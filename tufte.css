@@ -1,13 +1,13 @@
-/* Per http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt
-   Serif = In print, Monotype Bembo, which is proprietary.
-           Electronically, ETBembo, available at https://github.com/edwardtufte/presenter/tree/master/font/et-bembo/source/4-ttf (available under the MIT license)
-   Sans-serif = Gill Sans, "optically letter-spaced" */
-
 body { width: 74%;
        margin-left: auto;
        margin-right: auto;
-       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; /* In print, Tufte uses Monotype Bembo, which is proprietary. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's 'Presenter' project at https://github.com/edwardtufte/presenter (see http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt) */
        padding-bottom: 400px; }
+
+.sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+.code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; /* aping GitHub */
+        color: #333;
+        font-size: large; } 
 
 article { position: relative; }
 
@@ -32,6 +32,11 @@ h2 { font-style: italic;
      font-size: 2.1em;
      margin-top: 1.5em; }
 
+h3 { font-style: italic;
+     font-weight: 400;
+     font-size: 1.8em;
+     margin-top: 1.5em; }
+
 subtitle { font-style: italic;
            font-size: 2.1em;
            margin-bottom: 0.2em;
@@ -43,15 +48,18 @@ table { width: 65%;
         border-top: 2px solid #333333;
         border-bottom: 2px solid #333333;
         border-collapse: separate; 
-        border-spacing: 0 5px; }
+        border-spacing: 0 5px;
+        -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
+        -moz-font-feature-settings: 'tnum';
+        -ms-font-feature-settings: 'tnum'; }
 
 thead th { border-bottom: 1px solid #333333;
            font-weight: 400; 
            border-collapse: separate; 
            border-spacing: 5px 5px;}
 
-span.url { font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
-           word-break: break-all; }
+span.url { word-break: break-all;
+           font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
 
 sup.sidenote-number { font-size: medium; }
 

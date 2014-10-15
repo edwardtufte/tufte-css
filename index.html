@@ -4,18 +4,17 @@ and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8"/>
+  <title>Tufte CSS</title>
   <link rel="stylesheet" href="tufte.css"/>
 </head>
 <body>
   <article>
-    <h1>Tufte Handout</h1>
+    <h1>Tufte CSS</h1>
     <subtitle>Dave Liepmann</subtitle>
     <subtitle>September 2014</subtitle>
     <section>
       <h2>Introduction</h2>
-      <p>This Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup>
-        <span class="sidenote"><sup class="sidenote-number">1</sup> <span class="url">https://code.google.com/p/tufte-latex/</span></span>
-        document classes define a style similar to the style Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
+      <p>Tufte CSS is based on Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <span class="url">https://code.google.com/p/tufte-latex/</span> and <span class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</span></span>. The goal is to define a style similar to that which Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
     </section>
     
     <section>
@@ -39,25 +38,38 @@ and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
     
     <section>
       <h2>Sidenotes</h2>
-      <p>One of the most prominent and distinctive features of this style is the extensive use of sidenotes. There is a wide margin to provide ample room for sidenotes and small figures. Any use of a footnote will automatically be converted to a sidenote. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
+      <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
       <p>Most sidenotes include footnote-style numberings, but you don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
 
     <section>
       <h2>Tables</h2>
-      <p>Tabular data is presented with right-aligned text and minimal grid lines.</p>
-      <span class="marginnote">Table 1: first row of metcars.</span>
-      <table>
-        <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
-        <tbody>
-          <tr><td>Mazda RX4</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.62</td></tr>
-          <tr><td>Mazda RX4 Wag</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.88</td></tr>
-          <tr><td>Datsun 710</td><td>22.80</td><td>4.00</td><td>108.00</td><td>93.00</td><td>3.85</td><td>2.32</td></tr>
-          <tr><td>Hornet 4 Drive</td><td>21.40</td><td>6.00</td><td>258.00</td><td>110.00</td><td>3.08</td><td>3.21</td></tr>
-          <tr><td>Hornet Sportabout</td><td>18.70</td><td>8.00</td><td>360.00</td><td>175.00</td><td>3.15</td><td>3.44</td></tr>
-          <tr><td>Valiant</td><td>18.10</td><td>6.00</td><td>225.00</td><td>105.00</td><td>2.76</td><td>3.46</td></tr>
-        </tbody>
-      </table>
+      <p>Tabular data is presented with right-aligned text and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
+      <p>
+        <span class="marginnote">Table 1: first row of metcars.</span>
+        <table>
+          <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
+          <tbody>
+            <tr><td>Mazda RX4</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.62</td></tr>
+            <tr><td>Mazda RX4 Wag</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.88</td></tr>
+            <tr><td>Datsun 710</td><td>22.80</td><td>4.00</td><td>108.00</td><td>93.00</td><td>3.85</td><td>2.32</td></tr>
+            <tr><td>Hornet 4 Drive</td><td>21.40</td><td>6.00</td><td>258.00</td><td>110.00</td><td>3.08</td><td>3.21</td></tr>
+            <tr><td>Hornet Sportabout</td><td>18.70</td><td>8.00</td><td>360.00</td><td>175.00</td><td>3.15</td><td>3.44</td></tr>
+            <tr><td>Valiant</td><td>18.10</td><td>6.00</td><td>225.00</td><td>105.00</td><td>2.76</td><td>3.46</td></tr>
+          </tbody>
+        </table>
+      </p>
     </section>
+
+    <section>
+      <h2>Code</h2>
+      <p>Code samples are monospace using the 'code' class. The <span class="code">pre</span> tag is recommended for code blocks.</p>
+      <pre class="code">
+  (map tufte-style all-the-things)
+
+  for (i = 0; i++; i <= languagesWithoutHigherOrderFunctions) {
+    useTufteStyle();
+  }
+      </pre>
 </body>
 </html>
