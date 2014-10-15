@@ -1,6 +1,3 @@
-<!-- see http://rmarkdown.rstudio.com/examples/tufte-handout.pdf
-and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
-
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8"/>
@@ -14,13 +11,15 @@ and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
     <subtitle>September 2014</subtitle>
     <section>
       <h2>Introduction</h2>
-      <p>Tufte CSS is based on Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <span class="url">https://code.google.com/p/tufte-latex/</span> and <span class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</span></span>. The goal is to define a style similar to that which Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
+      <p>Tufte CSS is based on Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://code.google.com/p/tufte-latex/" class="url">https://code.google.com/p/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html" class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</a></span>. The goal is to define a style similar to that which Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
     </section>
     
     <section>
       <h2>Headings</h2>
-      <p>This CSS provides heading (h1, h2, etc.) and sub-title support, demonstrated above.</p>
-      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <span class="url">http://www.edwardtufte.com/tufte/books_be</span></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>.</p>
+      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+      <h3>Text</h3>
+      <p>In print, Tufte uses Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span>, which is proprietary. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's 'Presenter' project<sup class="sidenote-number">4</sup>.<span class="sidenote"><sup class="sidenote-number">4</sup> <a href="https://github.com/edwardtufte/presenter" class="url">https://github.com/edwardtufte/presenter</a></span>
     </section>
     
     <section>
@@ -29,7 +28,7 @@ and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
       <p>Images and graphics play an integral role in Tufte’s work.</p>
       <p>...</p>
       <h3>Equations</h3>
-      <p>...</p>
+      <p>For displaying mathematical symbols and equations I recommend <a href="http://www.mathjax.org/">MathJax</a>. Otherwise the topic is outside the scope of this document.</p>
       <h3>Full Width Figures</h3>
       <p>...</p>
       <h3>Main Column Figures</h3>

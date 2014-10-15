@@ -1,7 +1,7 @@
 body { width: 74%;
        margin-left: auto;
        margin-right: auto;
-       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; /* In print, Tufte uses Monotype Bembo, which is proprietary. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's 'Presenter' project at https://github.com/edwardtufte/presenter (see http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt) */
+       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        padding-bottom: 400px; }
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
@@ -15,11 +15,13 @@ p { font-size: 1.6em;
     width: 65%;
     padding-right: 0px; }
 
+a { color: #222; }
+
 .sidenote, .marginnote { float: right;
-        clear: right;
-        margin-right: -320px;
-        width: 260px;
-        font-size: 0.64em; }
+                         clear: right;
+                         margin-right: -320px;
+                         width: 260px;
+                         font-size: 0.84em; }
 
 h1 { font-style: italic;
      font-weight: 400;
@@ -58,8 +60,10 @@ thead th { border-bottom: 1px solid #333333;
            border-collapse: separate; 
            border-spacing: 5px 5px;}
 
-span.url { word-break: break-all;
-           font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
+a.url { text-decoration: none;
+        word-break: break-all;
+        font-size: large;
+        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
 
 sup.sidenote-number { font-size: medium; }
 
