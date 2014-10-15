@@ -1,26 +1,32 @@
-body { width: 74%;
+@font-face { font-family: ETBembo;
+             src: url("ETBembo-RomanLF.ttf"); }
+
+body { width: 87.5%;
        margin-left: auto;
        margin-right: auto;
+       padding-left: 12.5%;
        font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-       padding-bottom: 400px; }
+       padding-bottom: 400px;
+       background-color: #fffff8;
+       color: #111; }
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
-.code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; /* aping GitHub */
-        color: #333;
+.code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        color: #222;
         font-size: large; } 
 
 article { position: relative; }
 
 p { font-size: 1.6em;
-    width: 65%;
+    width: 55%;
     padding-right: 0px; }
 
 a { color: #222; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;
-                         margin-right: -320px;
-                         width: 260px;
+                         margin-right: -60%;
+                         width: 50%;
                          font-size: 0.84em; }
 
 h1 { font-style: italic;
@@ -44,9 +50,11 @@ subtitle { font-style: italic;
            margin-bottom: 0.2em;
            display: block; }
 
-table { width: 65%;
+table { width: 53%;
         text-align: right;
         font-size: 1.6em;
+        margin-left: 1%;
+        margin-right: 1%;
         border-top: 2px solid #333333;
         border-bottom: 2px solid #333333;
         border-collapse: separate; 

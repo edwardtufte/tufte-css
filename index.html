@@ -11,34 +11,45 @@
     <subtitle>September 2014</subtitle>
     <section>
       <h2>Introduction</h2>
-      <p>Tufte CSS is based on Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://code.google.com/p/tufte-latex/" class="url">https://code.google.com/p/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html" class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</a></span>. The goal is to define a style similar to that which Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
+      <p>Tufte CSS is an attempt to provide a base cascading style sheet to give web projects the look and feel of Edward Tufte's books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This project is heavily based on Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://code.google.com/p/tufte-latex/" class="url">https://code.google.com/p/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html" class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</a></span>.</p>
     </section>
     
     <section>
-      <h2>Headings</h2>
-      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>.</p>
-      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with class 'newthought', as demonstrated at the beginning of this paragraph.</p>
-      <h3>Text</h3>
-      <p>In print, Tufte uses Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span>, which is proprietary. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's 'Presenter' project<sup class="sidenote-number">4</sup>.<span class="sidenote"><sup class="sidenote-number">4</sup> <a href="https://github.com/edwardtufte/presenter" class="url">https://github.com/edwardtufte/presenter</a></span>
+      <h2>Basics</h2>
+      <h3>Color</h3>
+      <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors like <span class="code">#fffff8</span> and <span class="code">#111111</span>.</p>
+      <h3>Headings</h3>
+      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>. More specific headings (h4 and beyond) are not currently supported.</p>
+      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with the class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+      <h3>Font</h3>
+      <p>In print, Tufte uses Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span>, which is proprietary. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>.</p>
+      <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection and sans-serifs (with the <span class="code">sans</span> class) follow Tufte's choice of Gill Sans.</p>
     </section>
     
     <section>
       <h2>Figures</h2>
       <h3>Margin Figures</h3>
-      <p>Images and graphics play an integral role in Tufte’s work.</p>
-      <p>...</p>
+      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag.</p>
       <h3>Equations</h3>
       <p>For displaying mathematical symbols and equations I recommend <a href="http://www.mathjax.org/">MathJax</a>. Otherwise the topic is outside the scope of this document.</p>
       <h3>Full Width Figures</h3>
-      <p>...</p>
+      <p>There really isn't much to full-width figures. You just toss them inside an <span class="code">article</span> just like anything else, and they take up the full width. The caption is merely a sidenote, placed in an otherwise empty paragraph tag after the image. Don't wrap the figure in a paragraph tag.</p>
+      <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
+      <img src="figure2.png"/>
+      <p><span class="marginnote">Figure 2: Full width figure</span></p>
       <h3>Main Column Figures</h3>
-      <p>...</p>
+      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of these figures, since they're just images for now. Wrap the figure in a paragraph tag, into which also goes the caption, before the image.</p>
+      <p>
+        <span class="marginnote">Figure 3: A figure the width of the main column</span>
+        <img src="figure3.png"/>
+      </p>
     </section>
     
     <section>
       <h2>Sidenotes</h2>
-      <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
-      <p>Most sidenotes include footnote-style numberings, but you don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
+      <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
+      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
+      <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
 
     <section>
