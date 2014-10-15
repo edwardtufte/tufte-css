@@ -45,6 +45,22 @@ h3 { font-style: italic;
      font-size: 1.8em;
      margin-top: 1.5em; }
 
+h4 { font-style: italic;
+     font-weight: 400;
+     font-size: 1.6em;
+     margin-bottom: 1.2em; }
+
+h5 { font-style: italic;
+     font-weight: 400;
+     font-size: 1.4em;
+     margin-bottom: 1em; }
+
+h6 { font-style: italic;
+     font-weight: 400;
+     font-size: 1.2em;
+     margin-top: 1.5em;
+     margin-bottom: 1em; }
+
 subtitle { font-style: italic;
            font-size: 2.1em;
            margin-bottom: 0.2em;
