@@ -1,0 +1,63 @@
+<!-- see http://rmarkdown.rstudio.com/examples/tufte-handout.pdf
+and http://rmarkdown.rstudio.com/tufte_handout_format.html -->
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="tufte.css"/>
+</head>
+<body>
+  <article>
+    <h1>Tufte Handout</h1>
+    <subtitle>Dave Liepmann</subtitle>
+    <subtitle>September 2014</subtitle>
+    <section>
+      <h2>Introduction</h2>
+      <p>This Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> <sup class="sidenote-number">1</sup>
+        <span class="sidenote"><sup class="sidenote-number">1</sup> <span class="url">https://code.google.com/p/tufte-latex/</span></span>
+        document classes define a style similar to the style Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
+    </section>
+    
+    <section>
+      <h2>Headings</h2>
+      <p>This CSS provides heading (h1, h2, etc.) and sub-title support, demonstrated above.</p>
+      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <span class="url">http://www.edwardtufte.com/tufte/books_be</span></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+    </section>
+    
+    <section>
+      <h2>Figures</h2>
+      <h3>Margin Figures</h3>
+      <p>Images and graphics play an integral role in Tufte’s work.</p>
+      <p>...</p>
+      <h3>Equations</h3>
+      <p>...</p>
+      <h3>Full Width Figures</h3>
+      <p>...</p>
+      <h3>Main Column Figures</h3>
+      <p>...</p>
+    </section>
+    
+    <section>
+      <h2>Sidenotes</h2>
+      <p>One of the most prominent and distinctive features of this style is the extensive use of sidenotes. There is a wide margin to provide ample room for sidenotes and small figures. Any use of a footnote will automatically be converted to a sidenote. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
+      <p>Most sidenotes include footnote-style numberings, but you don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
+    </section>
+
+    <section>
+      <h2>Tables</h2>
+      <p>Tabular data is presented with right-aligned text and minimal grid lines.</p>
+      <span class="marginnote">Table 1: first row of metcars.</span>
+      <table>
+        <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
+        <tbody>
+          <tr><td>Mazda RX4</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.62</td></tr>
+          <tr><td>Mazda RX4 Wag</td><td>21.00</td><td>6.00</td><td>160.00</td><td>110.00</td><td>3.90</td><td>2.88</td></tr>
+          <tr><td>Datsun 710</td><td>22.80</td><td>4.00</td><td>108.00</td><td>93.00</td><td>3.85</td><td>2.32</td></tr>
+          <tr><td>Hornet 4 Drive</td><td>21.40</td><td>6.00</td><td>258.00</td><td>110.00</td><td>3.08</td><td>3.21</td></tr>
+          <tr><td>Hornet Sportabout</td><td>18.70</td><td>8.00</td><td>360.00</td><td>175.00</td><td>3.15</td><td>3.44</td></tr>
+          <tr><td>Valiant</td><td>18.10</td><td>6.00</td><td>225.00</td><td>105.00</td><td>2.76</td><td>3.46</td></tr>
+        </tbody>
+      </table>
+    </section>
+</body>
+</html>

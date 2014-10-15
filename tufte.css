@@ -1,0 +1,74 @@
+/* Per http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt
+   Serif = In print, Monotype Bembo, which is proprietary.
+           Electronically, ETBembo, available at https://github.com/edwardtufte/presenter/tree/master/font/et-bembo/source/4-ttf (available under the MIT license)
+   Sans-serif = Gill Sans, "optically letter-spaced" */
+
+body { width: 74%;
+       margin-left: auto;
+       margin-right: auto;
+       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       padding-bottom: 400px; }
+
+article { position: relative; }
+
+p { font-size: 1.6em;
+    width: 65%;
+    padding-right: 0px; }
+
+.sidenote, .marginnote { float: right;
+        clear: right;
+        margin-right: -320px;
+        width: 260px;
+        font-size: 0.64em; }
+
+h1 { font-style: italic;
+     font-weight: 400;
+     margin-top: 13%;
+     margin-bottom: 0.2em;
+     font-size: 2.5em; }
+
+h2 { font-style: italic;
+     font-weight: 400;
+     font-size: 2.1em;
+     margin-top: 1.5em; }
+
+subtitle { font-style: italic;
+           font-size: 2.1em;
+           margin-bottom: 0.2em;
+           display: block; }
+
+table { width: 65%;
+        text-align: right;
+        font-size: 1.6em;
+        border-top: 2px solid #333333;
+        border-bottom: 2px solid #333333;
+        border-collapse: separate; 
+        border-spacing: 0 5px; }
+
+thead th { border-bottom: 1px solid #333333;
+           font-weight: 400; 
+           border-collapse: separate; 
+           border-spacing: 5px 5px;}
+
+span.url { font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+           word-break: break-all; }
+
+sup.sidenote-number { font-size: medium; }
+
+.sidenote sup.sidenote-number { font-size: small; }
+
+span.newthought { font-variant: small-caps; }
+
+/* LaTeX-logo-specific styling */
+.latex sub, .latex sup { text-transform: uppercase; }
+
+.latex sub { vertical-align: -0.5ex;
+             margin-left: -0.1667em;
+             margin-right: -0.125em; }
+
+.latex, .latex sub { font-size: 1em; }
+
+.latex sup { font-size: 0.85em;
+             vertical-align: 0.15em;
+             margin-left: -0.36em;
+             margin-right: -0.15em; }
