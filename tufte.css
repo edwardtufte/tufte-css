@@ -23,6 +23,8 @@ p { font-size: 1.6em;
 
 a { color: #222; }
 
+img { max-width: 100%; }
+
 .fullwidth { max-width: 95%; } 
 
 .sidenote, .marginnote { float: right;
