@@ -39,9 +39,9 @@
       <h3>Equations</h3>
       <p>For displaying mathematical symbols and equations I recommend <a href="http://www.mathjax.org/">MathJax</a>. Otherwise the topic is outside the scope of this document.</p>
       <h3>Full Width Figures</h3>
-      <p>There really isn't much to full-width figures. You just toss them inside an <span class="code">article</span> just like anything else, and they take up the full width. The caption is merely a sidenote, placed in an otherwise empty paragraph tag after the image. Don't wrap the figure in a paragraph tag.</p>
+      <p>If you need a full-width image or figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, add a sidenote placed in an otherwise empty paragraph tag after the image.</p>
       <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
-      <img src="figure2.png"/>
+      <img class="fullwidth" src="figure2.png"/>
       <p><span class="marginnote">Figure 2: Full width figure</span></p>
       <h3>Main Column Figures</h3>
       <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of these figures, since they're just images. Wrap the figure in a paragraph tag, into which also goes the caption, before the image.</p>
