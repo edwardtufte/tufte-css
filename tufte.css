@@ -111,7 +111,7 @@ sub { top: 0.4rem; }
 h1 { font-style: italic;
       font-weight: 400;
       margin-top: 1.568rem;
-      margin-bottom: 0rem;
+      margin-bottom: 1.568rem;
       font-size: 2.5rem;
       line-height: 0.784; }
 
@@ -152,11 +152,11 @@ h6 {  font-style: italic;
       line-height: 1.63333333333; }
 
 subtitle { font-style: italic;
-           font-size: 2.1rem;
-           margin-bottom: 0;
-           margin-top: 1.8666666666667rem;
+           font-size: 1.8rem;
+           margin-bottom: 1.088888888889rem;
+           margin-top: 1.088888888889rem;
            display: block;
-           line-height: 0.93333333333; }
+           line-height: 1.088888888889; }
 
 table { width: 53%;
         text-align: right;
