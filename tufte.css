@@ -50,7 +50,8 @@ body { width: 87.5%;
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: #222;
-        font-size: large; } 
+        font-size: 1.2rem;
+        line-height: 1.63333333333; }
 
 article { position: relative; }
 
