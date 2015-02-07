@@ -1,5 +1,5 @@
-@font-face { font-family: ETBrembo;
-             src: url("ETBrembo-RomanLF.ttf"); }
+@font-face { font-family: ETBembo;
+             src: url("ETBembo-RomanLF.ttf"); }
 html{
     text-align: baseline;
     font-size: 11px;
@@ -41,7 +41,7 @@ body { width: 87.5%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 12.5%;
-       font-family: ETBrembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        padding-bottom: 400px;
        background-color: #fffff8;
        color: #111;
