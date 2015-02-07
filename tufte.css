@@ -55,7 +55,7 @@ body { width: 87.5%;
 article { position: relative; }
 
 p { font-size: 1.4rem;
-    line-height: 1.6;
+    line-height: 1.4;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     width: 55%;
@@ -92,7 +92,7 @@ sub { top: 0.4rem; }
                           margin-top: 0rem;
                           margin-bottom: 0rem;
                           font-size: 1.0rem;
-                          line-height: 2.24;
+                          line-height: 1.96;
                           vertical-align: baseline;
                           position: relative;
                           }
@@ -110,57 +110,57 @@ sub { top: 0.4rem; }
 
 h1 { font-style: italic;
       font-weight: 400;
-      margin-top: 1.792rem;
+      margin-top: 1.568rem;
       margin-bottom: 0rem;
       font-size: 2.5rem;
-      line-height: 0.896; }
+      line-height: 0.784; }
 
 h2 {  font-style: italic;
       font-weight: 400;
       font-size: 2.1rem;
-      margin-top: 2.1333333333333333rem;
+      margin-top: 1.86666666666667rem;
       margin-bottom: 0rem;
-      line-height: 1.0666666666667; }
+      line-height: 0.9333333333333; }
 
 h3 {  font-style: italic;
       font-weight: 400;
       font-size: 1.8rem;
-      margin-top: 2.488888888888rem;
+      margin-top: 2.177777777778rem;
       margin-bottom: 0;
-      line-height: 1.2444444444; }
+      line-height: 1.088888888889; }
 
 h4 {  font-style: italic;
       font-weight: 400;
       font-size: 1.6rem;
-      margin-top: 2.8rem;
+      margin-top: 2.45rem;
       margin-bottom: 0;
-      line-height: 1.4; }
+      line-height: 1.225; }
 
 h5 {  font-style: italic;
       font-weight: 400;
       font-size: 1.4rem;
-      margin-top: 3.2rem;
+      margin-top: 2.8rem;
       margin-bottom: 0rem;
-      line-height: 1.6;
+      line-height: 1.4;
       }
 
 h6 {  font-style: italic;
       font-weight: 400;
       font-size: 1.2rem;
-      margin-top: 3.733333333333333rem;
+      margin-top: 3.266666666667rem;
       margin-bottom: 0rem;
-      line-height: 1.8666666666667; }
+      line-height: 1.63333333333; }
 
 subtitle { font-style: italic;
            font-size: 2.1rem;
-           margin-bottom: 1.06666666667rem;
-           margin-top: 1.06666666667rem;
+           margin-bottom: 0;
+           margin-top: 1.8666666666667rem;
            display: block;
-           line-height: 1.06666666667; }
+           line-height: 0.93333333333; }
 
 table { width: 53%;
         text-align: right;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.4;
         margin-top: 1.4rem;
         margin-bottom: 1.4rem;
