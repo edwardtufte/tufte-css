@@ -1,41 +1,15 @@
 @font-face { font-family: ETBembo;
              src: url("ETBembo-RomanLF.ttf"); }
-html{
-    text-align: baseline;
-    font-size: 11px;
 
-  }
-  @media screen and (min-width: 800px){
-    html{
-      font-size: 12px;
-    }
-    }
+html { text-align: baseline;
+       font-size: 11px; }
 
-  @media screen and (min-width: 900px){
-    html{
-      font-size: 13px;
-    }
-    }
-  @media screen and (min-width: 1000px){
-    html{
-      font-size: 14px;
-    }
-    }
-  @media screen and (min-width: 1100px){
-    html{
-      font-size: 15px;
-    }
-    }
-  @media screen and (min-width: 1200px){
-    html{
-      font-size: 16px;
-    }
-    }
-  @media screen and (min-width: 1300px){
-    html{
-      font-size: 17px;
-    }
-    }
+@media screen and (min-width: 800px)  { html{ font-size: 12px; }}
+@media screen and (min-width: 900px)  { html{ font-size: 13px; }}
+@media screen and (min-width: 1000px) { html{ font-size: 14px; }}
+@media screen and (min-width: 1100px) { html{ font-size: 15px; }}
+@media screen and (min-width: 1200px) { html{ font-size: 16px; }}
+@media screen and (min-width: 1300px) { html{ font-size: 17px; }}
 
 body { width: 87.5%;
        margin-left: auto;
@@ -61,27 +35,19 @@ p { font-size: 1.4rem;
     margin-bottom: 1.4rem;
     width: 55%;
     padding-right: 0px;
-    vertical-align: baseline;
-     }
-@media screen and (max-width: 600px){
-    p{
-      width: 70%;
-    }
-    }     
-@media screen and (max-width: 400px){
-    p{
-      width: 90%;
-    }
-    }
+    vertical-align: baseline; }
+
+@media screen and (max-width: 600px) { p { width: 70%; }}
+@media screen and (max-width: 400px){ p { width: 90%; }}
 
 a { color: #222; }
 
 img { max-width: 100%; }
-sup, sub {
-   vertical-align: baseline;
-   position: relative;
-   top: -0.4rem;
-}
+
+sup, sub { vertical-align: baseline;
+           position: relative;
+           top: -0.4rem; }
+
 sub { top: 0.4rem; }
 
 .fullwidth { max-width: 95%; } 
@@ -95,19 +61,11 @@ sub { top: 0.4rem; }
                           font-size: 1.0rem;
                           line-height: 1.96;
                           vertical-align: baseline;
-                          position: relative;
-                          }
-@media screen and (max-width: 600px){
-    .sidenote, .marginnote{
-      width: 25%;
-      margin-right: -40%;
-    }
-    }
-@media screen and (max-width: 400px){
-    .sidenote, .marginnote{
-      display:none;
-    }
-    }
+                          position: relative; }
+
+@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 25%;
+                                                                margin-right: -40%; }}
+@media screen and (max-width: 400px) { .sidenote, .marginnote { display:none; }}
 
 h1 { font-style: italic;
       font-weight: 400;
@@ -142,8 +100,7 @@ h5 {  font-style: italic;
       font-size: 1.4rem;
       margin-top: 2.8rem;
       margin-bottom: 0rem;
-      line-height: 1.4;
-      }
+      line-height: 1.4; }
 
 h6 {  font-style: italic;
       font-weight: 400;
@@ -183,8 +140,6 @@ thead th { border-bottom: 1px solid #333333;
 a.url { text-decoration: none;
         word-break: break-all;
         font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
-
-
 
 sup.sidenote-number { 
       font-size: 0.9rem;
