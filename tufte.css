@@ -27,7 +27,8 @@ body { width: 87.5%;
         font-size: 1.2rem;
         line-height: 1.63333333333; }
 
-article { position: relative; }
+article { position: relative;
+          padding-top: 5rem; }
 
 p { font-size: 1.4rem;
     line-height: 1.4;
@@ -69,7 +70,7 @@ sub { top: 0.4rem; }
 
 h1 { font-style: italic;
       font-weight: 400;
-      margin-top: 1.568rem;
+      margin-top: 5rem;
       margin-bottom: 1.568rem;
       font-size: 2.5rem;
       line-height: 0.784; }
@@ -150,10 +151,10 @@ span.newthought { font-variant: small-caps; }
 /* LaTeX-logo-specific styling */
 .latex sub, .latex sup { text-transform: uppercase; }
 
-.latex sub { vertical-align: -0.5ex;
+.latex sub { vertical-align: 0.2rem;
              margin-left: -0.1667rem;
              margin-right: -0.125rem; }
 
-.latex sup { vertical-align: 0.15rem;
+.latex sup { vertical-align: -0.2rem;
              margin-left: -0.36rem;
              margin-right: -0.15rem; }
