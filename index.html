@@ -18,15 +18,12 @@
       <h2>Basics</h2>
       <h3>Color</h3>
       <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast.</p>
+      
       <h3>Headings</h3>
-      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>, making them nearly identical except for font size.</p>
-      <h4>More specific headings</h4>
-        <p>Headings 4 through 6 are provided as well. You can go down the rabbit hole to h4...</p>
-      <h5>Even more specific headings</h5>
-        <p>...h5...</p>
-      <h6>The most specific headings known to mankind</h6>
-        <p>...even h6. But there's rarely good reason to do so. You should probably just stick to h1, h2, and h3.</p>
+      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>, making them nearly identical except for font size. The <span class="code">h1</span> should be used as a title, the <span class="code">h2</span> for section headings, and <span class="code">h3</span> for subsection headings.</p>
+      <p>Tufte-CSS no longer supports more specific headings. If you feel the urge to reach for a heading of level 4 or higher, consider redesigning your document.</p>
       <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, use a span with the class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+      
       <h3>Font</h3>
       <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>.</p>
       <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection and sans-serifs (with the <span class="code">sans</span> class) follow Tufte's choice of Gill Sans.</p>
