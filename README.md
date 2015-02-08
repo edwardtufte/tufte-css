@@ -1,19 +1,24 @@
 tufte-css
 =========
+Edward Tufte uses a distinctive style in his handouts: simple, with well-set
+typography, extensive sidenotes, and tight integration of graphics and
+charts. `tufte-css` brings that style to HTML documents.
 
-The file *index.html* is a self-describing document that walks through
-the features of Tufte CSS. There is a version running at
-[http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/).
-
-As stated in the document, this project is directly inspired by and
+This project is directly inspired by and
 based on [Tufte-LaTeX](https://code.google.com/p/tufte-latex/) and the
 [R Markdown Tufte Handout](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
+
+Demo
+-
+The file *index.html* is a self-describing document that walks through
+the features of Tufte CSS by demonstrating them. Check out the live version at
+[http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/).
 
 Use
 -
 To use Tufte-CSS on your own HTML page, just copy `tufte.css`
 and `ETBembo-RomanLF.ttf` to your project directory and add the
-following to your HTML doc:
+following to your HTML doc's <head>:
 
     <link rel="stylesheet" href="tufte.css"/>
 
