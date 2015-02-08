@@ -154,9 +154,6 @@ span.newthought { font-variant: small-caps; }
              margin-left: -0.1667rem;
              margin-right: -0.125rem; }
 
-.latex, .latex sub { font-size: 1rem; }
-
-.latex sup { font-size: 0.85rem;
-             vertical-align: 0.15rem;
+.latex sup { vertical-align: 0.15rem;
              margin-left: -0.36rem;
              margin-right: -0.15rem; }
