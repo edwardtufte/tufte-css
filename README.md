@@ -18,7 +18,7 @@ Use
 -
 To use Tufte-CSS on your own HTML page, just copy `tufte.css`
 and `ETBembo-RomanLF.ttf` to your project directory and add the
-following to your HTML doc's <head>:
+following to your HTML doc's head block:
 
     <link rel="stylesheet" href="tufte.css"/>
 
