@@ -65,7 +65,7 @@ p { font-size: 1.4rem;
      }
 @media screen and (max-width: 600px){
     p{
-      width: 70%;
+      width: 65%;
     }
     }     
 @media screen and (max-width: 400px){
@@ -100,7 +100,7 @@ sub { top: 0.4rem; }
 @media screen and (max-width: 600px){
     .sidenote, .marginnote{
       width: 25%;
-      margin-right: -40%;
+      margin-right: -35%;
     }
     }
 @media screen and (max-width: 400px){
