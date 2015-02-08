@@ -1,8 +1,7 @@
 @font-face { font-family: ETBembo;
              src: url("ETBembo-RomanLF.ttf"); }
 
-html { text-align: baseline;
-       font-size: 11px; }
+html { font-size: 11px; }
 
 @media screen and (min-width: 800px)  { html{ font-size: 12px; }}
 @media screen and (min-width: 900px)  { html{ font-size: 13px; }}
@@ -35,7 +34,7 @@ p { font-size: 1.4rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     width: 55%;
-    padding-right: 0px;
+    padding-right: 0;
     vertical-align: baseline; }
 
 @media screen and (max-width: 600px) { p { width: 70%; }}
@@ -57,8 +56,8 @@ sub { top: 0.4rem; }
                           clear: right;
                           margin-right: -60%;
                           width: 50%;
-                          margin-top: 0rem;
-                          margin-bottom: 0rem;
+                          margin-top: 0;
+                          margin-bottom: 0;
                           font-size: 1.0rem;
                           line-height: 1.96;
                           vertical-align: baseline;
@@ -79,7 +78,7 @@ h2 {  font-style: italic;
       font-weight: 400;
       font-size: 2.1rem;
       margin-top: 1.86666666666667rem;
-      margin-bottom: 0rem;
+      margin-bottom: 0;
       line-height: 0.9333333333333; }
 
 h3 {  font-style: italic;
@@ -100,14 +99,14 @@ h5 {  font-style: italic;
       font-weight: 400;
       font-size: 1.4rem;
       margin-top: 2.8rem;
-      margin-bottom: 0rem;
+      margin-bottom: 0;
       line-height: 1.4; }
 
 h6 {  font-style: italic;
       font-weight: 400;
       font-size: 1.2rem;
       margin-top: 3.266666666667rem;
-      margin-bottom: 0rem;
+      margin-bottom: 0;
       line-height: 1.63333333333; }
 
 subtitle { font-style: italic;
