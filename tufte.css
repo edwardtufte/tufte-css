@@ -21,6 +21,7 @@ body { width: 87.5%;
        max-width: 1400px; }
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: #222;
         font-size: 1.2rem;
@@ -38,7 +39,7 @@ p { font-size: 1.4rem;
     vertical-align: baseline; }
 
 @media screen and (max-width: 600px) { p { width: 70%; }}
-@media screen and (max-width: 400px){ p { width: 90%; }}
+@media screen and (max-width: 400px) { p { width: 90%; }}
 
 a { color: #222; }
 
