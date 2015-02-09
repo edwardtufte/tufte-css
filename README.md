@@ -1,7 +1,7 @@
 tufte-css
 =========
 >Simplicity, to me, has always been the essence of good taste. <br/>
-> -- Cary Grant
+> -- [Cary Grant](http://www.gq.com/style/wear-it-now/201304/cary-grant-on-style?printable=true)
 
 Edward Tufte uses a distinctive style in his handouts: simple, with well-set
 typography, extensive sidenotes, and tight integration of graphics and
@@ -14,7 +14,7 @@ based on [Tufte-LaTeX](https://code.google.com/p/tufte-latex/) and the
 Demo
 -
 The file *index.html* is a self-describing document that walks through
-the features of Tufte CSS by demonstrating them. Check out the live version at
+the features of Tufte CSS. Check out the live version at
 [http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/).
 
 Use
@@ -28,6 +28,33 @@ following to your HTML doc's head block:
 All the other files can be ignored, as they are solely related to
 project maintenance and testing.
 
+CSS Style Guide
+-
+>Every major open-source project has its own style guide: a set of
+>conventions (sometimes arbitrary) about how to write code for that
+>project. It is much easier to understand a large codebase when all the
+>code in it is in a consistent style. <br/>
+> -- [Google Style Guide](https://code.google.com/p/google-styleguide/)
+
+Tufte-CSS aims for clarity, concision, and uniformity. Here's a basic
+example of our CSS conventions:
+
+    p { font-size: 1.4rem;
+        line-height: 2rem;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+        width: 55%;
+        padding-right: 0;
+        vertical-align: baseline; }
+    
+    @media screen and (max-width: 600px) { p { width: 70%; }}
+    @media screen and (max-width: 400px) { p { width: 90%; }}
+
+Notice the single spacing between most syntactic markers, the single
+blank lines between unrelated blocks, and the absence of line breaks
+after an open-paren and before end-parens. Notice also that these
+rules change slightly for media queries.
+
 Contributors
 -
  - Dave Liepmann (creator)
@@ -36,33 +63,6 @@ Contributors
 Pull requests are welcome. For best results, keep contributions to
 single changes at a time, and verify functionality against
 `index.html`.
-
-CSS Style Guide
--
->Every major open-source project has its own style guide: a set of
->conventions (sometimes arbitrary) about how to write code for that
->project. It is much easier to understand a large codebase when all the
->code in it is in a consistent style. <br/>
-> -- Google Style Guide (https://code.google.com/p/google-styleguide/)
-
-Tufte-CSS aims for clarity, concision, and uniformity. Here's a basic
-example of our CSS conventions:
-
-    p { font-size: 1.4rem;
-        line-height: 1.4;
-        margin-top: 1.4rem;
-        margin-bottom: 1.4rem;
-        width: 55%;
-        padding-right: 0;
-        vertical-align: baseline; }
-
-    @media screen and (max-width: 600px) { p { width: 70%; }}
-    @media screen and (max-width: 400px) { p { width: 90%; }}
-
-Notice the single spacing between most syntactic markers, the single
-blank lines between unrelated blocks, and the absence of line breaks
-after an open-paren and before end-parens. Notice also that these
-rules change slightly for media queries.
 
 License
 -
