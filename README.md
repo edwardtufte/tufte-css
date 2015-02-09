@@ -1,6 +1,6 @@
 tufte-css
 =========
->Simplicity, to me, has always been the essence of good taste.
+>Simplicity, to me, has always been the essence of good taste. <br/>
 > -- Cary Grant
 
 Edward Tufte uses a distinctive style in his handouts: simple, with well-set
@@ -42,7 +42,7 @@ CSS Style Guide
 >Every major open-source project has its own style guide: a set of
 >conventions (sometimes arbitrary) about how to write code for that
 >project. It is much easier to understand a large codebase when all the
->code in it is in a consistent style.
+>code in it is in a consistent style. <br/>
 > -- Google Style Guide (https://code.google.com/p/google-styleguide/)
 
 Tufte-CSS aims for clarity, concision, and uniformity. Here's a basic
