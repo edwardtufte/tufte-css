@@ -205,5 +205,42 @@ span.newthought { font-variant: small-caps; }
              vertical-align: 0.15rem;
              margin-left: -0.36rem;
              margin-right: -0.15rem; }
-
++/*--- Media query for printing --*/
++@media print {
++    *,
++    *:before,
++    *:after {
++        background: transparent !important;
++        color: #000 !important; /* Black prints faster:
++                                   http://www.sanbeiji.com/archives/953 */
++        box-shadow: none !important;
++        text-shadow: none !important;
++    }
++
++
++    thead {
++        display: table-header-group;
++    }
++
++    tr,
++    img {
++        page-break-inside: avoid;
++    }
++
++    img {
++        max-width: 100% !important;
++    }
++
++    p,
++    h2,
++    h3 {
++        orphans: 3;
++        widows: 3;
++    }
++
++    h2,
++    h3 {
++        page-break-after: avoid;
++    }
++} 
 
