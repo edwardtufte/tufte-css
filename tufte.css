@@ -80,7 +80,7 @@ p { font-size: 1.4rem;
     padding-right: 0;
     vertical-align: baseline; }
 
-@media screen and (max-width: 600px) { p { width: 70%; }}
+@media screen and (max-width: 600px) { p { width: 65%; }}
 @media screen and (max-width: 400px) { p { width: 90%; }}
 
 a { color: #222; }
@@ -120,7 +120,7 @@ pre.code { padding: 0 2em; }
                           position: relative; }
 
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 25%;
-                                                                margin-right: -40%; }}
+                                                                margin-right: -35%; }}
 @media screen and (max-width: 400px) { .sidenote, .marginnote { display:none; }}
 
 a.url { text-decoration: none;
@@ -156,4 +156,4 @@ span.newthought { font-variant: small-caps; }
                p, h2, h3 { orphans: 3;
                            widows: 3; }
 
-               h2, h3 { page-break-after: avoid; }}            
+               h2, h3 { page-break-after: avoid; }}
