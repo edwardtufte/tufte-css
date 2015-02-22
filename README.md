@@ -62,7 +62,8 @@ Contributors
 
 Pull requests are welcome. For best results, keep contributions to
 single changes at a time, and verify functionality against
-`index.html`.
+`index.html`. See the Issues page, especially [Help Wanted](https://github.com/daveliepmann/tufte-css/labels/help%20wanted), for
+opportunities to contribute.
 
 License
 -
