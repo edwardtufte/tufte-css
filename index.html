@@ -31,8 +31,15 @@
       <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class 'newthought', as demonstrated at the beginning of this paragraph. (The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class.) I find that this small-caps approach works well as a way to use fewer header elements.</p>
       
       <h3>Font</h3>
-      <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>.</p>
+      <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. In digital formats he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>, meaning you'll have to make the .ttf file available to your readers.</p>
       <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection and sans-serifs (with the <span class="sans">sans</span> class) follow Tufte's choice of Gill Sans.</p>
+    </section>
+
+    <section>
+      <h2>Sidenotes</h2>
+      <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
+      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> This is a sidenote.</span></p>
+      <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
     
     <section>
@@ -54,13 +61,6 @@
       </p>
     </section>
     
-    <section>
-      <h2>Sidenotes</h2>
-      <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
-      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> This is a sidenote.</span></p>
-      <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
-    </section>
-
     <section>
       <h2>Tables</h2>
       <p>Tabular data is presented with right-aligned text and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
@@ -90,5 +90,7 @@ for (i = 0; i++; i <= languagesWithoutHigherOrderFunctions) {
   useTufteStyle();
 }
       </pre>
+    </section>
+  </article>
 </body>
 </html>
