@@ -23,14 +23,14 @@ body { width: 87.5%;
 h1 { font-weight: 400;
      margin-top: 4rem;
      margin-bottom: 1.5rem;
-     font-size: 2.5rem;
+     font-size: 3.2rem;           /*2.5*/
      line-height: 1; }
 
 h2 { font-style: italic;
      font-weight: 400;
      margin-top: 2.1rem;
      margin-bottom: 0;
-     font-size: 2rem;
+     font-size: 2.2rem;
      line-height: 1; }
 
 h3 { font-style: italic;
@@ -70,6 +70,9 @@ thead th { border-bottom: 1px solid #333333;
 
 article { position: relative;
           padding-top: 5rem; }
+
+section { padding-top: 1rem;
+          padding-bottom: 1rem; }
 
 p { font-size: 1.4rem;
     line-height: 2rem;
