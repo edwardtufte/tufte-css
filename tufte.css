@@ -85,6 +85,12 @@ p { font-size: 1.4rem;
 @media screen and (max-width: 600px) { p { width: 65%; }}
 @media screen and (max-width: 400px) { p { width: 90%; }}
 
+blockquote p { font-size: 1.1rem;
+               width: 50%; }
+
+blockquote footer { width: 50%;
+                    text-align: right; }
+
 a { color: #222; }
 
 img { max-width: 100%; }
@@ -103,7 +109,7 @@ sup.sidenote-number {
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: #222;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.6; }
 
 pre.code { padding: 0 2em; }
