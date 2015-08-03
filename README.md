@@ -8,7 +8,7 @@ typography, extensive sidenotes, and tight integration of graphics and
 charts. `tufte-css` brings that style to HTML documents.
 
 This project is directly inspired by and
-based on [Tufte-LaTeX](https://code.google.com/p/tufte-latex/) and the
+based on [Tufte-LaTeX](https://tufte-latex.github.io/tufte-latex/) and the
 [R Markdown Tufte Handout](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
 
 Demo
