@@ -8,27 +8,27 @@
   <article>
     <h1>Tufte CSS</h1>
     <subtitle>Dave Liepmann</subtitle>
-    <subtitle>September 2014</subtitle>
     <section>
       <h2>Introduction</h2>
       <p>Tufte CSS is an attempt to provide a base cascading style sheet to give web projects the look and feel of Edward Tufte's books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.</p>
 
-      <p>The idea for this project is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> and R Markdown's Tufte Handout format<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://tufte-latex.github.io/tufte-latex/" class="url">https://tufte-latex.github.io/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html" class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>.</p>
+      <p>The project lives on GitHub as <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. The idea is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> and R Markdown's Tufte Handout format<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> See <a href="https://tufte-latex.github.io/tufte-latex/" class="url">https://tufte-latex.github.io/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html" class="url">http://rmarkdown.rstudio.com/tufte_handout_format.html</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>.</p>
     </section>
     
     <section>
       <h2>Basics</h2>
+      <p>Use an <span class="code">&lt;article&gt;</span> tag around the entire shebang, and <span class="code">&lt;section&gt;</span> tags around each logical grouping of text and headings.</p>
+      
       <h3>Color</h3>
       <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast.</p>
       
       <h3>Headings</h3>
-      <p>Tufte CSS styles headings <span class="code">h1</span>, <span class="code">h2</span>, and <span class="code">h3</span>, making them nearly identical except for font size. The <span class="code">h1</span> should be used as a title, the <span class="code">h2</span> for section headings, and <span class="code">h3</span> for subsection headings.</p>
-      <p>Tufte-CSS no longer supports more specific headings. If you feel the urge to reach for a heading of level 4 or higher, consider redesigning your document. Consider:</p>
+      <p>Tufte CSS uses headings <span class="code">h1</span> for the document title, <span class="code">h2</span> for top-level headings, and <span class="code">h3</span> for subsection headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:</p>
       <blockquote cite="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
-        <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of sentences which then cumulate sequentially into paragraphs, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn't require an elaborate hierarchy to organize.</p>
-        <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post in 'Book design: advice and examples'</a></footer>
+        <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn't require an elaborate hierarchy to organize.</p>
+        <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, 'Book design: advice and examples' thread</a></footer>
       </blockquote>
-      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class 'newthought', as demonstrated at the beginning of this paragraph.</p>
+      <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup>        <span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class 'newthought', as demonstrated at the beginning of this paragraph. (The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class.) I find that this small-caps approach works well as a way to use fewer header elements.</p>
       
       <h3>Font</h3>
       <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. Electronically he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>.</p>
@@ -57,7 +57,7 @@
     <section>
       <h2>Sidenotes</h2>
       <p>One of the most prominent and distinctive features of Tufte's style is the extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
-      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> This is a sidenote.</span></p>
+      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class 'sidenote' inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> This is a sidenote.</span></p>
       <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
 
