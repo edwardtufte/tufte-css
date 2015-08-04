@@ -38,7 +38,8 @@
       <p><span class="newthought">In his later books</span><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> <a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class <span class="code">newthought</span>, as demonstrated at the beginning of this paragraph. The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class. I feel the vertical space is unnecessary when using this technique to replace <span class="code">h2</span> elements, as in this paragaph. Be consistent: though I do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the <span class="code">newthought</span> technique. Pick one approach and stick to it.</p>
 
       <h3>Color</h3>
-      <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast. Other forms of text&mdash;for instance, links and code&mdash;are slightly lighter, and sidenote numbers are bright red to distinguish them from inline text.</p>
+      <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast. </p>      
+      <p>Other forms of text&mdash;for instance, links and code&mdash;are slightly lighter, and sidenote numbers are bright red to distinguish them from inline text.</p>
       
       <h3>Font</h3>
       <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. In digital formats he uses ETBembo, available under the MIT license through Edward Tufte, Adam Schwartz, and Marc Neuwirth's <em><a href="https://github.com/edwardtufte/presenter">Presenter</a></em> project. Tufte CSS uses ETBembo through the use of <span class="code">@font-face</span>, meaning you'll have to make the .ttf file available to your readers.</p>
@@ -94,9 +95,13 @@
       <h2>Code</h2>
       <p>Code samples are monospace using the <span class="code">code</span> class, as I've been using in this document to denote HTML tags like the word 'code' earlier in this sentence. Code blocks use that class in conjunction with the <span class="code">pre</span> tag, which gives us indentation too:</p>
       <pre class="code">
-(map tufte-style all-the-things) ;; functional programming
+;; functional programming:
+(map tufte-style all-the-things)
 
-for (i = 0; i++; i <= num) { all_the_things[i].useTufteStyle(); } //iterative programming
+// iterative programming:
+for (i = 0; i++; i <= num) {
+   all_the_things[i].useTufteStyle();
+} 
       </pre>
     </section>
   </article>

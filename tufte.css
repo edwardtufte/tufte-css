@@ -68,7 +68,7 @@ thead th { border-bottom: 1px solid #333333;
            border-spacing: 5px 5px;}
 
 article { position: relative;
-          padding-top: 5rem; }
+          padding: 5rem 0rem; }
 
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
@@ -77,12 +77,8 @@ p { font-size: 1.4rem;
     line-height: 2rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
-    width: 55%;
     padding-right: 0;
     vertical-align: baseline; }
-
-@media screen and (max-width: 600px) { p { width: 65%; }}
-@media screen and (max-width: 400px) { p { width: 90%; }}
 
 blockquote p { font-size: 1.1rem;
                width: 50%; }
@@ -100,9 +96,15 @@ sup, sub { vertical-align: baseline;
 
 sub { top: 0.4rem; }
 
-sup.sidenote-number { 
-      font-size: 0.9rem;
-      color: #f00000; }
+sup.sidenote-number { font-size: 0.9rem;
+                      color: #f00000; }
+
+p, footer, pre.code { width: 55%; }
+
+@media screen and (max-width: 600px) { p, footer, pre.code { width: 65%; }
+                                       blockquote p, blockquote footer { width: 60%; }}
+@media screen and (max-width: 400px) { p, footer, pre.code { width: 90%; }
+                                       blockquote p, blockquote footer { width: 65%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
