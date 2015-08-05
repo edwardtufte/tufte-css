@@ -1,5 +1,9 @@
 @font-face { font-family: ETBembo;
              src: url("ETBembo-RomanLF.ttf"); }
+@font-face { font-family: ETBembo;
+             src: url("ETBembo-DisplayItalic.ttf");
+             font-weight: normal;
+             font-style: italic; }
 
 html { font-size: 11px; }
 
@@ -56,15 +60,15 @@ table { width: 53%;
         margin-right: 1%;
         border-top: 2px solid #333333;
         border-bottom: 2px solid #333333;
-        border-collapse: separate; 
+        border-collapse: separate;
         border-spacing: 0 5px;
         -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
         -moz-font-feature-settings: 'tnum';
         -ms-font-feature-settings: 'tnum'; }
 
 thead th { border-bottom: 1px solid #333333;
-           font-weight: 400; 
-           border-collapse: separate; 
+           font-weight: 400;
+           border-collapse: separate;
            border-spacing: 5px 5px;}
 
 article { position: relative;
