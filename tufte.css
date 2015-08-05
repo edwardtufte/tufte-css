@@ -96,8 +96,20 @@ sup, sub { vertical-align: baseline;
 
 sub { top: 0.4rem; }
 
-sup.sidenote-number { font-size: 0.9rem;
-                      color: #f00000; }
+sup.sidenote-number {
+  font-size: 0.9rem;
+  color: #f00000;
+}
+
+.sidenote sup.sidenote-number {
+  position: absolute;
+  /* 100% refers to the computed width of the number, so this transform
+   * shifts the number just outside the left edge of the sidenote box,
+   * with a buffer of 0.25rem, no matter how many digits the number has. */
+  -webkit-transform: translateX(-100%) translateX(-0.25rem);
+      -ms-transform: translateX(-100%) translateX(-0.25rem);
+          transform: translateX(-100%) translateX(-0.25rem);
+}
 
 p, footer, pre.code { width: 55%; }
 
