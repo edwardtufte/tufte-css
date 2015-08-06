@@ -117,7 +117,7 @@ p, footer, pre.code { width: 55%; }
         font-size: 1rem;
         line-height: 1.6; }
 
-pre.code { padding: 0 2em 0 0; }
+pre.code { padding: 0 0 0 2em; }
 
 .fullwidth { max-width: 95%; } 
 
