@@ -59,6 +59,7 @@ Contributors
 -
  - Dave Liepmann (creator)
  - Clay Harmon (media queries, rem units)
+ - Linjie Ding (italic typeface)
 
 Pull requests are welcome. For best results, keep contributions to
 single changes at a time, and verify functionality against
