@@ -21,7 +21,7 @@ body { width: 87.5%;
        font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: #fffff8;
        color: #111;
-       max-width: 1400px; 
+       max-width: 1400px;
        counter-reset: sidenote-counter; }
 
 h1 { font-weight: 400;
@@ -120,7 +120,7 @@ p, footer, pre.code { width: 55%; }
 
 pre.code { padding: 0 0 0 2em; }
 
-.fullwidth { max-width: 95%; } 
+.fullwidth { max-width: 95%; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;
@@ -135,14 +135,14 @@ pre.code { padding: 0 0 0 2em; }
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
-.sidenote-number:before, .sidenote:before { content: counter(sidenote-counter) " ";
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                    position: relative;
                    top: -0.4rem;
                    vertical-align: baseline;
                    font-size: 0.9rem;
                    color: #f00000; }
 
-.sidenote-number:before { content: counter(sidenote-counter); }
+.sidenote-number:after { content: counter(sidenote-counter); }
 
 .sidenote:before { content: counter(sidenote-counter) " "; }
 
