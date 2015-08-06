@@ -1,4 +1,4 @@
-tufte-css
+Tufte CSS
 =========
 >Simplicity, to me, has always been the essence of good taste. <br/>
 > -- [Cary Grant](http://www.gq.com/style/wear-it-now/201304/cary-grant-on-style?printable=true)
@@ -19,7 +19,7 @@ the features of Tufte CSS. Check out the live version at
 
 Use
 -
-To use Tufte-CSS on your own HTML page, just copy `tufte.css`
+To use Tufte CSS on your own HTML page, just copy `tufte.css`
 and `ETBembo-RomanLF.ttf` to your project directory and add the
 following to your HTML doc's head block:
 
@@ -36,7 +36,7 @@ CSS Style Guide
 >code in it is in a consistent style. <br/>
 > -- [Google Style Guide](https://code.google.com/p/google-styleguide/)
 
-Tufte-CSS aims for clarity, concision, and uniformity. Here's a basic
+Tufte CSS aims for clarity, concision, and uniformity. Here's a basic
 example of our CSS conventions:
 
     p { font-size: 1.4rem;
