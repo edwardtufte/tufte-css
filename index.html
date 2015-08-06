@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="tufte.css"/>
   <link rel="stylesheet" href="latex.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+   img { mix-blend-mode: multiply; }
+  </style>
 </head>
 <body>
   <article>
@@ -18,12 +21,12 @@
 
     <section>
       <h2>Getting Started</h2>
-      <p>To use Tufte-CSS, copy <span class="code">tufte.css</span> and <span class="code">ETBembo-RomanLF.ttf</span> to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
+      <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and <span class="code">ETBembo-RomanLF.ttf</span> to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
 
       <pre class="code">&lt;link rel="stylesheet"
       href="tufte.css"/&gt;</pre>
 
-      <p>Now you just have to use the provided CSS rules, and the Tufte-CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
+      <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
     </section>
     
     <section>
@@ -57,6 +60,7 @@
     
     <section>
       <h2>Figures</h2>
+      <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
       <h3>Margin Figures</h3>
       <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag.</p>
       <h3>Equations</h3>
@@ -100,7 +104,7 @@
 ;; functional programming:
 (map tufte-style all-the-things)
 
-// iterative programming:
+// imperative programming:
 for (i = 0; i++; i <= num) {
    all_the_things[i].useTufteStyle();
 } 
