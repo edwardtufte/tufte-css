@@ -150,8 +150,9 @@ pre.code { padding: 0 0 0 2em; }
                                                                 margin-right: -35%; }}
 @media screen and (max-width: 400px) { .sidenote, .marginnote { display: none; }}
 
-a.url { text-decoration: none;
+.url { text-decoration: none;
         word-break: break-all;
-        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace; }
+        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+        font-size: 0.9rem; }
 
 span.newthought { font-variant: small-caps; }
