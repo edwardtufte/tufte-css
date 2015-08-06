@@ -21,7 +21,7 @@ Use
 -
 To use Tufte CSS on your own HTML page, just copy `tufte.css`
 and `ETBembo-RomanLF.ttf` to your project directory and add the
-following to your HTML doc's head block:
+following to your HTML doc’s head block:
 
     <link rel="stylesheet" href="tufte.css"/>
 
@@ -36,7 +36,7 @@ CSS Style Guide
 >code in it is in a consistent style. <br/>
 > -- [Google Style Guide](https://code.google.com/p/google-styleguide/)
 
-Tufte CSS aims for clarity, concision, and uniformity. Here's a basic
+Tufte CSS aims for clarity, concision, and uniformity. Here’s a basic
 example of our CSS conventions:
 
     p { font-size: 1.4rem;
@@ -46,7 +46,7 @@ example of our CSS conventions:
         width: 55%;
         padding-right: 0;
         vertical-align: baseline; }
-    
+
     @media screen and (max-width: 600px) { p { width: 70%; }}
     @media screen and (max-width: 400px) { p { width: 90%; }}
 
