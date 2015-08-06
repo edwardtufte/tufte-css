@@ -117,7 +117,7 @@ p, footer, pre.code { width: 55%; }
         font-size: 1rem;
         line-height: 1.6; }
 
-pre.code { padding: 0 2em; }
+pre.code { padding: 0 2em 0 0; }
 
 .fullwidth { max-width: 95%; } 
 
@@ -134,7 +134,7 @@ pre.code { padding: 0 2em; }
 
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 25%;
                                                                 margin-right: -35%; }}
-@media screen and (max-width: 400px) { .sidenote, .marginnote { display:none; }}
+@media screen and (max-width: 400px) { .sidenote, .marginnote { display: none; }}
 
 a.url { text-decoration: none;
         word-break: break-all;
