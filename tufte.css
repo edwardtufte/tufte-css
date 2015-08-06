@@ -58,18 +58,18 @@ table { width: 53%;
         margin-bottom: 1.4rem;
         margin-left: 1%;
         margin-right: 1%;
-        border-top: 2px solid #333333;
-        border-bottom: 2px solid #333333;
         border-collapse: separate;
         border-spacing: 0 5px;
         -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
         -moz-font-feature-settings: 'tnum';
         -ms-font-feature-settings: 'tnum'; }
 
-thead th { border-bottom: 1px solid #333333;
+thead th { border-bottom: 1px solid #AAAAAA;
            font-weight: 400;
            border-collapse: separate;
-           border-spacing: 5px 5px;}
+           border-spacing: 5px 5px; }
+
+td.text { text-align: left; }
 
 article { position: relative;
           padding: 5rem 0rem; }
