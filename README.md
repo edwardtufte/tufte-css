@@ -23,7 +23,9 @@ To use Tufte CSS on your own HTML page, just copy `tufte.css`
 and `ETBembo-RomanLF.ttf` to your project directory and add the
 following to your HTML doc's head block:
 
-    <link rel="stylesheet" href="tufte.css"/>
+```html
+<link rel="stylesheet" href="tufte.css"/>
+```
 
 All the other files can be ignored, as they are solely related to
 project maintenance and testing.
@@ -39,16 +41,18 @@ CSS Style Guide
 Tufte CSS aims for clarity, concision, and uniformity. Here's a basic
 example of our CSS conventions:
 
-    p { font-size: 1.4rem;
-        line-height: 2rem;
-        margin-top: 1.4rem;
-        margin-bottom: 1.4rem;
-        width: 55%;
-        padding-right: 0;
-        vertical-align: baseline; }
+```css
+p { font-size: 1.4rem;
+    line-height: 2rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    width: 55%;
+    padding-right: 0;
+    vertical-align: baseline; }
     
-    @media screen and (max-width: 600px) { p { width: 70%; }}
-    @media screen and (max-width: 400px) { p { width: 90%; }}
+@media screen and (max-width: 600px) { p { width: 70%; }}
+@media screen and (max-width: 400px) { p { width: 90%; }}
+```
 
 Notice the single spacing between most syntactic markers, the single
 blank lines between unrelated blocks, and the absence of line breaks
