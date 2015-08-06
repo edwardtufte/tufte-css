@@ -64,6 +64,7 @@ Contributors
  - Dave Liepmann (creator)
  - Clay Harmon (media queries, rem units)
  - Linjie Ding (italic typeface)
+ - Stephen A Thomas (automagically numbered sidenotes)
 
 Pull requests are welcome. For best results, keep contributions to
 single changes at a time, and verify functionality against
