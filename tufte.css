@@ -1,24 +1,34 @@
-@font-face { font-family: ETBembo;
-             src: url("ETBembo-RomanLF.ttf"); }
-@font-face { font-family: ETBembo;
-             src: url("ETBembo-DisplayItalic.ttf");
+@font-face { font-family: Cardo;
+             src: url('cardo-webfont.eot');
+             src: url('cardo-webfont.eot?#iefix') format('embedded-opentype'),
+                  url('cardo-webfont.woff2') format('woff2'),
+                  url('cardo-webfont.woff') format('woff'),
+                  url('cardo-webfont.ttf') format('truetype');
+             font-weight: normal;
+             font-style: normal; }
+@font-face { font-family: Cardo;
+             src: url('cardo-italic-webfont.eot');
+             src: url('cardo-italic-webfont.eot?#iefix') format('embedded-opentype'),
+                  url('cardo-italic-webfont.woff2') format('woff2'),
+                  url('cardo-italic-webfont.woff') format('woff'),
+                  url('cardo-italic-webfont.ttf') format('truetype');
              font-weight: normal;
              font-style: italic; }
 
-html { font-size: 11px; }
+html { font-size: 10px; }
 
-@media screen and (min-width: 800px)  { html{ font-size: 12px; }}
-@media screen and (min-width: 900px)  { html{ font-size: 13px; }}
-@media screen and (min-width: 1000px) { html{ font-size: 14px; }}
-@media screen and (min-width: 1100px) { html{ font-size: 15px; }}
-@media screen and (min-width: 1200px) { html{ font-size: 16px; }}
-@media screen and (min-width: 1300px) { html{ font-size: 17px; }}
+@media screen and (min-width: 800px)  { html{ font-size: 11px; }}
+@media screen and (min-width: 900px)  { html{ font-size: 12px; }}
+@media screen and (min-width: 1000px) { html{ font-size: 13px; }}
+@media screen and (min-width: 1100px) { html{ font-size: 14px; }}
+@media screen and (min-width: 1200px) { html{ font-size: 15px; }}
+@media screen and (min-width: 1300px) { html{ font-size: 16px; }}
 
 body { width: 87.5%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 12.5%;
-       font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: Cardo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: #fffff8;
        color: #111;
        max-width: 1400px; }

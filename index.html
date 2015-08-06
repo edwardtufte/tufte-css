@@ -18,7 +18,7 @@
 
     <section>
       <h2>Getting Started</h2>
-      <p>To use Tufte-CSS, copy <span class="code">tufte.css</span> and <span class="code">ETBembo-RomanLF.ttf</span> to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
+      <p>To use Tufte-CSS, copy <span class="code">tufte.css</span> and the font files to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
 
       <pre class="code">&lt;link rel="stylesheet"
       href="tufte.css"/&gt;</pre>
@@ -44,14 +44,14 @@
       <p>Other forms of text&mdash;for instance, links and code&mdash;are slightly lighter, and sidenote numbers are bright red to distinguish them from inline text.</p>
       
       <h3>Font</h3>
-      <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. In digital formats he uses ETBembo, which Tufte CSS includes using <span class="code">@font-face</span>. This means you'll have to make the .ttf file available to your readers. Note that <a href="https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00">thanks to Linjie Ding</a>, italicized text uses the ETBembo Italic font instead of mechanically skewing the characters.</p>
+      <p>In print, Tufte uses the proprietary Monotype Bembo<sup class="sidenote-number">3</sup><span class="sidenote"><sup class="sidenote-number">3</sup> <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. In digital formats he uses ETBembo. Since neither of these fonts have an open source license, we have substituted the similar Cardo<sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> <a href="http://www.fontsquirrel.com/fonts/Cardo" class="url">http://www.fontsquirrel.com/fonts/Cardo</a></span> font.</p>
       <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection and sans-serifs (with the <span class="sans">sans</span> class) follow Tufte's choice of Gill Sans.</p>
     </section>
 
     <section>
       <h2>Sidenotes</h2>
       <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
-      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class <span class="code">sidenote</span> inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">4</sup><span class="sidenote"><sup class="sidenote-number">4</sup> This is a sidenote.</span></p>
+      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class <span class="code">sidenote</span> inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <sup class="sidenote-number">5</sup><span class="sidenote"><sup class="sidenote-number">5</sup> This is a sidenote.</span></p>
         <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These numberless sidenotes are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
     
