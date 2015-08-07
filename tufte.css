@@ -21,7 +21,7 @@ body { width: 87.5%;
        font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: #fffff8;
        color: #111;
-       max-width: 1400px; 
+       max-width: 1400px;
        counter-reset: sidenote-counter; }
 
 h1 { font-weight: 400;
@@ -115,8 +115,8 @@ sup, sub { vertical-align: baseline;
 
 sub { top: 0.4rem; }
 
-sup.sidenote-number { font-size: 0.9rem;
-                      color: #f00000; }
+sup.sidenote { font-size: 0.9rem;
+               color: #f00000; }
 
 p, footer, pre.code { width: 55%; }
 
@@ -134,35 +134,35 @@ p, footer, pre.code { width: 55%; }
 
 pre.code { padding: 0 0 0 2em; }
 
-.fullwidth { max-width: 95%; } 
+.fullwidth { max-width: 95%; }
 
-.sidenote, .marginnote { float: right;
-                         clear: right;
-                         margin-right: -60%;
-                         width: 50%;
-                         margin-top: 0;
-                         margin-bottom: 0;
-                         font-size: 1.0rem;
-                         line-height: 1.96;
-                         vertical-align: baseline;
-                         position: relative; }
+.sidenote-content, .marginnote { float: right;
+                                 clear: right;
+                                 margin-right: -60%;
+                                 width: 50%;
+                                 margin-top: 0;
+                                 margin-bottom: 0;
+                                 font-size: 1.0rem;
+                                 line-height: 1.96;
+                                 vertical-align: baseline;
+                                 position: relative; }
 
-.sidenote-number { counter-increment: sidenote-counter; }
+.sidenote { counter-increment: sidenote-counter; }
 
-.sidenote-number:before, .sidenote:before { content: counter(sidenote-counter) " ";
+.sidenote:after, .sidenote-content:before { content: counter(sidenote-counter) " ";
                    position: relative;
                    top: -0.4rem;
                    vertical-align: baseline;
                    font-size: 0.9rem;
                    color: #f00000; }
 
-.sidenote-number:before { content: counter(sidenote-counter); }
+.sidenote:after { content: counter(sidenote-counter); }
 
-.sidenote:before { content: counter(sidenote-counter) " "; }
+.sidenote-content:before { content: counter(sidenote-counter) " "; }
 
-@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 25%;
+@media screen and (max-width: 600px) { .sidenote-content, .marginnote { width: 25%;
                                                                 margin-right: -35%; }}
-@media screen and (max-width: 400px) { .sidenote, .marginnote { display: none; }}
+@media screen and (max-width: 400px) { .sidenote-content, .marginnote { display: none; }}
 
 .url { text-decoration: none;
         word-break: break-all;
