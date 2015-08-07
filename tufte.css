@@ -136,6 +136,8 @@ sub { top: 0.4rem; }
 
 .sidenote-number:after { content: counter(sidenote-counter); }
 
+.sidenote-number:after { left: 0.1rem; }
+
 .sidenote:before { content: counter(sidenote-counter) " "; }
 
 p, footer, pre.code { width: 55%; }

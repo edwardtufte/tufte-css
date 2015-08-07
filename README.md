@@ -63,9 +63,8 @@ Sparklines
 -
 Sparklines are word sized line plots that render inline with text. Here are two javascript libraries for making them.
 
-jQuery plugin - https://github.com/gwatts/jquery.sparkline
-
-Using d3 - https://github.com/shawnbot/sparky
+ - jQuery plugin - https://github.com/gwatts/jquery.sparkline
+ - Using d3 - https://github.com/shawnbot/sparky
 
 Contributors
 -
