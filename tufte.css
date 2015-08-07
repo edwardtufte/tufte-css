@@ -7,12 +7,12 @@
 
 html { font-size: 11px; }
 
-@media screen and (min-width: 800px)  { html{ font-size: 12px; }}
-@media screen and (min-width: 900px)  { html{ font-size: 13px; }}
-@media screen and (min-width: 1000px) { html{ font-size: 14px; }}
-@media screen and (min-width: 1100px) { html{ font-size: 15px; }}
-@media screen and (min-width: 1200px) { html{ font-size: 16px; }}
-@media screen and (min-width: 1300px) { html{ font-size: 17px; }}
+@media screen and (min-width: 800px)  { html { font-size: 12px; }}
+@media screen and (min-width: 900px)  { html { font-size: 13px; }}
+@media screen and (min-width: 1000px) { html { font-size: 14px; }}
+@media screen and (min-width: 1100px) { html { font-size: 15px; }}
+@media screen and (min-width: 1200px) { html { font-size: 16px; }}
+@media screen and (min-width: 1300px) { html { font-size: 17px; }}
 
 body { width: 87.5%;
        margin-left: auto;
@@ -156,8 +156,9 @@ pre.code { padding: 0 0 0 2em; }
 
 .fullwidth { max-width: 95%; }
 
-@media screen and (max-width: 600px) { .sidenote-content, .marginnote { width: 25%;
-                                                                        margin-right: -35%; }}
-@media screen and (max-width: 400px) { .sidenote-content, .marginnote { display: none; }}
+@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
+                                                                margin-right: -45%; }}
+@media screen and (max-width: 400px) { .sidenote-number, .sidenote, .marginnote { display: none; }}
 
 span.newthought { font-variant: small-caps; }
+
