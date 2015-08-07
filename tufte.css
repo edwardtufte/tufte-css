@@ -100,7 +100,7 @@ figcaption { float: right;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
-             line-height: 1.96;
+             line-height: 1.6;
              vertical-align: baseline;
              position: relative; }
 
@@ -115,15 +115,15 @@ sup, sub { vertical-align: baseline;
 sub { top: 0.4rem; }
 
 .sidenote, .marginnote { float: right;
-                                 clear: right;
-                                 margin-right: -60%;
-                                 width: 50%;
-                                 margin-top: 0;
-                                 margin-bottom: 0;
-                                 font-size: 1.0rem;
-                                 line-height: 1.96;
-                                 vertical-align: baseline;
-                                 position: relative; }
+                         clear: right;
+                         margin-right: -60%;
+                         width: 50%;
+                         margin-top: 0;
+                         margin-bottom: 0;
+                         font-size: 1.0rem;
+                         line-height: 1.6;
+                         vertical-align: baseline;
+                         position: relative; }
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
