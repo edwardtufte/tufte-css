@@ -150,6 +150,8 @@ p, footer, pre.code { width: 55%; }
         font-size: 1.125rem;
         line-height: 1.6; }
 
+h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
+
 pre.code { padding: 0 0 0 2em; }
 
 .fullwidth { max-width: 95%; }
