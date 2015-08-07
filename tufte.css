@@ -147,7 +147,7 @@ p, footer, pre.code { width: 55%; }
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: #222;
-        font-size: 1rem;
+        font-size: 1.125rem;
         line-height: 1.6; }
 
 pre.code { padding: 0 0 0 2em; }
@@ -159,4 +159,3 @@ pre.code { padding: 0 0 0 2em; }
 @media screen and (max-width: 400px) { .sidenote-number, .sidenote, .marginnote { display: none; }}
 
 span.newthought { font-variant: small-caps; }
-
