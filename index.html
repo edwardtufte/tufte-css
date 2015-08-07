@@ -16,7 +16,7 @@
     <section>
       <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte's books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.</p>
 
-      <p>The project lives at GitHub as <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. The idea is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span><span class="sidenote-number"/> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown's Tufte Handout format</a><span class="sidenote">See <a href="https://tufte-latex.github.io/tufte-latex/" class="url">https://tufte-latex.github.io/tufte-latex/</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>. I give hearty thanks to all the people who have contributed to those projects.</p>
+      <p>The project lives at GitHub as <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. The idea is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span><span class="sidenote-number"></span> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown's Tufte Handout format</a><span class="sidenote">See <a href="https://tufte-latex.github.io/tufte-latex/" class="url">https://tufte-latex.github.io/tufte-latex/</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>. I give hearty thanks to all the people who have contributed to those projects.</p>
       <p>If you see anything that Tufte CSS could improve, please let us know by <a href="https://github.com/daveliepmann/tufte-css/issues/new">opening an issue on GitHub</a>. Contributions are welcome, too, in the form of pull requests.</p>
     </section>
 
@@ -54,34 +54,35 @@
 
     <section>
       <h2>Sidenotes</h2>
-      <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
-      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class <span class="code">sidenote</span> inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <span class="sidenote-number"/><span class="sidenote">This is a sidenote.</span></p>
-        <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These numberless sidenotes are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
+      <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes.<span class="sidenote-number"></span><span class="sidenote">This is a sidenote.</span> Perhaps you have noticed their use in this document already. You are very astute.</p>
+      <p>On sufficiently large viewports, the margin provides ample room for sidenotes and small figures. To get a sidenote to display immediately adjacent to the text it relates to, insert a <span class="code">span</span> with class <span class="code">sidenote</span> inserted directly into the middle of a <span class="code">p</span> tag. This will give the sidenote the correct height.</p>
+      <p>Sidenotes get automatically numbered by using a <span class="code">span</span> with a class of <span class="code">sidenote-number</span>.</p>
+      <p><span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>If you don't want footnote-style numberings on your sidenotes, what you want is a margin note.They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
     </section>
     
     <section>
       <h2>Figures</h2>
       <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
-      <h3>Margin Figures</h3>
-      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag.</p>
-      <h3>Equations</h3>
-      <p>For displaying mathematical symbols and equations I recommend <a href="http://www.mathjax.org/">MathJax</a>. Otherwise the topic is outside the scope of this document.</p>
-      <h3>Full Width Figures</h3>
-      <p>If you need a full-width image or figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, add a sidenote placed in an otherwise empty paragraph tag after the image.</p>
+      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>      
+      <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 2, which I suppose plots the data in the following code:</p>
       <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
-      <img class="fullwidth" src="figure2.png"/>
-      <p><span class="marginnote">Figure 2: Full width figure</span></p>
-      <h3>Main Column Figures</h3>
-      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of these figures, since they're just images. Wrap the figure in a paragraph tag, into which also goes the caption, before the image.</p>
+      <figure class="fullwidth">
+        <img src="figure2.png"/>
+        <figcaption>Figure 2: Full width figure</figcaption>
+      </figure>
+      <br/>
+      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of any images. Wrap the <span class="code">figure</span> tag in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure.</p>
       <p>
-        <span class="marginnote">Figure 3: A figure the width of the main column</span>
-        <img src="figure3.png"/>
+        <figure>
+          <img src="figure3.png"/>
+          <figcaption>Figure 3: A figure the width of the main column</figcaption>
+        </figure>
       </p>
     </section>
     
     <section>
       <h2>Tables</h2>
-      <p>Tabular data are presented with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
+      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
       <p>
         <span class="marginnote">Table 1: first row of metcars.</span>
         <table>
@@ -111,6 +112,12 @@ for (i = 0; i++; i <= num) {
    all_the_things[i].useTufteStyle();
 } 
       </pre>
+    </section>
+
+    <section>
+      <h2>Other Tools</h2>
+      <p>Sparklines are awesome, and can be created in a variety of ways. People are making them with <a href="https://github.com/adactio/Canvas-Sparkline">plain javascript</a>, <a href="http://omnipotent.net/jquery.sparkline/#s-about">jQuery</a>, <a href="http://www.tnoda.com/blog/2013-12-19">d3.js</a>, and <a href="http://www.highcharts.com/demo/sparkline">HighCharts</a>. Evaluate those solutions to see which is most appropriate for your needs.</p>
+      <p>If you need to display mathematical symbols and equations, I hear <a href="http://www.mathjax.org/">MathJax</a> is good. Otherwise the topic is outside the scope of this document.</p>
     </section>
   </article>
 </body>

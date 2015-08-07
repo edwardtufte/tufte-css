@@ -91,6 +91,20 @@ blockquote p { font-size: 1.1rem;
 blockquote footer { width: 50%;
                     text-align: right; }
 
+figure { -webkit-margin-start: 0;
+         -webkit-margin-end: 0; }
+
+figcaption { float: right;
+             clear: right;
+             margin-right: -10.5%;
+             width: 50%;
+             margin-top: 0;
+             margin-bottom: 0;
+             font-size: 1.0rem;
+             line-height: 1.96;
+             vertical-align: baseline;
+             position: relative; }
+
 a { color: #222; }
 
 img { max-width: 100%; }
