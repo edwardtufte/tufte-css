@@ -5,14 +5,7 @@
              font-weight: normal;
              font-style: italic; }
 
-html { font-size: 11px; }
-
-@media screen and (min-width: 800px)  { html { font-size: 12px; }}
-@media screen and (min-width: 900px)  { html { font-size: 13px; }}
-@media screen and (min-width: 1000px) { html { font-size: 14px; }}
-@media screen and (min-width: 1100px) { html { font-size: 15px; }}
-@media screen and (min-width: 1200px) { html { font-size: 16px; }}
-@media screen and (min-width: 1300px) { html { font-size: 17px; }}
+html { font-size: 15px; }
 
 body { width: 87.5%;
        margin-left: auto;
