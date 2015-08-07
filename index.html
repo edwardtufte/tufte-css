@@ -14,10 +14,10 @@
     <h1>Tufte CSS</h1>
     <subtitle>Dave Liepmann</subtitle>
     <section>
-      <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte's books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.</p>
-
-      <p>The project lives at GitHub as <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. The idea is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span><span class="sidenote-number"/> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown's Tufte Handout format</a><span class="sidenote">See <a href="https://tufte-latex.github.io/tufte-latex/" class="url">https://tufte-latex.github.io/tufte-latex/</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>. I give hearty thanks to all the people who have contributed to those projects.</p>
+      <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte's books and handouts. Tufte's style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.</p>
+      <p>The project lives at GitHub as <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. The idea is essentially cribbed wholesale from Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span><span class="sidenote-number"></span> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown's Tufte Handout format</a><span class="sidenote">See the <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-LaTeX project homepage</a></span>. This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>. I give hearty thanks to all the people who have contributed to those projects.</p>
       <p>If you see anything that Tufte CSS could improve, please let us know by <a href="https://github.com/daveliepmann/tufte-css/issues/new">opening an issue on GitHub</a>. Contributions are welcome, too, in the form of pull requests.</p>
+      <p>Finally, a reminder about the goal of this project. The web is not print. Webpages are not books. Therefore, the goal of Tufte CSS is not to say "websites should look like this interpretation of Tufte's books" but rather "here are some techniques Tufte developed that we've found useful in print; maybe you can find a way to make them useful on the web". Tufte CSS is merely a sketch of one way to implement this particular set of ideas. It should be a starting point, not a design goal, because any project should present their information as best suits their particular circumstances.</p>
     </section>
 
     <section>
@@ -29,59 +29,59 @@
 
       <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
     </section>
-    
+
     <section>
       <h2>Fundamentals</h2>
       <h3>Sections</h3>
       <p>Organize your document with an <span class="code">article</span> element inside your <span class="code">body</span> tag. Inside that, use <span class="code">section</span> tags around each logical grouping of text and headings.</p>
-      
+
       <h3>Headings</h3>
       <p>Tufte CSS uses <span class="code">h1</span> for the document title, <span class="code">h2</span> for section headings, and <span class="code">h3</span> for low-level headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:</p>
       <blockquote cite="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
         <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn't require an elaborate hierarchy to organize.</p>
         <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, 'Book design: advice and examples' thread</a></footer>
       </blockquote>
-      <p><span class="newthought">In his later books</span><span class="sidenote-number"/><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be" class="url">http://www.edwardtufte.com/tufte/books_be</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class <span class="code">newthought</span>, as demonstrated at the beginning of this paragraph. The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class. I feel the vertical space is unnecessary when using this technique to replace <span class="code">h2</span> elements, as in this paragaph. Be consistent: though I do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the <span class="code">newthought</span> technique. Pick one approach and stick to it.</p>
+      <p><span class="newthought">In his <span class="sidenote-number">later books</span></span><span class="sidenote">E.g. <a href="http://www.edwardtufte.com/tufte/books_be">Beautiful Evidence</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class <span class="code">newthought</span>, as demonstrated at the beginning of this paragraph. The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class. I feel the vertical space is unnecessary when using this technique to replace <span class="code">h2</span> elements, as in this paragaph. Be consistent: though I do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the <span class="code">newthought</span> technique. Pick one approach and stick to it.</p>
 
       <h3>Color</h3>
-      <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast. </p>      
+      <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their 'pure' cousins, but dial down the harsh contrast. </p>
       <p>Other forms of text&mdash;for instance, links and code&mdash;are slightly lighter, and sidenote numbers are bright red to distinguish them from inline text.</p>
-      
+
       <h3>Font</h3>
-      <p>In print, Tufte uses the proprietary Monotype Bembo<span class="sidenote-number"/><span class="sidenote"><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt" class="url">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt</a></span> font. In digital formats he uses ETBembo, which Tufte CSS includes using <span class="code">@font-face</span>. This means you'll have to make the .ttf file available to your readers. Note that <a href="https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00">thanks to Linjie Ding</a>, italicized text uses the ETBembo Italic font instead of mechanically skewing the characters.</p>
-      <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection and sans-serifs (with the <span class="sans">sans</span> class) follow Tufte's choice of Gill Sans.</p>
+      <p>In print, Tufte uses the proprietary <span class="sidenote-number">Monotype Bembo</span><span class="sidenote">See Tufte's response in the <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread.</span> font. In digital formats he uses ETBembo, which Tufte CSS includes using <span class="code">@font-face</span>. This means you'll have to make the .ttf file available to your readers. Note that <a href="https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00">thanks to Linjie Ding</a>, italicized text uses the ETBembo Italic font instead of mechanically skewing the characters.</p>
+      <p>Code snippets (using the <span class="code">code</span> class) ape GitHub's font selection. If you need to reach for sans-serifs, use the <span class="sans">sans</span> class, which follows Tufte's choice of Gill Sans.</p>
     </section>
 
     <section>
       <h2>Sidenotes</h2>
-      <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes. Perhaps you have noticed their use in this document already. You are very astute.</p>
-      <p>There is a wide margin to provide ample room for sidenotes and small figures. Spans with class <span class="code">sidenote</span> inserted directly into the middle of <span class="code">p</span> tags within each <span class="code">section</span> put the sidenote at the correct height. <span class="sidenote-number"/><span class="sidenote">This is a sidenote.</span></p>
-        <p>Most sidenotes include footnote-style numberings, but they don't have to. <span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>These numberless sidenotes are called margin notes. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately.</p>
+      <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes.<span class="sidenote-number"></span><span class="sidenote">This is a sidenote.</span> Perhaps you have noticed their use in this document already. You are very astute.</p>
+      <p>On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. Sidenotes consist of 1) a superscript reference number that goes inline with the text, and 2) a sidenote containing content that repeats the superscripted number to reinforce its connection to the text. To add the former, just put <span class="code">&lt;span class="sidenote-number"&gt;&lt;/span&gt;</span> where you want the reference to go. Immediately after that goes the <span class="code">span</span> with class <span class="code">sidenote</span>, inserted directly into the middle of the <span class="code">p</span> tag containing the referent text. This will give the sidenote the correct height.</p>
+      <p><span class="marginnote">This is a margin note. Notice there isn't a number preceding the note.</span>If you don't want footnote-style numberings on your sidenotes, what you want is a margin note. They are currently identical to sidenotes but are kept semantically distinct because one might wish to style them separately. Figures in the margin are created as margin notes, as demonstrated in the next section.</p>
     </section>
-    
+
     <section>
       <h2>Figures</h2>
       <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
-      <h3>Margin Figures</h3>
-      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag.</p>
-      <h3>Equations</h3>
-      <p>For displaying mathematical symbols and equations I recommend <a href="http://www.mathjax.org/">MathJax</a>. Otherwise the topic is outside the scope of this document.</p>
-      <h3>Full Width Figures</h3>
-      <p>If you need a full-width image or figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, add a sidenote placed in an otherwise empty paragraph tag after the image.</p>
+      <p><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>      
+      <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 2, which I suppose plots the data in the following code:</p>
       <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
-      <img class="fullwidth" src="figure2.png"/>
-      <p><span class="marginnote">Figure 2: Full width figure</span></p>
-      <h3>Main Column Figures</h3>
-      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of these figures, since they're just images. Wrap the figure in a paragraph tag, into which also goes the caption, before the image.</p>
+      <figure class="fullwidth">
+        <img src="figure2.png"/>
+        <figcaption>Figure 2: Full width figure</figcaption>
+      </figure>
+      <br/>
+      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of any images. Wrap the <span class="code">figure</span> tag in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure.</p>
       <p>
-        <span class="marginnote">Figure 3: A figure the width of the main column</span>
-        <img src="figure3.png"/>
+        <figure>
+          <img src="figure3.png"/>
+          <figcaption>Figure 3: A figure the width of the main column</figcaption>
+        </figure>
       </p>
     </section>
-    
+
     <section>
       <h2>Tables</h2>
-      <p>Tabular data are presented with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
+      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
       <p>
         <span class="marginnote">Table 1: first row of metcars.</span>
         <table>
@@ -96,7 +96,7 @@
           </tbody>
         </table>
       </p>
-      <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as "the table style to use", but rather as "a table style to start from". From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio ("within reason", as Tufte says), and "mobilize every graphical element, perhaps several times over, to show the data."<span class="sidenote-number"/><span class="sidenote">Page 139, The Visual Display of Quantitative Information, Edward Tufte 2001.</span>
+      <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as "the table style to use", but rather as "a table style to start from". From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio ("within reason", as Tufte says), and <span class="sidenote-number">"mobilize every graphical element, perhaps several times over, to show the data."</span><span class="sidenote">Page 139, The Visual Display of Quantitative Information, Edward Tufte 2001.</span> Know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.</p>
     </section>
 
     <section>
@@ -109,8 +109,14 @@
 // imperative programming:
 for (i = 0; i++; i <= num) {
    all_the_things[i].useTufteStyle();
-} 
+}
       </pre>
+    </section>
+
+    <section>
+      <h2>Other Tools</h2>
+      <p>Sparklines are awesome, and can be created in a variety of ways. People are making them with <a href="https://github.com/adactio/Canvas-Sparkline">plain javascript</a>, <a href="http://omnipotent.net/jquery.sparkline/#s-about">jQuery</a>, <a href="http://www.tnoda.com/blog/2013-12-19">d3.js</a>, and <a href="http://www.highcharts.com/demo/sparkline">HighCharts</a>. Evaluate those solutions to see which is most appropriate for your needs.</p>
+      <p>If you need to display mathematical symbols and equations, I hear <a href="http://www.mathjax.org/">MathJax</a> is good. Otherwise the topic is outside the scope of this document.</p>
     </section>
   </article>
 </body>

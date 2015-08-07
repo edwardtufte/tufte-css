@@ -59,6 +59,13 @@ blank lines between unrelated blocks, and the absence of line breaks
 after an open-paren and before end-parens. Notice also that these
 rules change slightly for media queries.
 
+Sparklines
+-
+Sparklines are word sized line plots that render inline with text. Here are two javascript libraries for making them.
+
+ - jQuery plugin - https://github.com/gwatts/jquery.sparkline
+ - Using d3 - https://github.com/shawnbot/sparky
+
 Contributors
 -
  - Dave Liepmann (creator)

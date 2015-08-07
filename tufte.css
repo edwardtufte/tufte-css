@@ -5,14 +5,7 @@
              font-weight: normal;
              font-style: italic; }
 
-html { font-size: 11px; }
-
-@media screen and (min-width: 800px)  { html{ font-size: 12px; }}
-@media screen and (min-width: 900px)  { html{ font-size: 13px; }}
-@media screen and (min-width: 1000px) { html{ font-size: 14px; }}
-@media screen and (min-width: 1100px) { html{ font-size: 15px; }}
-@media screen and (min-width: 1200px) { html{ font-size: 16px; }}
-@media screen and (min-width: 1300px) { html{ font-size: 17px; }}
+html { font-size: 15px; }
 
 body { width: 87.5%;
        margin-left: auto;
@@ -21,7 +14,7 @@ body { width: 87.5%;
        font-family: ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: #fffff8;
        color: #111;
-       max-width: 1400px; 
+       max-width: 1400px;
        counter-reset: sidenote-counter; }
 
 h1 { font-weight: 400;
@@ -91,7 +84,23 @@ blockquote p { font-size: 1.1rem;
 blockquote footer { width: 50%;
                     text-align: right; }
 
-a { color: #222; }
+figure { -webkit-margin-start: 0;
+         -webkit-margin-end: 0; }
+
+figcaption { float: right;
+             clear: right;
+             margin-right: 16%;
+             margin-top: 0;
+             margin-bottom: 0;
+             font-size: 1.0rem;
+             line-height: 1.6;
+             vertical-align: baseline;
+             position: relative; }
+
+a { color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #777;
+    padding-bottom: 1px; }
 
 img { max-width: 100%; }
 
@@ -101,8 +110,31 @@ sup, sub { vertical-align: baseline;
 
 sub { top: 0.4rem; }
 
-sup.sidenote-number { font-size: 0.9rem;
-                      color: #f00000; }
+.sidenote, .marginnote { float: right;
+                         clear: right;
+                         margin-right: -60%;
+                         width: 50%;
+                         margin-top: 0;
+                         margin-bottom: 0;
+                         font-size: 1.0rem;
+                         line-height: 1.6;
+                         vertical-align: baseline;
+                         position: relative; }
+
+.sidenote-number { counter-increment: sidenote-counter; }
+
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
+                                           position: relative;
+                                           top: -0.4rem;
+                                           vertical-align: baseline;
+                                           font-size: 0.9rem;
+                                           color: #f00000; }
+
+.sidenote-number:after { content: counter(sidenote-counter); }
+
+.sidenote-number:after { left: 0.1rem; }
+
+.sidenote:before { content: counter(sidenote-counter) " "; }
 
 p, footer, pre.code { width: 55%; }
 
@@ -115,44 +147,15 @@ p, footer, pre.code { width: 55%; }
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         color: #222;
-        font-size: 1rem;
+        font-size: 1.125rem;
         line-height: 1.6; }
 
 pre.code { padding: 0 0 0 2em; }
 
-.fullwidth { max-width: 95%; } 
+.fullwidth { max-width: 95%; }
 
-.sidenote, .marginnote { float: right;
-                         clear: right;
-                         margin-right: -60%;
-                         width: 50%;
-                         margin-top: 0;
-                         margin-bottom: 0;
-                         font-size: 1.0rem;
-                         line-height: 1.96;
-                         vertical-align: baseline;
-                         position: relative; }
-
-.sidenote-number { counter-increment: sidenote-counter; }
-
-.sidenote-number:before, .sidenote:before { content: counter(sidenote-counter) " ";
-                   position: relative;
-                   top: -0.4rem;
-                   vertical-align: baseline;
-                   font-size: 0.9rem;
-                   color: #f00000; }
-
-.sidenote-number:before { content: counter(sidenote-counter); }
-
-.sidenote:before { content: counter(sidenote-counter) " "; }
-
-@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 25%;
-                                                                margin-right: -35%; }}
-@media screen and (max-width: 400px) { .sidenote, .marginnote { display: none; }}
-
-.url { text-decoration: none;
-        word-break: break-all;
-        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
-        font-size: 0.9rem; }
+@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
+                                                                margin-right: -45%; }}
+@media screen and (max-width: 400px) { .sidenote-number, .sidenote, .marginnote { display: none; }}
 
 span.newthought { font-variant: small-caps; }
