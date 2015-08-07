@@ -96,8 +96,7 @@ figure { -webkit-margin-start: 0;
 
 figcaption { float: right;
              clear: right;
-             margin-right: -10.5%;
-             width: 50%;
+             margin-right: 16%;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
@@ -115,8 +114,29 @@ sup, sub { vertical-align: baseline;
 
 sub { top: 0.4rem; }
 
-sup.sidenote { font-size: 0.9rem;
-               color: #f00000; }
+.sidenote, .marginnote { float: right;
+                                 clear: right;
+                                 margin-right: -60%;
+                                 width: 50%;
+                                 margin-top: 0;
+                                 margin-bottom: 0;
+                                 font-size: 1.0rem;
+                                 line-height: 1.96;
+                                 vertical-align: baseline;
+                                 position: relative; }
+
+.sidenote-number { counter-increment: sidenote-counter; }
+
+.sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
+                                           position: relative;
+                                           top: -0.4rem;
+                                           vertical-align: baseline;
+                                           font-size: 0.9rem;
+                                           color: #f00000; }
+
+.sidenote-number:after { content: counter(sidenote-counter); }
+
+.sidenote:before { content: counter(sidenote-counter) " "; }
 
 p, footer, pre.code { width: 55%; }
 
@@ -136,37 +156,8 @@ pre.code { padding: 0 0 0 2em; }
 
 .fullwidth { max-width: 95%; }
 
-.sidenote-content, .marginnote { float: right;
-                                 clear: right;
-                                 margin-right: -60%;
-                                 width: 50%;
-                                 margin-top: 0;
-                                 margin-bottom: 0;
-                                 font-size: 1.0rem;
-                                 line-height: 1.96;
-                                 vertical-align: baseline;
-                                 position: relative; }
-
-.sidenote { counter-increment: sidenote-counter; }
-
-.sidenote:after, .sidenote-content:before { content: counter(sidenote-counter) " ";
-                   position: relative;
-                   top: -0.4rem;
-                   vertical-align: baseline;
-                   font-size: 0.9rem;
-                   color: #f00000; }
-
-.sidenote:after { content: counter(sidenote-counter); }
-
-.sidenote-content:before { content: counter(sidenote-counter) " "; }
-
 @media screen and (max-width: 600px) { .sidenote-content, .marginnote { width: 25%;
-                                                                margin-right: -35%; }}
+                                                                        margin-right: -35%; }}
 @media screen and (max-width: 400px) { .sidenote-content, .marginnote { display: none; }}
-
-.url { text-decoration: none;
-        word-break: break-all;
-        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
-        font-size: 0.9rem; }
 
 span.newthought { font-variant: small-caps; }
