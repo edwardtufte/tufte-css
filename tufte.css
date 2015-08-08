@@ -154,7 +154,8 @@ p, footer, pre.code { width: 55%; }
 
 h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
-pre.code { padding: 0 0 0 2em; }
+pre.code { padding: 0 0 0 2em;
+           overflow-x: scroll; }
 
 .fullwidth { max-width: 95%; }
 
