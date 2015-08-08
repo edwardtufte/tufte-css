@@ -66,18 +66,26 @@ Sparklines are word sized line plots that render inline with text. Here are two 
  - jQuery plugin - https://github.com/gwatts/jquery.sparkline
  - Using d3 - https://github.com/shawnbot/sparky
 
+Contributing
+-
+If you notice something wrong or broken, let us know by opening an
+issue. **Pull requests are very welcome**.
+
+For best results, keep pull requests to one change at a time, and
+test your fix or new functionality against `index.html` on screens as
+small as an iPhone 4 and as big as, well, as big as you use
+normally. (If you don't have a mobile device handy, fake different
+devices with your browser's developer tools.)  See the Issues page, especially
+[Help Wanted](https://github.com/daveliepmann/tufte-css/labels/help%20wanted),
+for opportunities to contribute.
+
 Contributors
 -
- - Dave Liepmann (creator)
+ - Dave Liepmann (creator, project maintainer)
  - Clay Harmon (media queries, rem units)
  - Linjie Ding (italic typeface)
  - Stephen A Thomas (automagically numbered sidenotes)
  - Ben Newman (sidenote numbering style)
-
-Pull requests are welcome. For best results, keep contributions to
-single changes at a time, and verify functionality against
-`index.html`. See the Issues page, especially [Help Wanted](https://github.com/daveliepmann/tufte-css/labels/help%20wanted), for
-opportunities to contribute.
 
 License
 -
