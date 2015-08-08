@@ -197,6 +197,7 @@ pre.code { padding: 0 0 0 2em;
 
 .fullwidth { max-width: 95%; }
 
+/*
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
                                                                 margin-right: -45%; }}
 @media screen and (max-width: 400px) { pre.code { padding: 0; }
@@ -204,7 +205,57 @@ pre.code { padding: 0 0 0 2em;
                                        .sidenote, .marginnote { width: 50%;
                                                                 margin: 0.5em 0 0.5em 1.6em; }}
 @media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
+*/
 
 
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
+
+/*
+.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+*/
+input.margin-toggle {
+    display:none;
+}
+
+label.sidenote-number{
+    display:inline;
+}
+
+label.margin-toggle {
+    display: none;
+}
+
+
+@media(max-width: 480px){
+/*
+  body {
+    margin:5px;
+}
+*/
+
+    label.margin-toggle{
+        display:inline
+    }
+    .sidenote, .marginnote {
+        display: none;
+    }
+
+    .margin-toggle:checked + .sidenote, .margin-toggle:checked + .marginnote {
+        display: block;
+        float: none;
+        clear: none;
+        width: 80%;
+        margin: 10px;
+        vertical-align: baseline;
+        position: relative;
+    }
+    label {
+        cursor: pointer;
+    }
+}
+
+
+
