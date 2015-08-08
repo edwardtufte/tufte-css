@@ -198,6 +198,8 @@ p, footer, pre.code { width: 55%; }
 
 h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
+.marginnote .code, .sidenote .code { font-size: 1rem; }
+
 pre.code { padding: 0 0 0 2em;
            overflow-x: scroll; }
 
