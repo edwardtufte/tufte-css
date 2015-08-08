@@ -46,7 +46,7 @@ subtitle { font-style: italic;
 
 table { width: 53%;
         text-align: right;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.4;
         margin-top: 1.4rem;
         margin-bottom: 1.4rem;
@@ -168,10 +168,10 @@ pre.code { padding: 0 0 0 2em;
 
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
                                                                 margin-right: -45%; }}
-@media screen and (max-width: 400px) { .sidenote-number { visibility: hidden; }
+@media screen and (max-width: 400px) { pre.code { padding: 0; }
+                                       .sidenote-number:after { display: none; }
                                        .sidenote, .marginnote { width: 50%;
-                                                                margin: 0.5em;
-                                                                margin-right: -5%; }}
+                                                                margin: 0.5em 0 0.5em 1.6em; }}
 @media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
 
 
