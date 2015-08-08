@@ -46,7 +46,7 @@ subtitle { font-style: italic;
 
 table { width: 53%;
         text-align: right;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.4;
         margin-top: 1.4rem;
         margin-bottom: 1.4rem;
@@ -64,6 +64,41 @@ thead th { border-bottom: 1px solid #AAAAAA;
            border-spacing: 5px 5px; }
 
 td.text { text-align: left; }
+
+table.booktabs { width: auto;
+                 max-width: 53%;
+                 margin-left: auto;  /* center the table */
+                 margin-right: auto;
+                 border-spacing: 0px;
+                 border-top: 2px solid #333333;
+                 border-bottom: 2px solid #333333; }
+
+.booktabs th { border-bottom: 1px solid #333333;
+               padding: 0.65ex 0.5em 0.4ex 0.5em;
+               font-weight: normal;
+               text-align: center; }
+
+.booktabs th.cmid { border-bottom: 1px solid #666666; }
+
+.booktabs th.nocmid { border-bottom: none; }
+
+.booktabs tbody tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */ 
+
+.booktabs td { padding-left: 0.5em;
+               padding-right: 0.5em;
+               text-align: left; }
+
+.booktabs caption { font-size: 90%;
+                    text-align: left;
+                    width: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 1ex;
+                    caption-side: bottom; }
+
+.booktabs tbody tr td.l { text-align: left !important; }
+.booktabs tbody tr td.c { text-align: center !important; }
+.booktabs tbody tr td.r { text-align: right !important; }
 
 article { position: relative;
           padding: 5rem 0rem; }
@@ -89,7 +124,7 @@ figure { -webkit-margin-start: 0;
 
 figcaption { float: right;
              clear: right;
-             margin-right: 16%;
+             margin-right: 18.5%;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
@@ -97,18 +132,14 @@ figcaption { float: right;
              vertical-align: baseline;
              position: relative; }
 
+figure.fullwidth figcaption { margin-right: 24%; }
+
 a { color: #222;
     text-decoration: none;
     border-bottom: 1px solid #777;
     padding-bottom: 1px; }
 
 img { max-width: 100%; }
-
-sup, sub { vertical-align: baseline;
-           position: relative;
-           top: -0.4rem; }
-
-sub { top: 0.4rem; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;
@@ -125,16 +156,23 @@ sub { top: 0.4rem; }
 
 .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                                            position: relative;
-                                           top: -0.4rem;
                                            vertical-align: baseline;
-                                           font-size: 0.9rem;
                                            color: #f00000; }
 
-.sidenote-number:after { content: counter(sidenote-counter); }
+.sidenote-number:after { content: counter(sidenote-counter); 
+                         font-size: 0.9rem;
+                         top: -0.4rem; }
 
 .sidenote-number:after { left: 0.1rem; }
 
-.sidenote:before { content: counter(sidenote-counter) " "; }
+.sidenote:before { content: counter(sidenote-counter) ". ";
+                   position: absolute;
+                   /* 100% refers to the computed width of the number, so this transform
+                    * shifts the number just outside the left edge of the sidenote box,
+                    * with a buffer of 0.25rem, no matter how many digits the number has. */
+                   -webkit-transform: translateX(-100%) translateX(-0.25rem);
+                   -ms-transform: translateX(-100%) translateX(-0.25rem);
+                   transform: translateX(-100%) translateX(-0.25rem); }
 
 p, footer, pre.code { width: 55%; }
 
@@ -150,12 +188,23 @@ p, footer, pre.code { width: 55%; }
         font-size: 1.125rem;
         line-height: 1.6; }
 
-pre.code { padding: 0 0 0 2em; }
+h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
+
+.marginnote .code, .sidenote .code { font-size: 1rem; }
+
+pre.code { padding: 0 0 0 2em;
+           overflow-x: scroll; }
 
 .fullwidth { max-width: 95%; }
 
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
                                                                 margin-right: -45%; }}
-@media screen and (max-width: 400px) { .sidenote-number, .sidenote, .marginnote { display: none; }}
+@media screen and (max-width: 400px) { pre.code { padding: 0; }
+                                       .sidenote-number:after { display: none; }
+                                       .sidenote, .marginnote { width: 50%;
+                                                                margin: 0.5em 0 0.5em 1.6em; }}
+@media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
 
-span.newthought { font-variant: small-caps; }
+
+span.newthought { font-variant: small-caps;
+                  font-size: 1.2em; }

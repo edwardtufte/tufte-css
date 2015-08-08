@@ -11,24 +11,36 @@ This project is directly inspired by and
 based on [Tufte-LaTeX](https://tufte-latex.github.io/tufte-latex/) and the
 [R Markdown Tufte Handout](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
 
-Demo
--
-The file *index.html* is a self-describing document that walks through
-the features of Tufte CSS. Check out the live version at
-[http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/).
-
 Use
 -
-To use Tufte CSS on your own HTML page, just copy `tufte.css`
-and `ETBembo-RomanLF.ttf` to your project directory and add the
-following to your HTML doc's head block:
+The file *index.html* is a self-describing demonstration document that walks through
+the features of Tufte CSS. The live version at
+[http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/)
+is the best overview of the project.
+
+To use Tufte CSS on your own HTML page, just copy `tufte.css`,
+`ETBembo-RomanLF.ttf`, and `ETBembo-DisplayItalic.ttf` to your project
+directory and add the following to your HTML doc's head block:
 
 ```html
 <link rel="stylesheet" href="tufte.css"/>
 ```
 
-All the other files can be ignored, as they are solely related to
-project maintenance and testing.
+All the other files can be ignored, as they are merely used by the
+demonstration document.
+
+Contributing
+-
+If you notice something wrong or broken, let us know by opening an
+issue. **Pull requests are very welcome**.
+
+For best results, keep pull requests to one change at a time, and
+test your fix or new functionality against `index.html` on screens as
+small as an iPhone 4 and as big as, well, as big as you use
+normally. (If you don't have a mobile device handy, fake different
+devices with your browser's developer tools.)  See the Issues page, especially
+[Help Wanted](https://github.com/daveliepmann/tufte-css/labels/help%20wanted),
+for opportunities to contribute. Keep our style guide in mind:
 
 CSS Style Guide
 -
@@ -59,24 +71,13 @@ blank lines between unrelated blocks, and the absence of line breaks
 after an open-paren and before end-parens. Notice also that these
 rules change slightly for media queries.
 
-Sparklines
--
-Sparklines are word sized line plots that render inline with text. Here are two javascript libraries for making them.
-
- - jQuery plugin - https://github.com/gwatts/jquery.sparkline
- - Using d3 - https://github.com/shawnbot/sparky
-
 Contributors
 -
- - Dave Liepmann (creator)
+ - Dave Liepmann (creator, project maintainer)
  - Clay Harmon (media queries, rem units)
  - Linjie Ding (italic typeface)
  - Stephen A Thomas (automagically numbered sidenotes)
-
-Pull requests are welcome. For best results, keep contributions to
-single changes at a time, and verify functionality against
-`index.html`. See the Issues page, especially [Help Wanted](https://github.com/daveliepmann/tufte-css/labels/help%20wanted), for
-opportunities to contribute.
+ - Ben Newman (sidenote numbering style)
 
 License
 -
