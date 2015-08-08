@@ -168,6 +168,11 @@ pre.code { padding: 0 0 0 2em;
 
 @media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
                                                                 margin-right: -45%; }}
-@media screen and (max-width: 400px) { .sidenote-number, .sidenote, .marginnote { display: none; }}
+@media screen and (max-width: 400px) { .sidenote-number { visibility: hidden; }
+                                       .sidenote, .marginnote { width: 50%;
+                                                                margin: 0.5em;
+                                                                margin-right: -5%; }}
+@media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
+
 
 span.newthought { font-variant: small-caps; }
