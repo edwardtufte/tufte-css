@@ -175,4 +175,5 @@ pre.code { padding: 0 0 0 2em;
 @media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
 
 
-span.newthought { font-variant: small-caps; }
+span.newthought { font-variant: small-caps;
+                  font-size: 1.2em; }
