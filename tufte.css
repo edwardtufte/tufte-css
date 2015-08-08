@@ -136,7 +136,14 @@ sub { top: 0.4rem; }
 
 .sidenote-number:after { left: 0.1rem; }
 
-.sidenote:before { content: counter(sidenote-counter) " "; }
+.sidenote:before { content: counter(sidenote-counter) " ";
+                   position: absolute;
+                   /* 100% refers to the computed width of the number, so this transform
+                    * shifts the number just outside the left edge of the sidenote box,
+                    * with a buffer of 0.25rem, no matter how many digits the number has. */
+                   -webkit-transform: translateX(-100%) translateX(-0.25rem);
+                   -ms-transform: translateX(-100%) translateX(-0.25rem);
+                   transform: translateX(-100%) translateX(-0.25rem); }
 
 p, footer, pre.code { width: 55%; }
 
