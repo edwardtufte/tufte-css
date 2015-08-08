@@ -72,6 +72,7 @@ Contributors
  - Clay Harmon (media queries, rem units)
  - Linjie Ding (italic typeface)
  - Stephen A Thomas (automagically numbered sidenotes)
+ - Ben Newman (sidenote numbering style)
 
 Pull requests are welcome. For best results, keep contributions to
 single changes at a time, and verify functionality against
