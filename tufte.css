@@ -65,6 +65,43 @@ thead th { border-bottom: 1px solid #AAAAAA;
 
 td.text { text-align: left; }
 
+table.booktabs { width: auto;
+                 max-width: 53%;
+                 margin-left: auto;  /* center the table */
+                 margin-right: auto;
+                 border-spacing: 0px;
+                 border-top: 2px solid #333333;
+                 border-bottom: 2px solid #333333; }
+
+.booktabs th { border-bottom: 1px solid #333333;
+               padding: 0.65ex 0.5em 0.4ex 0.5em;
+               font-weight: normal;
+               text-align: center; }
+
+.booktabs th.cmid { border-bottom: 1px solid #666666; }
+
+.booktabs th.nocmid { border-bottom: none; }
+
+.booktabs tbody tr:first-child td {
+    /* add 0.65ex space between thead row and tbody */
+    padding-top: 0.65ex; }
+
+.booktabs td { padding-left: 0.5em;
+              padding-right: 0.5em;
+              text-align: left; }
+
+.booktabs caption { font-size: 90%;
+                    text-align: left;
+                    width: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 1ex;
+                    caption-side: bottom; }
+
+.l { text-align: left !important; }
+.c { text-align: center !important; }
+.r { text-align: right !important; }
+
 article { position: relative;
           padding: 5rem 0rem; }
 
