@@ -176,9 +176,7 @@ img { max-width: 100%; }
 
 p, footer, pre.code { width: 55%; }
 
-@media screen and (max-width: 600px) { p, footer, pre.code { width: 65%; }
-                                       blockquote p, blockquote footer { width: 60%; }}
-@media screen and (max-width: 400px) { p, footer, pre.code { width: 90%; }
+@media screen and (max-width: 760px) { p, footer, pre.code { width: 90%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
@@ -211,11 +209,6 @@ pre.code { padding: 0 0 0 2em;
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
 
-/*
-.margin-toggle:not(.sidenote-number) {
-  display: none;
-}
-*/
 input.margin-toggle {
     display:none;
 }
@@ -224,38 +217,22 @@ label.sidenote-number{
     display:inline;
 }
 
-label.margin-toggle {
+label.margin-toggle:not(.sidenote-number) {
     display: none;
 }
 
 
-@media(max-width: 480px){
-/*
-  body {
-    margin:5px;
-}
-*/
-
-    label.margin-toggle{
-        display:inline
-    }
-    .sidenote, .marginnote {
-        display: none;
-    }
-
-    .margin-toggle:checked + .sidenote, .margin-toggle:checked + .marginnote {
-        display: block;
-        float: none;
-        clear: none;
-        width: 80%;
-        margin: 10px;
-        vertical-align: baseline;
-        position: relative;
-    }
-    label {
-        cursor: pointer;
-    }
-}
+@media(max-width: 760px){ label.margin-toggle:not(.sidenote-number) {display: inline;}
+                          .sidenote, .marginnote { display: none;}
+                          .margin-toggle:checked + .sidenote, 
+                          .margin-toggle:checked + .marginnote { display: block;
+                                                                 float: none;
+                                                                 clear: none;
+                                                                 width: 80%;
+                                                                 margin: 10px;
+                                                                 vertical-align: baseline;
+                                                                 position: relative; }
+                          label { cursor: pointer; }}
 
 
 
