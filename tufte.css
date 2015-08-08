@@ -89,13 +89,15 @@ figure { -webkit-margin-start: 0;
 
 figcaption { float: right;
              clear: right;
-             margin-right: 16%;
+             margin-right: 18.5%;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
              line-height: 1.6;
              vertical-align: baseline;
              position: relative; }
+
+figure.fullwidth figcaption { margin-right: 24%; }
 
 a { color: #222;
     text-decoration: none;
