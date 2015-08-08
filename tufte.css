@@ -82,13 +82,11 @@ table.booktabs { width: auto;
 
 .booktabs th.nocmid { border-bottom: none; }
 
-.booktabs tbody tr:first-child td {
-    /* add 0.65ex space between thead row and tbody */
-    padding-top: 0.65ex; }
+.booktabs tbody tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */ 
 
 .booktabs td { padding-left: 0.5em;
-              padding-right: 0.5em;
-              text-align: left; }
+               padding-right: 0.5em;
+               text-align: left; }
 
 .booktabs caption { font-size: 90%;
                     text-align: left;
@@ -98,9 +96,9 @@ table.booktabs { width: auto;
                     margin-top: 1ex;
                     caption-side: bottom; }
 
-.l { text-align: left !important; }
-.c { text-align: center !important; }
-.r { text-align: right !important; }
+.booktabs tbody tr td.l { text-align: left !important; }
+.booktabs tbody tr td.c { text-align: center !important; }
+.booktabs tbody tr td.r { text-align: right !important; }
 
 article { position: relative;
           padding: 5rem 0rem; }
@@ -142,12 +140,6 @@ a { color: #222;
     padding-bottom: 1px; }
 
 img { max-width: 100%; }
-
-sup, sub { vertical-align: baseline;
-           position: relative;
-           top: -0.4rem; }
-
-sub { top: 0.4rem; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;
