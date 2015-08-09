@@ -136,7 +136,7 @@ a { color: #222;
     border-bottom: 1px solid #777;
     padding-bottom: 1px; }
 
-img { max-width: 100%; }
+img { width: 100%; }
 
 .sidenote, .marginnote { float:right;
                          clear: right;
@@ -231,9 +231,9 @@ label.margin-toggle:not(.sidenote-number) {
                                                                  clear: both;
                                                                  width: 95%;
                                                                  margin-top: 1rem;
-                                                                 margin-bottom:2rem;
-                                                                 margin-left:0;
-                                                                 margin-right:0;
+                                                                 margin-bottom: 2rem;
+                                                                 margin-left: 2.5%;
+                                                                 margin-right: 2.5%;
                                                                  vertical-align: baseline;
                                                                  position: relative; }
                             label { cursor: pointer; }
