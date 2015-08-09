@@ -195,16 +195,6 @@ pre.code { padding: 0 0 0 2em;
 
 .fullwidth { max-width: 95%; }
 
-/*
-@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
-                                                                margin-right: -45%; }}
-@media screen and (max-width: 400px) { pre.code { padding: 0; }
-                                       .sidenote-number:after { display: none; }
-                                       .sidenote, .marginnote { width: 50%;
-                                                                margin: 0.5em 0 0.5em 1.6em; }}
-@media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
-*/
-
 
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
@@ -226,13 +216,21 @@ label.margin-toggle:not(.sidenote-number) {
                           .sidenote, .marginnote { display: none;}
                           .margin-toggle:checked + .sidenote, 
                           .margin-toggle:checked + .marginnote { display: block;
-                                                                 float: none;
-                                                                 clear: none;
-                                                                 width: 80%;
-                                                                 margin: 10px;
+                                                                 float: left;
+                                                                 left: 1rem;
+                                                                 clear: both;
+                                                                 width: 95%;
+                                                                 margin-top: 1rem;
+                                                                 margin-bottom:2rem;
+                                                                 margin-left:0;
+                                                                 margin-right:0;
                                                                  vertical-align: baseline;
                                                                  position: relative; }
-                          label { cursor: pointer; }}
+                            label { cursor: pointer; }
+                            pre.code { padding: 0; }
+    
+
+}
 
 
 
