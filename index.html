@@ -119,12 +119,9 @@
     <section>
       <h2>Tables</h2>
       <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
-      <p>
-        <label for="7" class="margin-toggle">&#8853;</label>
-        <input type="checkbox"id="7" class="margin-toggle"/>
-        <span class="marginnote">
+        <p><span class="table-caption">
             Table 1: first row of metcars.
-        </span>
+            </span></p>
         <table>
           <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
           <tbody>
@@ -136,7 +133,6 @@
             <tr><td class="text">Valiant</td><td>18.1</td><td>6</td><td>225</td><td>105</td><td>2.76</td><td>3.46</td></tr>
           </tbody>
         </table>
-      </p>
       <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as "the table style to use", but rather as "a table style to start from". From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio ("within reason", as Tufte says), and "mobilize every graphical element, perhaps several times over, to show the data."
           <label for="8" class="margin-toggle sidenote-number"></label>
           <input type="checkbox" id="8" class="margin-toggle"/>
@@ -145,12 +141,7 @@
           </span> 
           Know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.</p>
       <p>For instance, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the <span class="code">booktabs</span> package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the <span class="code">booktabs</span> class, as demonstrated in Table 2:</p>
-      <p>
-        <label for="9" class="margin-toggle">&#8853;</label>
-        <input type="checkbox"id="9" class="margin-toggle"/>
-        <span class="marginnote">
-            Table 2: An example of a <span class="code">booktabs</span>-styled table.
-        </span>
+        <p><span class="table-caption">Table 2: An example of a <span class="code">booktabs</span>-styled table.</span></p>
         <table class="booktabs">
           <thead>
             <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
