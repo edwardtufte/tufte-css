@@ -103,8 +103,9 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
-p { font-size: 1.4rem;
-    line-height: 2rem;
+p, ol, ul { font-size: 1.4rem; }
+
+p { line-height: 2rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     padding-right: 0;
@@ -115,6 +116,10 @@ blockquote p { font-size: 1.1rem;
 
 blockquote footer { width: 50%;
                     text-align: right; }
+
+ul { list-style-type: none; }
+
+li { padding: 0.5rem 0; }
 
 figure { -webkit-margin-start: 0;
          -webkit-margin-end: 0; }
