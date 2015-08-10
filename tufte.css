@@ -238,7 +238,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                              vertical-align: baseline;
                                              position: relative; }
                             table, table.booktabs { width: 85%; }
-/*                            img { width: 100%; }*/
+                            img { width: 100%; }
 }
 
 
