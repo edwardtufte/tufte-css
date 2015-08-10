@@ -11,7 +11,7 @@ This project is directly inspired by and
 based on [Tufte-LaTeX](https://tufte-latex.github.io/tufte-latex/) and the
 [R Markdown Tufte Handout](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
 
-Use
+Getting Started
 -
 The file *index.html* is a self-describing demonstration document that walks through
 the features of Tufte CSS. The live version at

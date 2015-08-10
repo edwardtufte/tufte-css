@@ -81,40 +81,42 @@
 
     <section>
       <h2>Tables</h2>
-      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes placed inside a <span class="code">p</span> tag that wraps the <span class="code">table</span>.</p>
-      <p>
-        <span class="marginnote">Table 1: first row of metcars.</span>
-        <table>
-          <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
-          <tbody>
-            <tr><td class="text">Mazda RX4</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.62</td></tr>
-            <tr><td class="text">Mazda RX4 Wag</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.88</td></tr>
-            <tr><td class="text">Datsun 710</td><td>22.8</td><td>4</td><td>108</td><td>93</td><td>3.85</td><td>2.32</td></tr>
-            <tr><td class="text">Hornet 4 Drive</td><td>21.4</td><td>6</td><td>258</td><td>110</td><td>3.08</td><td>3.21</td></tr>
-            <tr><td class="text">Hornet Sportabout</td><td>18.7</td><td>8</td><td>360</td><td>175</td><td>3.15</td><td>3.44</td></tr>
-            <tr><td class="text">Valiant</td><td>18.1</td><td>6</td><td>225</td><td>105</td><td>2.76</td><td>3.46</td></tr>
-          </tbody>
-        </table>
-      </p>
-      <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as "the table style to use", but rather as "a table style to start from". From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio ("within reason", as Tufte says), and "mobilize every graphical element, perhaps several times over, to show the data."<span class="sidenote-number"></span><span class="sidenote">Page 139, The Visual Display of Quantitative Information, Edward Tufte 2001.</span> Know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.</p>
-      <p>For instance, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the <span class="code">booktabs</span> package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the <span class="code">booktabs</span> class, as demonstrated in Table 2:</p>
-      <p>
-        <span class="marginnote">Table 2: An example of a <span class="code">booktabs</span>-styled table.</span>
-        <table class="booktabs">
-          <thead>
-            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
-            <tr><th>Animal</th><th>Description</th><th>Price ($)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
-            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
-            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
-            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
-            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
-          </tbody>
-        </table>
-      </p>
-      <p>Notice how this table is centered, compact, and surrounded by heavy rules on the top and bottom. A lighter-weight rule is used to separate the table head from its body. If you need a column heading to span two or more other column headings, an even lighter-weight rule may be used. Vertical rules are unnecessary. Additionally, the spacing around the rules has been increased to avoid a cramped appearance.</p>
+      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. Table labels are margin notes with an additional <span class="code">table-label</span> class, placed inside a <span class="code">div</span> tag of class <span class="code">table-wrapper</span> that wraps the <span class="code">table</span>.</p>
+        <div class="table-wrapper">
+          <span class="marginnote table-label">Table 1: first row of metcars.</span>
+          <table>
+            <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
+            <tbody>
+              <tr><td class="text">Mazda RX4</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.62</td></tr>
+              <tr><td class="text">Mazda RX4 Wag</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.88</td></tr>
+              <tr><td class="text">Datsun 710</td><td>22.8</td><td>4</td><td>108</td><td>93</td><td>3.85</td><td>2.32</td></tr>
+              <tr><td class="text">Hornet 4 Drive</td><td>21.4</td><td>6</td><td>258</td><td>110</td><td>3.08</td><td>3.21</td></tr>
+              <tr><td class="text">Hornet Sportabout</td><td>18.7</td><td>8</td><td>360</td><td>175</td><td>3.15</td><td>3.44</td></tr>
+              <tr><td class="text">Valiant</td><td>18.1</td><td>6</td><td>225</td><td>105</td><td>2.76</td><td>3.46</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as "the table style to use", but rather as "a table style to start from". From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio ("within reason", as Tufte says), and "mobilize every graphical element, perhaps several times over, to show the data."<span class="sidenote-number"></span><span class="sidenote">Page 139, The Visual Display of Quantitative Information, Edward Tufte 2001.</span> Know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.</p>
+
+        <p>For instance, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the <span class="code">booktabs</span> package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the <span class="code">booktabs</span> class, as demonstrated in Table 2:</p>
+        <div class="table-wrapper">
+          <span class="marginnote table-label">Table 2: An example of a <span class="code">booktabs</span>-styled table.</span>
+          <table class="booktabs">
+            <thead>
+              <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
+              <tr><th>Animal</th><th>Description</th><th>Price ($)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
+              <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
+              <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
+              <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
+              <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
+            </tbody>
+          </table>
+        </div>        
+        <p>Notice how this table is centered, compact, and surrounded by heavy rules on the top and bottom. A lighter-weight rule is used to separate the table head from its body. If you need a column heading to span two or more other column headings, an even lighter-weight rule may be used. Vertical rules are unnecessary. Additionally, the spacing around the rules has been increased to avoid a cramped appearance.</p>
     </section>
 
     <section>
