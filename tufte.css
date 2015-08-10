@@ -167,9 +167,8 @@ img { max-width: 100%; }
 
 .sidenote-number:after { content: counter(sidenote-counter); 
                          font-size: 0.9rem;
-                         top: -0.4rem; }
-
-.sidenote-number:after { left: -0.1rem; }
+                         top: -0.5rem;
+                         left: 0.1rem; }
 
 .sidenote:before { content: counter(sidenote-counter) ". ";
                    position: absolute;
@@ -218,10 +217,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                                                   left: 1rem;
                                                                   clear: both;
                                                                   width: 95%;
-                                                                  margin-top: 1rem;
-                                                                  margin-bottom: 2rem;
-                                                                  margin-left: 2.5%;
-                                                                  margin-right: 2.5%;
+                                                                  margin: 1rem 2.5%;
                                                                   vertical-align: baseline;
                                                                   position: relative; }
                            label { cursor: pointer; }
