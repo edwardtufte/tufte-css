@@ -91,7 +91,7 @@ table.booktabs { width: auto;
                     margin-left: auto;
                     margin-right: auto;
                     margin-top: 1ex;
-                    caption-side: bottom; }
+                    caption-side: top; }
 
 .booktabs tbody tr td.l { text-align: left !important; }
 .booktabs tbody tr td.c { text-align: center !important; }
@@ -138,7 +138,7 @@ a { color: #222;
 
 img { max-width: 100%; }
 
-.sidenote, .marginnote { float: right;
+.sidenote, .marginnote { float:right;
                          clear: right;
                          margin-right: -60%;
                          width: 50%;
@@ -148,6 +148,15 @@ img { max-width: 100%; }
                          line-height: 1.6;
                          vertical-align: baseline;
                          position: relative; }
+
+.table-caption { float:right;
+                 clear:right;
+                 margin-right: -60%;
+                 width: 50%;
+                 margin-top: 0;
+                 margin-bottom: 0;
+                 font-size: 1.0rem;
+                 line-height: 1.6; }
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
@@ -160,7 +169,7 @@ img { max-width: 100%; }
                          font-size: 0.9rem;
                          top: -0.4rem; }
 
-.sidenote-number:after { left: 0.1rem; }
+.sidenote-number:after { left: -0.1rem; }
 
 .sidenote:before { content: counter(sidenote-counter) ". ";
                    position: absolute;
@@ -173,9 +182,7 @@ img { max-width: 100%; }
 
 p, footer, pre.code, div.table-wrapper { width: 55%; }
 
-@media screen and (max-width: 600px) { p, footer, pre.code { width: 65%; }
-                                       blockquote p, blockquote footer { width: 60%; }}
-@media screen and (max-width: 400px) { p, footer, pre.code { width: 90%; }
+@media screen and (max-width: 760px) { p, footer, pre.code { width: 90%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
@@ -194,14 +201,45 @@ pre.code { padding: 0 0 0 2em;
 
 .fullwidth { max-width: 95%; }
 
-@media screen and (max-width: 600px) { .sidenote, .marginnote { width: 35%;
-                                                                margin-right: -45%; }}
-@media screen and (max-width: 400px) { pre.code { padding: 0; }
-                                       .sidenote-number:after { display: none; }
-                                       .sidenote, .marginnote { width: 50%;
-                                                                margin: 0.5em 0 0.5em 1.6em; }}
-@media screen and (max-width: 300px) { .sidenote, .marginnote { margin-right: 0; }}
-
 
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
+
+input.margin-toggle { display:none; }
+
+label.sidenote-number{ display:inline; }
+
+label.margin-toggle:not(.sidenote-number) { display: none; }
+
+@media(max-width: 760px){ label.margin-toggle:not(.sidenote-number) {display: inline;}
+                          .sidenote, .marginnote { display: none;}
+                          .margin-toggle:checked + .sidenote, 
+                          .margin-toggle:checked + .marginnote { display: block;
+                                                                 float: left;
+                                                                 left: 1rem;
+                                                                 clear: both;
+                                                                 width: 95%;
+                                                                 margin-top: 1rem;
+                                                                 margin-bottom: 2rem;
+                                                                 margin-left: 2.5%;
+                                                                 margin-right: 2.5%;
+                                                                 vertical-align: baseline;
+                                                                 position: relative; }
+                            label { cursor: pointer; }
+                            pre.code { padding: 0; }
+                            .table-caption { display:block;
+                                             float:right;
+                                             clear:both;
+                                             width: 98%;
+                                             margin-top: 1rem;
+                                             margin-bottom: 0.5rem;
+                                             margin-left: 1%;
+                                             margin-right: 1%;
+                                             vertical-align: baseline;
+                                             position: relative; }
+                            table, table.booktabs { width: 85%; }
+                            img { width: 100%; }
+}
+
+
+
