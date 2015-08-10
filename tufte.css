@@ -136,7 +136,7 @@ a { color: #222;
     border-bottom: 1px solid #777;
     padding-bottom: 1px; }
 
-img { width: 100%; }
+img { max-width: 100%; }
 
 .sidenote, .marginnote { float:right;
                          clear: right;
@@ -237,7 +237,9 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                              margin-right: 1%;
                                              vertical-align: baseline;
                                              position: relative; }
-                            table, table.booktabs { width: 85%; }}
+                            table, table.booktabs { width: 85%; }
+/*                            img { width: 100%; }*/
+}
 
 
 
