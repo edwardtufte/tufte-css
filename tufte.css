@@ -136,7 +136,7 @@ figcaption { float: right;
 
 figure.fullwidth figcaption { margin-right: 24%; }
 
-a { color: #222;
+a { color: #111;
     text-decoration: none;
     border-bottom: 1px solid #777;
     padding-bottom: 1px; }
@@ -192,7 +192,6 @@ p, footer, pre.code, div.table-wrapper { width: 55%; }
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        color: #222;
         font-size: 1.125rem;
         line-height: 1.6; }
 
