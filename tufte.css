@@ -121,12 +121,14 @@ ul { list-style-type: none; }
 
 li { padding: 0.5rem 0; }
 
-figure { -webkit-margin-start: 0;
-         -webkit-margin-end: 0; }
+figure { max-width: 55%;
+         -webkit-margin-start: 0;
+         -webkit-margin-end: 0;
+         margin-bottom: 3em; }
 
 figcaption { float: right;
              clear: right;
-             margin-right: 18.5%;
+             margin-right: -48%;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
@@ -187,6 +189,7 @@ img { max-width: 100%; }
 p, footer, pre.code, div.table-wrapper { width: 55%; }
 
 @media screen and (max-width: 760px) { p, footer, pre.code { width: 90%; }
+                                       figure { max-width: 90%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
