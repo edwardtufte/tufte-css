@@ -12,7 +12,7 @@
 <body>
   <article>
     <h1>Tufte CSS</h1>
-    <subtitle>Dave Liepmann</subtitle>
+    <p class="subtitle">Dave Liepmann</p>
     <section>
       <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully chosen typography.</p>
       <p>The idea is essentially cribbed wholesale from <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown’s Tufte Handout format</a><label for="sn-tufte-handout" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-tufte-handout" class="margin-toggle"/>.
@@ -38,8 +38,7 @@
       <h2>Fundamentals</h2>
       <h3>Sections and Headings</h3>
       <p>Organize your document with an <span class="code">article</span> element inside your <span class="code">body</span> tag. Inside that, use <span class="code">section</span> tags around each logical grouping of text and headings.</p>
-
-      <p>Tufte CSS uses <span class="code">h1</span> for the document title, <span class="code">h2</span> for section headings, and <span class="code">h3</span> for low-level headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:</p>
+      <p>Tufte CSS uses <span class="code">h1</span> for the document title, <span class="code">p</span> with class <span class="code">subtitle</span> for the document subtitle, <span class="code">h2</span> for section headings, and <span class="code">h3</span> for low-level headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:</p>
       <blockquote cite="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
         <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.</p>
         <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, ‘Book design: advice and examples’ thread</a></footer>
