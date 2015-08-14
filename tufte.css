@@ -17,6 +17,14 @@ body { width: 87.5%;
        max-width: 1400px;
        counter-reset: sidenote-counter; }
 
+::-moz-selection { background: #444;
+                   color: #fff;
+                   text-shadow: none; }
+
+selection { background: #444;
+            color: #fff;
+            text-shadow: none; }
+
 h1 { font-weight: 400;
      margin-top: 4rem;
      margin-bottom: 1.5rem;
@@ -137,9 +145,18 @@ figcaption { float: right;
 figure.fullwidth figcaption { margin-right: 24%; }
 
 a { color: #111;
+    background-image: linear-gradient(#111, #111);
+    background-position: 0 86%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
     text-decoration: none;
-    border-bottom: 1px solid #777;
-    padding-bottom: 1px; }
+    text-shadow: 0.03em 0 #fffff8 , -0.03em 0 #fffff8 , 0 0.03em #fffff8 , 0 -0.03em #fffff8 , 0.2em 0 #fffff8 , -0.2em 0 #fffff8 , 0.09em 0 #fffff8 , -0.09em 0 #fffff8 , 0.12em 0 #fffff8 , -0.12em 0 #fffff8 , 0.15em 0 #fffff8 , -0.15em 0 #fffff8; }
+
+a sup { opacity: 0.99;
+        text-shadow: none; }
+
+a:hover { color: #f05;
+          background-image: linear-gradient(#f05, #f05); }
 
 img { max-width: 100%; }
 
