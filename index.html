@@ -162,16 +162,26 @@
 
     <section>
       <h2>Code</h2>
-      <p>Technical jargon, programming language terms, and code samples are denoted with the <span class="code">code</span> class, as I’ve been using in this document to denote HTML. Code needs to be monospace to aid in a variety of programming analysis tasks, but also must maintain its readability. To those ends, Tufte CSS apes GitHub’s font selection, which degrades gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.</p>
+      <p>Technical jargon, programming language terms, and code samples are denoted with the <span class="code">code</span> class, as I’ve been using in this document to denote HTML. Code needs to be monospace for formatting purposes and to aid in code analysis, but also must maintain its readability. To those ends, Tufte CSS apes GitHub’s font selection, which degrades gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.</p>
       <p>Extended code examples should use a <span class="code">pre</span> tag with class <span class="code">code</span>. This adds control over indentation and overflow as well:</p>
       <pre class="code">
-;; functional programming:
-(map tufte-style all-the-things)
+;; Some code examples in Clojure. This is a comment.
 
-// imperative programming:
-for (i = 0; i++; i <= num) {
-   all_the_things[i].useTufteStyle();
-}
+;; applying a function to every item in the collection
+(map tufte-css blog-posts)
+;;;; if unfamiliar, see http://www.lispcast.com/annotated-map
+
+;; side-effecty loop (unformatted, causing text overflow) - from https://clojuredocs.org/clojure.core/doseq
+(doseq [[[a b] [c d]] (map list (sorted-map :1 1 :2 2) (sorted-map :3 3 :4 4))] (prn (* b d)))
+
+;; that same side-effecty loop, formatted
+(doseq [[[a b] [c d]] (map list
+                           (sorted-map :1 1 :2 2)
+                           (sorted-map :3 3 :4 4))]
+  (prn (* b d)))
+
+;; If this proselytizing has worked, check out:
+;; http://howistart.org/posts/clojure/1
       </pre>
     </section>
 
