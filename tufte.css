@@ -146,7 +146,7 @@ figure.fullwidth figcaption { margin-right: 24%; }
 
 a { color: #111;
     background-image: linear-gradient(#111, #111);
-    background-position: 0 86%;
+    background-position: 0 87%;
     background-repeat: repeat-x;
     background-size: 1px 1px;
     text-decoration: none;
@@ -154,9 +154,6 @@ a { color: #111;
 
 a sup { opacity: 0.99;
         text-shadow: none; }
-
-a:hover { color: #f05;
-          background-image: linear-gradient(#f05, #f05); }
 
 img { max-width: 100%; }
 
