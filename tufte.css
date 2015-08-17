@@ -37,12 +37,12 @@ h3 { font-style: italic;
      margin-bottom: 0;
      line-height: 1; }
 
-subtitle { font-style: italic;
-           margin-top: 1rem;
-           margin-bottom: 1rem;
-           font-size: 1.8rem;
-           display: block;
-           line-height: 1; }
+p.subtitle { font-style: italic;
+             margin-top: 1rem;
+             margin-bottom: 1rem;
+             font-size: 1.8rem;
+             display: block;
+             line-height: 1; }
 
 table { width: 98%;
         text-align: right;
@@ -121,12 +121,14 @@ ul { list-style-type: none; }
 
 li { padding: 0.5rem 0; }
 
-figure { -webkit-margin-start: 0;
-         -webkit-margin-end: 0; }
+figure { max-width: 55%;
+         -webkit-margin-start: 0;
+         -webkit-margin-end: 0;
+         margin-bottom: 3em; }
 
 figcaption { float: right;
              clear: right;
-             margin-right: 18.5%;
+             margin-right: -48%;
              margin-top: 0;
              margin-bottom: 0;
              font-size: 1.0rem;
@@ -136,7 +138,7 @@ figcaption { float: right;
 
 figure.fullwidth figcaption { margin-right: 24%; }
 
-a { color: #222;
+a { color: #111;
     text-decoration: none;
     border-bottom: 1px solid #777;
     padding-bottom: 1px; }
@@ -187,12 +189,12 @@ img { max-width: 100%; }
 p, footer, pre.code, div.table-wrapper { width: 55%; }
 
 @media screen and (max-width: 760px) { p, footer, pre.code { width: 90%; }
+                                       figure { max-width: 90%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        color: #222;
         font-size: 1.125rem;
         line-height: 1.6; }
 
