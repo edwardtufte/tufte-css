@@ -195,6 +195,7 @@ p, footer, div.table-wrapper { width: 55%; }
                                        pre.code { width: 87.5%; }
                                        ul { width: 85%; }
                                        figure { max-width: 90%; }
+                                       figcaption, figure.fullwidth figcaption { margin-right: 0%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
@@ -211,7 +212,7 @@ pre.code { width: 52.5%;
            padding-left: 2.5%;
            overflow-x: scroll; }
 
-.fullwidth { max-width: 95%; }
+.fullwidth { max-width: 90%; }
 
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
@@ -222,29 +223,29 @@ label.sidenote-number { display: inline; }
 
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
-@media(max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; }
-                           .sidenote, .marginnote { display: none; }
-                           .margin-toggle:checked + .sidenote, 
-                           .margin-toggle:checked + .marginnote { display: block;
-                                                                  float: left;
-                                                                  left: 1rem;
-                                                                  clear: both;
-                                                                  width: 95%;
-                                                                  margin: 1rem 2.5%;
-                                                                  vertical-align: baseline;
-                                                                  position: relative; }
-                           label { cursor: pointer; }
-                           pre.code { width: 90%; 
-                                      padding: 0; }
-                           .table-caption { display: block;
-                                            float: right;
-                                            clear: both;
-                                            width: 98%;
-                                            margin-top: 1rem;
-                                            margin-bottom: 0.5rem;
-                                            margin-left: 1%;
-                                            margin-right: 1%;
-                                            vertical-align: baseline;
-                                            position: relative; }
-                           table, table.booktabs { width: 85%; }
-                           img { width: 100%; } }
+@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; }
+                            .sidenote, .marginnote { display: none; }
+                            .margin-toggle:checked + .sidenote, 
+                            .margin-toggle:checked + .marginnote { display: block;
+                                                                   float: left;
+                                                                   left: 1rem;
+                                                                   clear: both;
+                                                                   width: 95%;
+                                                                   margin: 1rem 2.5%;
+                                                                   vertical-align: baseline;
+                                                                   position: relative; }
+                            label { cursor: pointer; }
+                            pre.code { width: 90%; 
+                                       padding: 0; }
+                            .table-caption { display: block;
+                                             float: right;
+                                             clear: both;
+                                             width: 98%;
+                                             margin-top: 1rem;
+                                             margin-bottom: 0.5rem;
+                                             margin-left: 1%;
+                                             margin-right: 1%;
+                                             vertical-align: baseline;
+                                             position: relative; }
+                            table, table.booktabs { width: 85%; }
+                            img { width: 100%; } }
