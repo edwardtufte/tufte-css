@@ -98,15 +98,15 @@
       <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>      
       <p>Figures should try to use the <span class="code">figure</span> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure. For example, most of the time I should introduce a figure directly into the main flow of discussion, like so:</p>
       <figure>
-        <img src="figure3.png"/>
-        <figcaption>Figure 3: A figure the width of the main column</figcaption>
+        <img src="main-column-figure.png"/>
+        <figcaption>Figure 1: A figure the width of the main column</figcaption>
       </figure>
-      <p>Tight integration of graphics is central to Tufte’s work. <label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="figure1.png"/>Figure 1: Sepal length vs. petal length, colored by species</span> To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>
-      <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that’s inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 2, which I suppose plots the data in the following code:</p>
+      <p>Tight integration of graphics is central to Tufte’s work. <label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="margin-figure.png"/>Figure 2: Sepal length vs. petal length, colored by species</span> To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 2 to the right of this paragraph.</p>
+      <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that’s inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 3, which I suppose plots the data in the following code:</p>
       <p class="code">qplot(wt, mpg, data = mtcars, colour = factor(cyl))</p>
       <figure class="fullwidth">
-        <img src="figure2.png"/>
-        <figcaption>Figure 2: Full width figure</figcaption>
+        <img src="fullwidth-figure.png"/>
+        <figcaption>Figure 3: Full width figure</figcaption>
       </figure>
     </section>
 
