@@ -145,7 +145,7 @@ a { color: #111;
 
 img { max-width: 100%; }
 
-.sidenote, .marginnote { float:right;
+.sidenote, .marginnote { float: right;
                          clear: right;
                          margin-right: -60%;
                          width: 50%;
