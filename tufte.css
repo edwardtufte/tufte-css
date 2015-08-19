@@ -117,7 +117,10 @@ blockquote p { font-size: 1.1rem;
 blockquote footer { width: 50%;
                     text-align: right; }
 
-ul { list-style-type: none; }
+ul { width: 45%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
+     list-style-type: none; }
 
 li { padding: 0.5rem 0; }
 
@@ -186,9 +189,11 @@ img { max-width: 100%; }
                    -ms-transform: translateX(-100%) translateX(-0.25rem);
                    transform: translateX(-100%) translateX(-0.25rem); }
 
-p, footer, pre.code, div.table-wrapper { width: 55%; }
+p, footer, div.table-wrapper { width: 55%; }
 
-@media screen and (max-width: 760px) { p, footer, pre.code { width: 90%; }
+@media screen and (max-width: 760px) { p, footer { width: 90%; }
+                                       pre.code { width: 87.5%; }
+                                       ul { width: 85%; }
                                        figure { max-width: 90%; }
                                        blockquote p, blockquote footer { width: 90%; }}
 
@@ -202,7 +207,8 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 .marginnote .code, .sidenote .code { font-size: 1rem; }
 
-pre.code { padding: 0 0 0 2em;
+pre.code { width: 52.5%;
+           padding-left: 2.5%;
            overflow-x: scroll; }
 
 .fullwidth { max-width: 95%; }
@@ -228,7 +234,8 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                                                   vertical-align: baseline;
                                                                   position: relative; }
                            label { cursor: pointer; }
-                           pre.code { padding: 0; }
+                           pre.code { width: 90%; 
+                                      padding: 0; }
                            .table-caption { display: block;
                                             float: right;
                                             clear: both;
