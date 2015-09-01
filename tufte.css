@@ -45,6 +45,7 @@ p.subtitle { font-style: italic;
              line-height: 1; }
 
 table { width: 98%;
+        clear: left;
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.4;
