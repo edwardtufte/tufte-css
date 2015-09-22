@@ -176,23 +176,17 @@ img { max-width: 100%; }
 .sidenote-number { counter-increment: sidenote-counter; }
 
 .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
+                                           font-family: et-bembo-roman-old-style;
                                            position: relative;
-                                           vertical-align: baseline;
-                                           color: #f00000; }
+                                           vertical-align: baseline; }
 
-.sidenote-number:after { content: counter(sidenote-counter); 
-                         font-size: 0.9rem;
+.sidenote-number:after { content: counter(sidenote-counter);
+                         font-size: 1rem;
                          top: -0.5rem;
                          left: 0.1rem; }
 
-.sidenote:before { content: counter(sidenote-counter) ". ";
-                   position: absolute;
-                   /* 100% refers to the computed width of the number, so this transform
-                    * shifts the number just outside the left edge of the sidenote box,
-                    * with a buffer of 0.25rem, no matter how many digits the number has. */
-                   -webkit-transform: translateX(-100%) translateX(-0.25rem);
-                   -ms-transform: translateX(-100%) translateX(-0.25rem);
-                   transform: translateX(-100%) translateX(-0.25rem); }
+.sidenote:before { content: counter(sidenote-counter) " ";
+                   top: -0.5rem; }
 
 p, footer, div.table-wrapper { width: 55%; }
 
