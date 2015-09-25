@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "et-bembo";
+  src: url("et-bembo/et-bembo-roman-line-figures/et-bembo-roman-line-figures.eot");
+  src: url("et-bembo/et-bembo-roman-line-figures/et-bembo-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-bembo/et-bembo-roman-line-figures/et-bembo-roman-line-figures.woff") format("woff"), url("et-bembo/et-bembo-roman-line-figures/et-bembo-roman-line-figures.ttf") format("truetype"), url("et-bembo/et-bembo-roman-line-figures/et-bembo-roman-line-figures.svg#etbemboromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-bembo";
+  src: url("et-bembo/et-bembo-display-italic-old-style-figures/et-bembo-display-italic-old-style-figures.eot");
+  src: url("et-bembo/et-bembo-display-italic-old-style-figures/et-bembo-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-bembo/et-bembo-display-italic-old-style-figures/et-bembo-display-italic-old-style-figures.woff") format("woff"), url("et-bembo/et-bembo-display-italic-old-style-figures/et-bembo-display-italic-old-style-figures.ttf") format("truetype"), url("et-bembo/et-bembo-display-italic-old-style-figures/et-bembo-display-italic-old-style-figures.svg#etbemboromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "et-bembo";
+  src: url("et-bembo/et-bembo-bold-line-figures/et-bembo-bold-line-figures.eot");
+  src: url("et-bembo/et-bembo-bold-line-figures/et-bembo-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-bembo/et-bembo-bold-line-figures/et-bembo-bold-line-figures.woff") format("woff"), url("et-bembo/et-bembo-bold-line-figures/et-bembo-bold-line-figures.ttf") format("truetype"), url("et-bembo/et-bembo-bold-line-figures/et-bembo-bold-line-figures.svg#etbemboromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "et-bembo-roman-old-style";
+  src: url("et-bembo/et-bembo-roman-old-style-figures/et-bembo-roman-old-style-figures.eot");
+  src: url("et-bembo/et-bembo-roman-old-style-figures/et-bembo-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-bembo/et-bembo-roman-old-style-figures/et-bembo-roman-old-style-figures.woff") format("woff"), url("et-bembo/et-bembo-roman-old-style-figures/et-bembo-roman-old-style-figures.ttf") format("truetype"), url("et-bembo/et-bembo-roman-old-style-figures/et-bembo-roman-old-style-figures.svg#etbemboromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
