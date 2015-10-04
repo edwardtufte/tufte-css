@@ -182,10 +182,15 @@ ul { width: 45%;
 
 li { padding: 0.5rem 0; }
 
-figure { max-width: 55%;
+figure { padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+         max-width: 55%;
          -webkit-margin-start: 0;
          -webkit-margin-end: 0;
-         margin-bottom: 3em; }
+         margin: 0 0 3em 0; }
 
 figcaption { float: right;
              clear: right;
