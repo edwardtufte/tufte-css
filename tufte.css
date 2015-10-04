@@ -108,9 +108,7 @@ span.table-label { padding-top: 8px; } /* to maintain height relative to table h
 
 table.booktabs { width: auto;
                  margin: 0 auto;
-                 border-spacing: 0px;
-                 border-top: 2px solid #333333;
-                 border-bottom: 2px solid #333333; }
+                 border-spacing: 0px; }
 
 .booktabs th { border-bottom: 1px solid #333333;
                padding: 0.65ex 0.5em 0.4ex 0.5em;
