@@ -38,7 +38,7 @@
 
     <section>
       <h2>Getting Started</h2>
-      <p>To use Tufte CSS, copy <span class="code">tufte.css</span>, <span class="code">ETBembo-RomanLF.ttf</span>, and <span class="code">ETBembo-DisplayItalic.ttf</span> to your project directory and add the following to your HTML document’s <span class="code">head</span> block:</p>
+      <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and the <span class="code">et-bembo</span> directory of font files to your project directory, then add the following to your HTML document’s <span class="code">head</span> block:</p>
 
       <pre class="code">&lt;link rel="stylesheet"
       href="tufte.css"/&gt;</pre>
@@ -74,14 +74,30 @@
       <p>This is but a small subset of a proper overview of the topic of lists in communication. A better way to understand Tufte’s thoughts on lists would be to read “The Cognitive Style of PowerPoint: Pitching Out Corrupts Within,” a chapter in Tufte’s book <em>Beautiful Evidence</em>, excerpted at some length by Tufte himself <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0002QF">on his website</a>. The whole piece is information-dense and therefore difficult to summarize. He speaks to web design specifically, but in terms of examples and principles rather than as a set of simple do-this, don’t-do-that prescriptions. It is well worth reading in full for that reason alone.</p>
       <p>For these reasons, Tufte CSS encourages caution before reaching for a list element, and by default removes the bullet points from unordered lists.</p>
     </section>
+
+    <section>
+      <h2>Epigraphs</h2>
+      <div class="epigraph">
+        <blockquote>
+          <p>The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.</p>
+          <footer>George Orwell, “Politics and the English Language”</footer>
+        </blockquote>
+        <blockquote>
+          <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
+          <footer>Richard P. Feynman, <cite>“What Do You Care What Other People Think?”</cite></footer> 
+        </blockquote>
+        <blockquote>I do not paint things, I paint only the differences between things.<footer>Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite> (Paris, 1943), 37.</blockquote>
+      </div>
+      <p>If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly Beautiful Evidence), these are <span class="code">blockquote</span> elements with a bit of specialized styling. Quoted text is italicized. The source goes in a <span class="code">footer</span> element inside the <span class="code">blockquote</span>. I have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.</p>
+    </section>
     
     <section>
       <h2>Sidenotes</h2>
       <p>One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.</p>
       <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations <em>as close as possible</em> to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.</p>
-        <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
-        <p>
-          <pre class="code">
+      <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
+      <p>
+        <pre class="code">
 &lt;label for="sn-demo" class="margin-toggle sidenote-number"&gt;&lt;/label&gt;
 &lt;input type="checkbox" id="sn-demo" class="margin-toggle"/&gt;</pre>
       </p>

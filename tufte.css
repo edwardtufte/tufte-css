@@ -153,10 +153,26 @@ p { line-height: 2rem;
     padding-right: 0;
     vertical-align: baseline; }
 
-blockquote p { font-size: 1.1rem;
-               width: 50%; }
+/* Chapter Epigraphs */
+div.epigraph { margin: 5em 0; }
+
+div.epigraph > blockquote { margin-top: 3em;
+                            margin-bottom: 3em; }
+
+div.epigraph > blockquote, div.epigraph > blockquote > p { font-style: italic; }
+
+div.epigraph > blockquote > footer { font-style: normal; }
+
+div.epigraph > blockquote > footer > cite { font-style: italic; }
+
+/* end chapter epigraphs styles */
+
+blockquote { font-size: 1.4rem; }
+
+blockquote p { width: 50%; }
 
 blockquote footer { width: 50%;
+                    font-size: 1.1rem;
                     text-align: right; }
 
 ul { width: 45%;
@@ -176,7 +192,7 @@ figcaption { float: right;
              margin-right: -48%;
              margin-top: 0;
              margin-bottom: 0;
-             font-size: 1.0rem;
+             font-size: 1.1rem;
              line-height: 1.6;
              vertical-align: baseline;
              position: relative;
@@ -186,8 +202,11 @@ figure.fullwidth figcaption { margin-right: 24%; }
 
 a { color: #111;
     text-decoration: none;
-    border-bottom: 1px solid #777;
-    padding-bottom: 1px; }
+    position: relative; /*  See http://codepen.io/ghepting/pen/tLnHK/ */
+    text-shadow: -1px -1px 0 #fffff8, 1px -1px 0 #fffff8, -1px 1px 0 #fffff8, 1px 1px 0 #fffff8;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 3px, rgba(0, 0, 0, 0) 3px); }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) { a { background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 2.5px, rgba(0, 0, 0, 0) 2.5px); } }
 
 img { max-width: 100%; }
 
