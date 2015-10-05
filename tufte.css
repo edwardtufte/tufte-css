@@ -119,7 +119,7 @@ table.booktabs { width: auto;
 
 .booktabs th.nocmid { border-bottom: none; }
 
-.booktabs tbody tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */ 
+.booktabs tbody tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
 
 .booktabs td { padding-left: 0.5em;
                padding-right: 0.5em;
@@ -173,10 +173,11 @@ blockquote footer { width: 50%;
                     font-size: 1.1rem;
                     text-align: right; }
 
-ul { width: 45%;
-     -webkit-padding-start: 5%;
-     -webkit-padding-end: 5%;
-     list-style-type: none; }
+ol, ul { width: 45%;
+         -webkit-padding-start: 5%;
+         -webkit-padding-end: 5%; }
+         
+ul { list-style-type: none; }
 
 li { padding: 0.5rem 0; }
 
@@ -289,7 +290,7 @@ pre.code { width: 52.5%;
            padding-left: 2.5%;
            overflow-x: scroll; }
 
-.fullwidth { max-width: 90%; 
+.fullwidth { max-width: 90%;
              clear:both; }
 
 span.newthought { font-variant: small-caps;
@@ -303,7 +304,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 
 @media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; }
                             .sidenote, .marginnote { display: none; }
-                            .margin-toggle:checked + .sidenote, 
+                            .margin-toggle:checked + .sidenote,
                             .margin-toggle:checked + .marginnote { display: block;
                                                                    float: left;
                                                                    left: 1rem;
@@ -313,7 +314,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                                                    vertical-align: baseline;
                                                                    position: relative; }
                             label { cursor: pointer; }
-                            pre.code { width: 90%; 
+                            pre.code { width: 90%;
                                        padding: 0; }
                             .table-caption { display: block;
                                              float: right;
