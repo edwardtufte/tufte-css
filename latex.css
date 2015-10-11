@@ -1,9 +1,11 @@
-.latex sub, .latex sup { text-transform: uppercase; }
+.latex-sub, .latex-sup { text-transform: uppercase;
+                         font-size: smaller;
+                         position: relative; }
 
-.latex sub { vertical-align: -0.2rem;
+.latex-sub { top: 0.2rem;
              margin-left: -0.1667rem;
              margin-right: -0.125rem; }
 
-.latex sup { vertical-align: 0.2rem;
+.latex-sup { top: -0.2rem;
              margin-left: -0.36rem;
              margin-right: -0.15rem; }
