@@ -11,7 +11,7 @@
    table#newspaper-tone > thead > tr > th:nth-child(2) { width: 70px; }
    table#newspaper-tone > thead > tr > th:nth-child(3) { padding: 0 59px;
                                                          min-width: 100px; }
-   
+
    @media screen and (max-width: 760px) { table#newspaper-tone > thead > tr > th:first-child { padding-right: 0; }
                                           table#newspaper-tone > thead > tr > th:nth-child(2) { padding-right: 0; }
                                           table#newspaper-tone > thead > tr > th:nth-child(3) { padding-right: 0; }
@@ -30,7 +30,7 @@
       <p>The idea was cribbed in whole from <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-<span class="latex">L<span class="latex-sup">a</span>T<span class="latex-sub">e</span>X</span></a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown’s Tufte Handout format</a><label for="sn-tufte-handout" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-tufte-handout" class="margin-toggle"/>.
         <span class="sidenote">
           This page was in fact originally an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout Example</a> PDF.
-        </span> 
+        </span>
         I give hearty thanks to all the people who have contributed to those projects.</p>
       <p>If you see anything that Tufte CSS could improve, we welcome your contribution in the form of an issue or pull request on the GitHub project: <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. Please note the <a href="https://github.com/daveliepmann/tufte-css#contributing">contribution guidelines</a>.</p>
       <p>Finally, a reminder about the goal of this project. The web is not print. Webpages are not books. Therefore, the goal of Tufte CSS is not to say “websites should look like this interpretation of Tufte’s books” but rather “here are some techniques Tufte developed that we’ve found useful in print; maybe you can find a way to make them useful on the web”. Tufte CSS is merely a sketch of one way to implement this particular set of ideas. It should be a starting point, not a design goal, because any project should present their information as best suits their particular circumstances.</p>
@@ -38,7 +38,7 @@
 
     <section>
       <h2>Getting Started</h2>
-      <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and the <span class="code">et-bembo</span> directory of font files to your project directory, then add the following to your HTML document’s <span class="code">head</span> block:</p>
+      <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and the <span class="code">et-book</span> directory of font files to your project directory, then add the following to your HTML document’s <span class="code">head</span> block:</p>
 
       <pre class="code">&lt;link rel="stylesheet"
       href="tufte.css"/&gt;</pre>
@@ -60,11 +60,11 @@
 
       <h3>Text</h3>
       <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <span class="code">#fffff8</span> and <span class="code">#111111</span> because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. We stick to the greyscale for text, reserving color for specific, careful use in figures and images.</p>
-      <p>In print, Tufte uses the proprietary Monotype Bembo<label for="sn-proprietary-monotype-bembo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-proprietary-monotype-bembo" class="margin-toggle"/><span class="sidenote">See Tufte’s comment in the <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread.</span> font. A similar effect is achieved in digital formats with the now open-source <a href="https://github.com/edwardtufte/et-bembo">ETBembo</a>, which Tufte CSS supplies with a <span class="code">@font-face</span> reference to a .ttf file. In case ETBembo somehow doesn’t work, Tufte CSS degrades gracefully to other serif fonts like Palatino and Georgia. Notice how Tufte CSS includes separate font files for bold (strong) and italic (emphasis), instead of relying on the browser to mechanically transform the text. <em>This is typographic best practice.</em> It’s also <strong>really important</strong>. Thus concludes my inappropriate usage of <span class="code">em</span> and <span class="code">strong</span> for the purpose of example.</p>
+      <p>In print, Tufte uses the proprietary Monotype Book<label for="sn-proprietary-monotype-book" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-proprietary-monotype-book" class="margin-toggle"/><span class="sidenote">See Tufte’s comment in the <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread.</span> font. A similar effect is achieved in digital formats with the now open-source <a href="https://github.com/edwardtufte/et-book">ETBook</a>, which Tufte CSS supplies with a <span class="code">@font-face</span> reference to a .ttf file. In case ETBook somehow doesn’t work, Tufte CSS degrades gracefully to other serif fonts like Palatino and Georgia. Notice how Tufte CSS includes separate font files for bold (strong) and italic (emphasis), instead of relying on the browser to mechanically transform the text. <em>This is typographic best practice.</em> It’s also <strong>really important</strong>. Thus concludes my inappropriate usage of <span class="code">em</span> and <span class="code">strong</span> for the purpose of example.</p>
         <p class="sans">If you prefer sans-serifs, use the <span class="code">sans</span> class. It relies on Gill Sans, Tufte’s sans-serif font of choice. Notice how weird and jarring this paragraph is, since it switches from serif to sans-serif? Don’t follow this paragraph’s bad example! Pick either serif or sans-serif for paragraphs throughout your document.</p>
         <p>Links in Tufte CSS match the body text in color and do not change on mouseover or when clicked. Here is a <a href="#">dummy example</a> that goes nowhere. These links are underlined, since this is the most widely recognized indicator of clickable text. <label for="mn-blue-links" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-blue-links" class="margin-toggle"/><span class="marginnote">Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.</span> However, because most browsers’ default underlining does not clear descenders and is so thick and distracting, the underline effect is instead achieved using CSS trickery involving background gradients instead of standard <span class="code">text-decoration</span>. Credit goes to Adam Shwartz for that technique.</p>
         <p>As always, these design choices are merely one approach that Tufte CSS provides by default. Other approaches, such as changing color on click or mouseover, or using highlighting or color instead of underlining to denote links, could also be made to work. The goal is to make sentences readable without interference from links, as well as to make links immediately identifiable even by casual web users.</p>
-        
+
         <h3>Lists</h3>
         <p>Tufte points out that while lists have valid uses, they tend to promote ineffective writing habits due to their “lack of syntactic and intellectual discipline”. He is particularly critical of hierarchical and bullet-pointed lists. So before reaching for an HTML list element, ask yourself:</p>
         <ul>
@@ -85,13 +85,13 @@
         </blockquote>
         <blockquote>
           <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
-          <footer>Richard P. Feynman, <cite>“What Do You Care What Other People Think?”</cite></footer> 
+          <footer>Richard P. Feynman, <cite>“What Do You Care What Other People Think?”</cite></footer>
         </blockquote>
         <blockquote>I do not paint things, I paint only the differences between things.<footer>Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite> (Paris, 1943), 37.</blockquote>
       </div>
       <p>If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly Beautiful Evidence), these are <span class="code">blockquote</span> elements with a bit of specialized styling. Quoted text is italicized. The source goes in a <span class="code">footer</span> element inside the <span class="code">blockquote</span>. I have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.</p>
     </section>
-    
+
     <section>
       <h2>Sidenotes</h2>
       <p>One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.</p>
@@ -124,11 +124,11 @@
 
     <section>
       <h2>Figures</h2>
-      <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>      
+      <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
       <p>Figures should try to use the <span class="code">figure</span> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure. For example, most of the time I should introduce a figure directly into the main flow of discussion, like so:</p>
       <figure>
         <figcaption>From Edward Tufte, <em>Visual Display of Quantitative Information</em>, page 92.</figcaption>
-        <img src="img/exports-imports.png"/>        
+        <img src="img/exports-imports.png"/>
       </figure>
 
       <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="img/rhino.png"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen to the right of this paragraph.</p>
@@ -199,7 +199,7 @@
           </tbody>
         </table>
       </div>
-        
+
       <p>Please understand: this is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as “the table style to use”, but rather as “a table style to start from”. From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio (“within reason”, as Tufte says), and “mobilize every graphical element, perhaps several times over, to show the data.”<label for="sn-show-the-data" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-show-the-data" class="margin-toggle"/>.
         <span class="sidenote">
           Page 139, <em>The Visual Display of Quantitative Information</em>, Edward Tufte 2001.
@@ -220,7 +220,7 @@
             <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
           </tbody>
         </table>
-      </div>        
+      </div>
       <p>Notice how this table is centered and compact. The heavy rules that booktabs usually puts on the top and bottom are gone. A lighter-weight rule is used to separate the table head from its body. If you need a column heading to span two or more other column headings, an even lighter-weight rule may be used. Vertical rules are unnecessary. Additionally, the spacing around the rules has been increased to avoid a cramped appearance.</p>
     </section>
 
