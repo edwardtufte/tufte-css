@@ -62,6 +62,14 @@
    table#o-rings > thead > tr > th:nth-child(7) { width: 57%; }
 
    table#o-rings .danger { color: red; }
+
+   /* Statistical graphic density */
+   table#pravda { width: 26em;
+                  margin: 0 auto;
+                  padding: 0 5em;
+                  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
+   table#pravda > caption { font-variant: small-caps; } /* need ET Book to supply real small caps! */
+
    
   </style>
 </head>
@@ -894,6 +902,36 @@
         </table>
       </div>
 
+      <p>...and another simple example:</p>
+
+      <div class="table-wrapper">
+        <table id="pravda">
+          <caption>median number of entries in data matrices for statistical graphics in various publications, <span class="numeral">2003</span></caption>
+            <tbody>
+              <tr><td class="text"><em>Science</em></td><td class="number">&gt;1000</td></tr>
+              <tr><td class="text"><em>Nature</em></td><td class="number">&gt;700</td></tr>
+              <tr><td class="text"><em>New York Times</em></td><td class="number">120</td></tr>
+              <tr><td class="text"><em>Wall Street Journal</em></td><td class="number">112</td></tr>
+              <tr><td class="text"><em>Frankfurter Allgemaine Zeitung</em></td><td class="number">98</td></tr>
+              <tr><td class="text"><em>New England Journal of Medicine</em></td><td class="number">53</td></tr>
+              <tr><td class="text"><em>Asahi</em></td><td class="number">40</td></tr>
+              <tr><td class="text"><em>Financial Times</em></td><td class="number">40</td></tr>
+              <tr><td class="text"><em>The Economist</em></td><td class="number">32</td></tr>
+              <tr><td class="text"><em>Le Monde</em></td><td class="number">28</td></tr>
+              <tr><td class="text">28 books on PowerPoint presentations (1997-2003)</td><td class="number">12</td></tr>
+              <tr><td class="text danger"><em>Pravda</em> (1982)</td><td class="number danger">5</td></tr>
+            </tbody>
+        </table>
+      </div>
+
+
+      <!-- flesh out into quick-start -->
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th></th></tr></thead>
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+      </div>
       
     </section>
 

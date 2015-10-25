@@ -75,6 +75,9 @@ p.subtitle { font-style: italic;
              display: block;
              line-height: 1; }
 
+.numeral { font-family: et-book-roman-old-style; }
+
+/* Tables */
 table { overflow-x: scroll;
         width: 98%;
         clear: left;
