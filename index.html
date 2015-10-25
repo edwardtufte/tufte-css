@@ -9,6 +9,7 @@
    /* Tufte CSS covers table styling, but styles specific to the data in these specific tables is put here because it is not part of Tufte CSS table styling. */
    
    /* "Newspaper Tone" demo table */
+   table#newspaper-tone { font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
    table#newspaper-tone > tbody > tr > td:nth-child(1) { padding-right: 15%; }
    table#newspaper-tone > thead > tr > th:nth-child(2) { width: 70px; }
    table#newspaper-tone > thead > tr > th:nth-child(3) { padding: 0 59px;
@@ -42,6 +43,25 @@
 
    table#groups-voting.supertable > tbody > tr > td.pseudoparagraph-heading { padding-left: 0em;
                                                                               text-indent: 0em; }
+
+   /* Table about O-rings from the Challenger shuttle disaster */
+   table#o-rings { border-spacing: 10px 0px;
+                   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
+   
+   table#o-rings > tbody > tr:nth-child(1) > td { padding-top: 1rem; }
+   table#o-rings > thead > tr > th { vertical-align: top;
+                                     text-align: center; }
+   table#o-rings > thead > tr > th.text { text-align: left; }
+   
+   table#o-rings > thead > tr > th:nth-child(1) { width: 3%; }
+   table#o-rings > thead > tr > th:nth-child(2) { width: 8%; }
+   table#o-rings > thead > tr > th:nth-child(3) { width: 8%; }
+   table#o-rings > thead > tr > th:nth-child(4) { width: 8%; }
+   table#o-rings > thead > tr > th:nth-child(5) { width: 8%; }
+   table#o-rings > thead > tr > th:nth-child(6) { width: 8%; }
+   table#o-rings > thead > tr > th:nth-child(7) { width: 57%; }
+
+   table#o-rings .danger { color: red; }
    
   </style>
 </head>
@@ -250,578 +270,628 @@
       </div>
       <p>Notice how this table is centered and compact. The heavy rules that booktabs usually puts on the top and bottom are gone. A lighter-weight rule is used to separate the table head from its body. If you need a column heading to span two or more other column headings, an even lighter-weight rule may be used. Vertical rules are unnecessary. Additionally, the spacing around the rules has been increased to avoid a cramped appearance.</p>
 
-      <p>Other table styles are possible and desirable. Here’s an example of a <em>supertable</em> that Tufte designed for the New York times, pulled from page 179 of Tufte’s <em>Visual Display of Quantitative Information</em>:</p>
+      <p>Other table styles are possible and desirable. Here’s one example of a <em>supertable</em>, pulled from page 179 of Tufte’s <em>Visual Display of Quantitative Information</em>. I'll let Tufte introduce it:</p>
 
+      <blockquote>
+        <p>Tables also work well when the data presentation requires many localized comparisons. In this 410-number table that I designed for the <em>New York Times</em> to show how different people voted presidential elections in the United States, comparisons between the elections of 1980 and 1976 are read across each line; within-election analysis is conducted by reading downward in the clusters of three to seven lines. The horizontal rules divide the data into topical paragraphs; the rows are ordered so as to tell an ordered story about the elections. This kind of elaborate table, a <em>supertable</em>, is likely to attract and intrigue readers through its organized, sequential detail and reference-like quality. One supertable is better than a hundred little bar charts.</p>
+      </blockquote>
+      
       <div class="table-wrapper supertable-wrapper">
         <h3>How Different Groups Voted for President</h3>
         <p>Based on 12,782 interviews with voters at their polling places. Shown is how each group divided its vote for President and, in parentheses, the percentage of the electorate belonging to each group.</p>
-          <table class="supertable" id="groups-voting">
-            <thead>
-              <tr>
-                <th class="text"></th>
-                <th>CARTER</th>
-                <th>REAGAN</th>
-                <th>ANDERSON</th>
-                <th>CARTER/FORD<br/>in 1976</th></tr>
-            </thead>
+        <table class="supertable" id="groups-voting">
+          <thead>
+            <tr>
+              <th class="text"></th>
+              <th>CARTER</th>
+              <th>REAGAN</th>
+              <th>ANDERSON</th>
+              <th>CARTER/FORD<br/>in 1976</th></tr>
+          </thead>
+          <tbody>
 
-            <tbody>
+            <tr>
+              <td class="text">Democrats (43%)</td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">26</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">77 - 22</div></td>
+            </tr>
+            <tr>
+              <td class="text">Independents (23%)</td>
+              <td><div class="number number2">30</div></td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">12</div></td>
+              <td><div class="number number7">43 - 54</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Republicans (28%)</td>
+              <td><div class="number number2">11</div></td>
+              <td><div class="number number2">84</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">9 - 90</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">Democrats (43%)</td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">26</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">77 - 22</div></td>
-              </tr>
-              <tr>
-                <td class="text">Independents (23%)</td>
-                <td><div class="number number2">30</div></td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">12</div></td>
-                <td><div class="number number7">43 - 54</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Republicans (28%)</td>
-                <td><div class="number number2">11</div></td>
-                <td><div class="number number2">84</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">9 - 90</div></td>
-              </tr>
+            <tr>
+              <td class="text">Liberals (17%)</td>
+              <td><div class="number number2">57</div></td>
+              <td><div class="number number2">27</div></td>
+              <td><div class="number number2">11</div></td>
+              <td><div class="number number7">70 - 26</div></td>
+            </tr>
+            <tr>
+              <td class="text">Moderates (46%)</td>
+              <td><div class="number number2">42</div></td>
+              <td><div class="number number2">48</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">51 - 48</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Conservatives (28%)</td>
+              <td><div class="number number2">23</div></td>
+              <td><div class="number number2">71</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">29 - 70</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">Liberals (17%)</td>
-                <td><div class="number number2">57</div></td>
-                <td><div class="number number2">27</div></td>
-                <td><div class="number number2">11</div></td>
-                <td><div class="number number7">70 - 26</div></td>
-              </tr>
-              <tr>
-                <td class="text">Moderates (46%)</td>
-                <td><div class="number number2">42</div></td>
-                <td><div class="number number2">48</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">51 - 48</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Conservatives (28%)</td>
-                <td><div class="number number2">23</div></td>
-                <td><div class="number number2">71</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">29 - 70</div></td>
-              </tr>
+            <tr>
+              <td class="text">Liberal Democrats (9%)</td>
+              <td><div class="number number2">70</div></td>
+              <td><div class="number number2">14</div></td>
+              <td><div class="number number2">13</div></td>
+              <td><div class="number number7">86 - 12</div></td>
+            </tr>
+            <tr>
+              <td class="text">Moderate Democrats (22%)</td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">28</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">77 - 22</div></td>
+            </tr>
+            <tr>
+              <td class="text">Conservative Democrats (8%)</td>
+              <td><div class="number number2">53</div></td>
+              <td><div class="number number2">41</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">64 - 35</div></td>
+            </tr>
+            <tr>
+              <td class="text">Politically Active Democrats (3%)</td>
+              <td><div class="number number2">72</div></td>
+              <td><div class="number number2">19</div></td>
+              <td><div class="number number2">8</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Democrats favoring Kennedy in primaries (13%)</td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">24</div></td>
+              <td><div class="number number2">8</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Liberal Democrats (9%)</td>
-                <td><div class="number number2">70</div></td>
-                <td><div class="number number2">14</div></td>
-                <td><div class="number number2">13</div></td>
-                <td><div class="number number7">86 - 12</div></td>
-              </tr>
-              <tr>
-                <td class="text">Moderate Democrats (22%)</td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">28</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">77 - 22</div></td>
-              </tr>
-              <tr>
-                <td class="text">Conservative Democrats (8%)</td>
-                <td><div class="number number2">53</div></td>
-                <td><div class="number number2">41</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">64 - 35</div></td>
-              </tr>
-              <tr>
-                <td class="text">Politically Active Democrats (3%)</td>
-                <td><div class="number number2">72</div></td>
-                <td><div class="number number2">19</div></td>
-                <td><div class="number number2">8</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Democrats favoring Kennedy in primaries (13%)</td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">24</div></td>
-                <td><div class="number number2">8</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">Liberal Independents (4%)</td>
+              <td><div class="number number2">50</div></td>
+              <td><div class="number number2">29</div></td>
+              <td><div class="number number2">15</div></td>
+              <td><div class="number number7">64 - 29</div></td>
+            </tr>
+            <tr>
+              <td class="text">Moderate Independents (12%)</td>
+              <td><div class="number number2">31</div></td>
+              <td><div class="number number2">53</div></td>
+              <td><div class="number number2">13</div></td>
+              <td><div class="number number7">45 - 53</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Conservative Independents (7%)</td>
+              <td><div class="number number2">22</div></td>
+              <td><div class="number number2">69</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">26 - 72</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">Liberal Independents (4%)</td>
-                <td><div class="number number2">50</div></td>
-                <td><div class="number number2">29</div></td>
-                <td><div class="number number2">15</div></td>
-                <td><div class="number number7">64 - 29</div></td>
-              </tr>
-              <tr>
-                <td class="text">Moderate Independents (12%)</td>
-                <td><div class="number number2">31</div></td>
-                <td><div class="number number2">53</div></td>
-                <td><div class="number number2">13</div></td>
-                <td><div class="number number7">45 - 53</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Conservative Independents (7%)</td>
-                <td><div class="number number2">22</div></td>
-                <td><div class="number number2">69</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">26 - 72</div></td>
-              </tr>
+            <tr>
+              <td class="text">Liberal Republicans (2%)</td>
+              <td><div class="number number2">25</div></td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">9</div></td>
+              <td><div class="number number7">17 - 82</div></td>
+            </tr>
+            <tr>
+              <td class="text">Moderate Republicans (11%)</td>
+              <td><div class="number number2">13</div></td>
+              <td><div class="number number2">81</div></td>
+              <td><div class="number number2">5</div></td>
+              <td><div class="number number7">11 - 88</div></td>
+            </tr>
+            <tr>
+              <td class="text">Conservative Republicans (12%)</td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number2">91</div></td>
+              <td><div class="number number2">2</div></td>
+              <td><div class="number number7">6 - 93</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Politically Active Republicans (2%)</td>
+              <td><div class="number number2">5</div></td>
+              <td><div class="number number2">89</div></td>
+              <td><div class="number number2">6</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Liberal Republicans (2%)</td>
-                <td><div class="number number2">25</div></td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">9</div></td>
-                <td><div class="number number7">17 - 82</div></td>
-              </tr>
-              <tr>
-                <td class="text">Moderate Republicans (11%)</td>
-                <td><div class="number number2">13</div></td>
-                <td><div class="number number2">81</div></td>
-                <td><div class="number number2">5</div></td>
-                <td><div class="number number7">11 - 88</div></td>
-              </tr>
-              <tr>
-                <td class="text">Conservative Republicans (12%)</td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number2">91</div></td>
-                <td><div class="number number2">2</div></td>
-                <td><div class="number number7">6 - 93</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Politically Active Republicans (2%)</td>
-                <td><div class="number number2">5</div></td>
-                <td><div class="number number2">89</div></td>
-                <td><div class="number number2">6</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">East (32%)</td>
+              <td><div class="number number2">43</div></td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">51 - 47</div></td>
+            </tr>
+            <tr>
+              <td class="text">South (27%)</td>
+              <td><div class="number number2">44</div></td>
+              <td><div class="number number2">51</div></td>
+              <td><div class="number number2">3</div></td>
+              <td><div class="number number7">54 - 55</div></td>
+            </tr>
+            <tr>
+              <td class="text">Midwest (20%)</td>
+              <td><div class="number number2">41</div></td>
+              <td><div class="number number2">51</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">48 - 50</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">West (11%)</td>
+              <td><div class="number number2">35</div></td>
+              <td><div class="number number2">52</div></td>
+              <td><div class="number number2">10</div></td>
+              <td><div class="number number7">46 - 51</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">East (32%)</td>
-                <td><div class="number number2">43</div></td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">51 - 47</div></td>
-              </tr>
-              <tr>
-                <td class="text">South (27%)</td>
-                <td><div class="number number2">44</div></td>
-                <td><div class="number number2">51</div></td>
-                <td><div class="number number2">3</div></td>
-                <td><div class="number number7">54 - 55</div></td>
-              </tr>
-              <tr>
-                <td class="text">Midwest (20%)</td>
-                <td><div class="number number2">41</div></td>
-                <td><div class="number number2">51</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">48 - 50</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">West (11%)</td>
-                <td><div class="number number2">35</div></td>
-                <td><div class="number number2">52</div></td>
-                <td><div class="number number2">10</div></td>
-                <td><div class="number number7">46 - 51</div></td>
-              </tr>
+            <tr>
+              <td class="text">Blacks (10%)</td>
+              <td><div class="number number2">82</div></td>
+              <td><div class="number number2">14</div></td>
+              <td><div class="number number2">3</div></td>
+              <td><div class="number number7">82 - 16</div></td>
+            </tr>
+            <tr>
+              <td class="text">Hispanics (2%)</td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">36</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">75 - 24</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Whites (88%)</td>
+              <td><div class="number number2">36</div></td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">47 - 52</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">Blacks (10%)</td>
-                <td><div class="number number2">82</div></td>
-                <td><div class="number number2">14</div></td>
-                <td><div class="number number2">3</div></td>
-                <td><div class="number number7">82 - 16</div></td>
-              </tr>
-              <tr>
-                <td class="text">Hispanics (2%)</td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">36</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">75 - 24</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Whites (88%)</td>
-                <td><div class="number number2">36</div></td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">47 - 52</div></td>
-              </tr>
+            <tr>
+              <td class="text">Female (49%)</td>
+              <td><div class="number number2">45</div></td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">50 - 48</div></td>
+            </tr>
+            <tr>
+              <td class="text">Male (51%)</td>
+              <td><div class="number number2">37</div></td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">50 - 48</div></td>
+            </tr>
+            <tr>
+              <td class="text">Female, favors equal rights amendment (22%)</td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">32</div></td>
+              <td><div class="number number2">11</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Female, opposes equal rights amendment (15%)</td>
+              <td><div class="number number2">29</div></td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">4</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Female (49%)</td>
-                <td><div class="number number2">45</div></td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">50 - 48</div></td>
-              </tr>
-              <tr>
-                <td class="text">Male (51%)</td>
-                <td><div class="number number2">37</div></td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">50 - 48</div></td>
-              </tr>
-              <tr>
-                <td class="text">Female, favors equal rights amendment (22%)</td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">32</div></td>
-                <td><div class="number number2">11</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Female, opposes equal rights amendment (15%)</td>
-                <td><div class="number number2">29</div></td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">4</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">Catholic (25%)</td>
+              <td><div class="number number2">40</div></td>
+              <td><div class="number number2">51</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">54 - 44</div></td>
+            </tr>
+            <tr>
+              <td class="text">Jewish (5%)</td>
+              <td><div class="number number2">45</div></td>
+              <td><div class="number number2">39</div></td>
+              <td><div class="number number2">14</div></td>
+              <td><div class="number number7">64 - 34</div></td>
+            </tr>
+            <tr>
+              <td class="text">Protestant (46%)</td>
+              <td><div class="number number2">37</div></td>
+              <td><div class="number number2">56</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">44 - 55</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Born-again white Protestant (17%)</td>
+              <td><div class="number number2">34</div></td>
+              <td><div class="number number2">61</div></td>
+              <td><div class="number number2">4</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Catholic (25%)</td>
-                <td><div class="number number2">40</div></td>
-                <td><div class="number number2">51</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">54 - 44</div></td>
-              </tr>
-              <tr>
-                <td class="text">Jewish (5%)</td>
-                <td><div class="number number2">45</div></td>
-                <td><div class="number number2">39</div></td>
-                <td><div class="number number2">14</div></td>
-                <td><div class="number number7">64 - 34</div></td>
-              </tr>
-              <tr>
-                <td class="text">Protestant (46%)</td>
-                <td><div class="number number2">37</div></td>
-                <td><div class="number number2">56</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">44 - 55</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Born-again white Protestant (17%)</td>
-                <td><div class="number number2">34</div></td>
-                <td><div class="number number2">61</div></td>
-                <td><div class="number number2">4</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">18 - 21 years old (6%)</td>
+              <td><div class="number number2">44</div></td>
+              <td><div class="number number2">43</div></td>
+              <td><div class="number number2">11</div></td>
+              <td><div class="number number7">48 - 50</div></td>
+            </tr>
+            <tr>
+              <td class="text">22 - 29 years old (17%)</td>
+              <td><div class="number number2">43</div></td>
+              <td><div class="number number2">43</div></td>
+              <td><div class="number number2">11</div></td>
+              <td><div class="number number7">51 - 46</div></td>
+            </tr>
+            <tr>
+              <td class="text">30 - 44 years old (31%)</td>
+              <td><div class="number number2">37</div></td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">49 - 49</div></td>
+            </tr>
+            <tr>
+              <td class="text">45 - 59 years old (23%)</td>
+              <td><div class="number number2">39</div></td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">47 - 52</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">60 years or older (18%)</td>
+              <td><div class="number number2">40</div></td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">47 - 52</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">18 - 21 years old (6%)</td>
-                <td><div class="number number2">44</div></td>
-                <td><div class="number number2">43</div></td>
-                <td><div class="number number2">11</div></td>
-                <td><div class="number number7">48 - 50</div></td>
-              </tr>
-              <tr>
-                <td class="text">22 - 29 years old (17%)</td>
-                <td><div class="number number2">43</div></td>
-                <td><div class="number number2">43</div></td>
-                <td><div class="number number2">11</div></td>
-                <td><div class="number number7">51 - 46</div></td>
-              </tr>
-              <tr>
-                <td class="text">30 - 44 years old (31%)</td>
-                <td><div class="number number2">37</div></td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">49 - 49</div></td>
-              </tr>
-              <tr>
-                <td class="text">45 - 59 years old (23%)</td>
-                <td><div class="number number2">39</div></td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">47 - 52</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">60 years or older (18%)</td>
-                <td><div class="number number2">40</div></td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">47 - 52</div></td>
-              </tr>
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">Family Income</td>
+            </tr>
+            <tr>
+              <td class="text">Less than $10,000 (13%)</td>
+              <td><div class="number number2">50</div></td>
+              <td><div class="number number2">41</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">58 - 40</div></td>
+            </tr>
+            <tr>
+              <td class="text">$10,000 - $14,999 (14%)</td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">42</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">55 - 43</div></td>
+            </tr>
+            <tr>
+              <td class="text">$15,000 - $24,999 (30%)</td>
+              <td><div class="number number2">38</div></td>
+              <td><div class="number number2">53</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">48 - 50</div></td>
+            </tr>
+            <tr>
+              <td class="text">$25,000 - $50,000 (24%)</td>
+              <td><div class="number number2">32</div></td>
+              <td><div class="number number2">58</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">36 - 62</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Over $50,000 (5%)</td>
+              <td><div class="number number2">25</div></td>
+              <td><div class="number number2">65</div></td>
+              <td><div class="number number2">8</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">Family Income</td>
-              </tr>
-              <tr>
-                <td class="text">Less than $10,000 (13%)</td>
-                <td><div class="number number2">50</div></td>
-                <td><div class="number number2">41</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">58 - 40</div></td>
-              </tr>
-              <tr>
-                <td class="text">$10,000 - $14,999 (14%)</td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">42</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">55 - 43</div></td>
-              </tr>
-              <tr>
-                <td class="text">$15,000 - $24,999 (30%)</td>
-                <td><div class="number number2">38</div></td>
-                <td><div class="number number2">53</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">48 - 50</div></td>
-              </tr>
-              <tr>
-                <td class="text">$25,000 - $50,000 (24%)</td>
-                <td><div class="number number2">32</div></td>
-                <td><div class="number number2">58</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">36 - 62</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Over $50,000 (5%)</td>
-                <td><div class="number number2">25</div></td>
-                <td><div class="number number2">65</div></td>
-                <td><div class="number number2">8</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">Professional or manager (40%)</td>
+              <td><div class="number number2">33</div></td>
+              <td><div class="number number2">56</div></td>
+              <td><div class="number number2">9</div></td>
+              <td><div class="number number7">41 - 57</div></td>
+            </tr>
+            <tr>
+              <td class="text">Clerical, sales, or other white-collar (11%)</td>
+              <td><div class="number number2">42</div></td>
+              <td><div class="number number2">48</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">46 - 53</div></td>
+            </tr>
+            <tr>
+              <td class="text">Blue-collar worker (17%)</td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">5</div></td>
+              <td><div class="number number7">57 - 41</div></td>
+            </tr>
+            <tr>
+              <td class="text">Agriculture (3%)</td>
+              <td><div class="number number2">29</div></td>
+              <td><div class="number number2">66</div></td>
+              <td><div class="number number2">3</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Looking for work (3%)</td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">35</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">65 - 34</div></td>
+            </tr>
+            
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">Education</td>
+            </tr>
+            <tr>
+              <td class="text">High school or less (39%)</td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">48</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">57 - 43</div></td>
+            </tr>
+            <tr>
+              <td class="text">Some college (28%)</td>
+              <td><div class="number number2">35</div></td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">51 - 49</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">College graduate (27%)</td>
+              <td><div class="number number2">35</div></td>
+              <td><div class="number number2">51</div></td>
+              <td><div class="number number2">11</div></td>
+              <td><div class="number number7">45 - 55</div></td>
+            </tr>
+            
+            <tr>
+              <td class="text">Labor union household (26%)</td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">44</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">59 - 39</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">No member of household in union (62%)</td>
+              <td><div class="number number2">35</div></td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">43-55</div></td>
+            </tr>
 
-              <tr>
-                <td class="text">Professional or manager (40%)</td>
-                <td><div class="number number2">33</div></td>
-                <td><div class="number number2">56</div></td>
-                <td><div class="number number2">9</div></td>
-                <td><div class="number number7">41 - 57</div></td>
-              </tr>
-              <tr>
-                <td class="text">Clerical, sales, or other white-collar (11%)</td>
-                <td><div class="number number2">42</div></td>
-                <td><div class="number number2">48</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">46 - 53</div></td>
-              </tr>
-              <tr>
-                <td class="text">Blue-collar worker (17%)</td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">5</div></td>
-                <td><div class="number number7">57 - 41</div></td>
-              </tr>
-              <tr>
-                <td class="text">Agriculture (3%)</td>
-                <td><div class="number number2">29</div></td>
-                <td><div class="number number2">66</div></td>
-                <td><div class="number number2">3</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Looking for work (3%)</td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">35</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">65 - 34</div></td>
-              </tr>
-              
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">Education</td>
-              </tr>
-              <tr>
-                <td class="text">High school or less (39%)</td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">48</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">57 - 43</div></td>
-              </tr>
-              <tr>
-                <td class="text">Some college (28%)</td>
-                <td><div class="number number2">35</div></td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">51 - 49</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">College graduate (27%)</td>
-                <td><div class="number number2">35</div></td>
-                <td><div class="number number2">51</div></td>
-                <td><div class="number number2">11</div></td>
-                <td><div class="number number7">45 - 55</div></td>
-              </tr>
-              
-              <tr>
-                <td class="text">Labor union household (26%)</td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">44</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">59 - 39</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">No member of household in union (62%)</td>
-                <td><div class="number number2">35</div></td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">43-55</div></td>
-              </tr>
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">Family finances</td>
+            </tr>
+            <tr>
+              <td class="text">Better off than a year ago (16%)</td>
+              <td><div class="number number2">53</div></td>
+              <td><div class="number number2">37</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">30 - 70</div></td>
+            </tr>
+            <tr>
+              <td class="text">Same (40%)</td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">51 - 49</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Worse off than a year ago (34%)</td>
+              <td><div class="number number2">25</div></td>
+              <td><div class="number number2">64</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">77 - 23</div></td>
+            </tr>
 
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">Family finances</td>
-              </tr>
-              <tr>
-                <td class="text">Better off than a year ago (16%)</td>
-                <td><div class="number number2">53</div></td>
-                <td><div class="number number2">37</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">30 - 70</div></td>
-              </tr>
-              <tr>
-                <td class="text">Same (40%)</td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">51 - 49</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Worse off than a year ago (34%)</td>
-                <td><div class="number number2">25</div></td>
-                <td><div class="number number2">64</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">77 - 23</div></td>
-              </tr>
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">Family finances and political party</td>
+            </tr>
+            <tr>
+              <td class="text">Democrats, better off than a year ago (7%)</td>
+              <td><div class="number number2">77</div></td>
+              <td><div class="number number2">16</div></td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number7">69 - 31</div></td>
+            </tr>
+            <tr>
+              <td class="text">Democrats, worse off than a year ago (13%)</td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">39</div></td>
+              <td><div class="number number2">10</div></td>
+              <td><div class="number number7">94 - 6</div></td>
+            </tr>
+            <tr>
+              <td class="text">Independents, better off (3%)</td>
+              <td><div class="number number2">45</div></td>
+              <td><div class="number number2">36</div></td>
+              <td><div class="number number2">12</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td class="text">Independents, worse off (9%)</td>
+              <td><div class="number number2">21</div></td>
+              <td><div class="number number2">65</div></td>
+              <td><div class="number number2">11</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td class="text">Republicans, better off (4%)</td>
+              <td><div class="number number2">18</div></td>
+              <td><div class="number number2">77</div></td>
+              <td><div class="number number2">5</div></td>
+              <td><div class="number number7">3 - 97</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Republicans, worse off (11%)</td>
+              <td><div class="number number2">6</div></td>
+              <td><div class="number number2">89</div></td>
+              <td><div class="number number2">4</div></td>
+              <td><div class="number number7">24 - 76</div></td>
+            </tr>
 
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">Family finances and political party</td>
-              </tr>
-              <tr>
-                <td class="text">Democrats, better off than a year ago (7%)</td>
-                <td><div class="number number2">77</div></td>
-                <td><div class="number number2">16</div></td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number7">69 - 31</div></td>
-              </tr>
-              <tr>
-                <td class="text">Democrats, worse off than a year ago (13%)</td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">39</div></td>
-                <td><div class="number number2">10</div></td>
-                <td><div class="number number7">94 - 6</div></td>
-              </tr>
-              <tr>
-                <td class="text">Independents, better off (3%)</td>
-                <td><div class="number number2">45</div></td>
-                <td><div class="number number2">36</div></td>
-                <td><div class="number number2">12</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td class="text">Independents, worse off (9%)</td>
-                <td><div class="number number2">21</div></td>
-                <td><div class="number number2">65</div></td>
-                <td><div class="number number2">11</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td class="text">Republicans, better off (4%)</td>
-                <td><div class="number number2">18</div></td>
-                <td><div class="number number2">77</div></td>
-                <td><div class="number number2">5</div></td>
-                <td><div class="number number7">3 - 97</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Republicans, worse off (11%)</td>
-                <td><div class="number number2">6</div></td>
-                <td><div class="number number2">89</div></td>
-                <td><div class="number number2">4</div></td>
-                <td><div class="number number7">24 - 76</div></td>
-              </tr>
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">More important problem</td>
+            </tr>
+            <tr>
+              <td class="text">Unemployment (39%)</td>
+              <td><div class="number number2">51</div></td>
+              <td><div class="number number2">40</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">75 - 25</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Inflation (44%)</td>
+              <td><div class="number number2">30</div></td>
+              <td><div class="number number2">60</div></td>
+              <td><div class="number number2">9</div></td>
+              <td><div class="number number7">35 - 65</div></td>
+            </tr>
+            
 
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">More important problem</td>
-              </tr>
-              <tr>
-                <td class="text">Unemployment (39%)</td>
-                <td><div class="number number2">51</div></td>
-                <td><div class="number number2">40</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">75 - 25</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Inflation (44%)</td>
-                <td><div class="number number2">30</div></td>
-                <td><div class="number number2">60</div></td>
-                <td><div class="number number2">9</div></td>
-                <td><div class="number number7">35 - 65</div></td>
-              </tr>
-              
+            <tr>
+              <td class="text">Feel that the U.S. should be more forceful with the Soviet Union even if it would increase the chance of war (54%)</td>
+              <td><div class="number number2">28</div></td>
+              <td><div class="number number2">64</div></td>
+              <td><div class="number number2">6</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Disagree (31%)</td>
+              <td><div class="number number2">56</div></td>
+              <td><div class="number number2">32</div></td>
+              <td><div class="number number2">10</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Feel that the U.S. should be more forceful with the Soviet Union even if it would increase the chance of war (54%)</td>
-                <td><div class="number number2">28</div></td>
-                <td><div class="number number2">64</div></td>
-                <td><div class="number number2">6</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Disagree (31%)</td>
-                <td><div class="number number2">56</div></td>
-                <td><div class="number number2">32</div></td>
-                <td><div class="number number2">10</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text">Favor equal rights amendment (46%)</td>
+              <td><div class="number number2">49</div></td>
+              <td><div class="number number2">38</div></td>
+              <td><div class="number number2">11</div></td>
+              <td>&mdash;</td>
+            </tr>
+            <tr class="divider">
+              <td class="text">Oppose equal rights amendment (35%)</td>
+              <td><div class="number number2">26</div></td>
+              <td><div class="number number2">68</div></td>
+              <td><div class="number number2">4</div></td>
+              <td>&mdash;</td>
+            </tr>
 
-              <tr>
-                <td class="text">Favor equal rights amendment (46%)</td>
-                <td><div class="number number2">49</div></td>
-                <td><div class="number number2">38</div></td>
-                <td><div class="number number2">11</div></td>
-                <td>&mdash;</td>
-              </tr>
-              <tr class="divider">
-                <td class="text">Oppose equal rights amendment (35%)</td>
-                <td><div class="number number2">26</div></td>
-                <td><div class="number number2">68</div></td>
-                <td><div class="number number2">4</div></td>
-                <td>&mdash;</td>
-              </tr>
+            <tr>
+              <td class="text pseudoparagraph-heading" colspan="5">Family finances and political party</td>
+            </tr>
+            <tr>
+              <td class="text">Knew all along (41%)</td>
+              <td><div class="number number2">47</div></td>
+              <td><div class="number number2">50</div></td>
+              <td><div class="number number2">2</div></td>
+              <td><div class="number number7">44 - 55</div></td>
+            </tr>
+            <tr>
+              <td class="text">During the primaries (13%)</td>
+              <td><div class="number number2">30</div></td>
+              <td><div class="number number2">60</div></td>
+              <td><div class="number number2">8</div></td>
+              <td><div class="number number7">57 - 42</div></td>
+            </tr>
+            <tr>
+              <td class="text">During conventions (8%)</td>
+              <td><div class="number number2">36</div></td>
+              <td><div class="number number2">55</div></td>
+              <td><div class="number number2">7</div></td>
+              <td><div class="number number7">51 - 48</div></td>
+            </tr>
+            <tr>
+              <td class="text">Since Labor Day (8%)</td>
+              <td><div class="number number2">30</div></td>
+              <td><div class="number number2">54</div></td>
+              <td><div class="number number2">13</div></td>
+              <td><div class="number number7">49 - 49</div></td>
+            </tr>
+            <tr class="divider">
+              <td class="text">In week before election (23%)</td>
+              <td><div class="number number2">38</div></td>
+              <td><div class="number number2">46</div></td>
+              <td><div class="number number2">13</div></td>
+              <td><div class="number number7">49 - 47</div></td>
+            </tr>
+            <tr>
+              <td class="text pseudoparagraph-footer" colspan="5">Source: 1976 and 1980 election day surveys by The New York Times/CBS News Poll and 1976 election day survey by NBC News.</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
 
-              <tr>
-                <td class="text pseudoparagraph-heading" colspan="5">Family finances and political party</td>
-              </tr>
-              <tr>
-                <td class="text">Knew all along (41%)</td>
-                <td><div class="number number2">47</div></td>
-                <td><div class="number number2">50</div></td>
-                <td><div class="number number2">2</div></td>
-                <td><div class="number number7">44 - 55</div></td>
-              </tr>
-              <tr>
-                <td class="text">During the primaries (13%)</td>
-                <td><div class="number number2">30</div></td>
-                <td><div class="number number2">60</div></td>
-                <td><div class="number number2">8</div></td>
-                <td><div class="number number7">57 - 42</div></td>
-              </tr>
-              <tr>
-                <td class="text">During conventions (8%)</td>
-                <td><div class="number number2">36</div></td>
-                <td><div class="number number2">55</div></td>
-                <td><div class="number number2">7</div></td>
-                <td><div class="number number7">51 - 48</div></td>
-              </tr>
-              <tr>
-                <td class="text">Since Labor Day (8%)</td>
-                <td><div class="number number2">30</div></td>
-                <td><div class="number number2">54</div></td>
-                <td><div class="number number2">13</div></td>
-                <td><div class="number number7">49 - 49</div></td>
-              </tr>
-              <tr class="divider">
-                <td class="text">In week before election (23%)</td>
-                <td><div class="number number2">38</div></td>
-                <td><div class="number number2">46</div></td>
-                <td><div class="number number2">13</div></td>
-                <td><div class="number number7">49 - 47</div></td>
-              </tr>
-              <tr>
-                <td class="text pseudoparagraph-footer" colspan="5">Source: 1976 and 1980 election day surveys by The New York Times/CBS News Poll and 1976 election day survey by NBC News.</td>
-              </tr>
-              
-            </tbody>
-          </table>
+      <p>And here’s another example, from page 44 of <em>Visual Explanations</em>:</p>
+
+      <div class="table-wrapper fullwidth">
+        <table id="o-rings">
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th>Date</th>
+              <th>Temperature<br/>&deg;F</th>
+              <th>Erosion<br/> incidents</th>
+              <th>Blow-by<br/> incidents</th>
+              <th>Damage<br/> index</th>
+              <th class="text">Comments</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr><td class="number">51-C</td><td>01.24.85</td><td class="danger">53&deg;</td><td class="danger">3</td><td class="danger">2</td><td><div class="number number2">11</div></td><td class="text">Most erosion any flight; blow-by; back-up rings heated.</td></tr>
+            <tr><td class="number">41-B</td><td>02.03.84</td><td>57&deg;</td><td class="danger">1</td><td></td><td><div class="number number2">4</div></td><td class="text">Deep, extensive erosion.</td></tr>
+            <tr><td class="number">61-C</td><td>01.12.86</td><td>58&deg;</td><td>1</td><td></td><td><div class="number number2">4</div></td><td class="text">O-ring erosion on launch 2 weeks before Challenger.</td></tr>
+            <tr><td class="number">41-C</td><td>04.06.84</td><td>63&deg;</td><td class="danger">1</td><td></td><td><div class="number number2">2</div></td><td class="text">O-rings showed signs of heating, but no damage.</td></tr>
+            <tr><td class="number">1</td><td>04.12.81</td><td>66&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text">Coolest (66&deg;) launch without O-ring problems.</td></tr>
+            
+            <tr><td class="number">6</td><td>04.04.83</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td></td></tr>
+            <tr><td class="number">51-A</td><td ">11.08.84</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">51-D</td><td ">04.12.85</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">5</td><td>11.11.82</td><td>68&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">3</td><td>03.22.82</td><td>69&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">2</td><td>11.12.81</td><td>70&deg;</td><td class="danger">1</td><td></td><td><div class="number number2">4</div></td><td class="text">Extent of erosion not fully known.</td></tr>
+            <tr><td class="number">9</td><td>11.28.83</td><td>70&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">41-D</td><td>08.30.84</td><td>70&deg;</td><td class="danger">1</td><td></td><td><div class="number number2">4</div></td><td class="text"></td></tr>
+            <tr><td class="number">59-G</td><td>06.17.85</td><td>70&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">7</td><td>06.18.83</td><td>72&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">8</td><td>08.30.83</td><td>73&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">51-B</td><td>04.29.85</td><td>75&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td></td></tr>
+            
+            <tr><td class="number">61-A</td><td>10.30.85</td><td class="danger">75&deg;</td><td></td><td class="danger">2</td><td><div class="number number2">4</div></td><td class="text">No erosion. Soot found behind two primary O-rings.</td></tr>
+            <tr><td class="number">51-I</td><td>08.27.85</td><td>76&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">61-B</td><td>11.26.85</td><td>76&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">41-G</td><td>10.05.84</td><td>78&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">51-J</td><td>10.03.85</td><td>79&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number"></td><td>06.27.82</td><td>80&deg;</td><td></td><td></td><td><div class="number number2">?</div></td><td class="text">O-ring condition unknown; rocket casing lost at sea.</td></tr>
+            <tr><td class="number">51-F</td><td>07.29.85</td><td>81&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+          </tbody>
+        </table>
       </div>
 
       

@@ -80,15 +80,13 @@ table { overflow-x: scroll;
         clear: left;
         text-align: center;
         font-size: 1.2rem;
-        line-height: 1.4;
+        line-height: 1.2;
         margin: 1.4rem 1%;
         border-collapse: separate;
         border-spacing: 0 5px;
         -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
         -moz-font-feature-settings: 'tnum';
         -ms-font-feature-settings: 'tnum'; }
-
-div.supertable-wrapper { font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 div.supertable-wrapper > h3 { font-style: normal;
                               font-size: 1.7rem;
@@ -117,20 +115,19 @@ table > tbody > tr.divider > td { padding-bottom: 5px;
 
 thead th { text-align: left;
            border-bottom: 1px solid #AAAAAA;
-           font-weight: 400;
-           border-collapse: separate;
-           border-spacing: 5px 5px; }
+           font-weight: 400; }
 
-td.text { text-align: left; }
+.text { text-align: left; }
 
-td > div.number { text-align: right;
-                  display: inline-block; }
+.number { text-align: right; }
+td > div.number { display: inline-block; }
 
 td > div.number2 { width: 1rem; }
 td > div.number7 { width: 3.3rem; }
 
 span.table-label { padding-top: 8px; } /* to maintain height relative to table header row */
 
+/* Table option: Booktabs, Tufte style */
 table.booktabs { width: auto;
                  margin: 0 auto;
                  border-spacing: 0px; }
@@ -290,7 +287,10 @@ img { max-width: 100%; }
 
 p, footer, div.table-wrapper { width: 55%; }
 
-div.table-wrapper { overflow-x: scroll; }
+div.fullwidth { width: 100%; }
+
+div.table-wrapper { overflow-x: scroll;
+                    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 @media screen and (max-width: 760px) { p, footer { width: 90%; }
                                        pre.code { width: 87.5%; }
