@@ -77,6 +77,8 @@ p.subtitle { font-style: italic;
 
 .numeral { font-family: et-book-roman-old-style; }
 
+.danger { color: red; }
+
 /* Tables */
 table { overflow-x: scroll;
         width: 98%;
