@@ -81,24 +81,24 @@ p.subtitle { font-style: italic;
 
 /* Tables */
 table { overflow-x: scroll;
-        width: 98%;
         clear: left;
         text-align: center;
         font-size: 1.2rem;
         line-height: 1.2;
-        margin: 1.4rem 1%;
+        margin: 1.4rem 0;
         border-collapse: separate;
         border-spacing: 0 5px;
         -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
         -moz-font-feature-settings: 'tnum';
         -ms-font-feature-settings: 'tnum'; }
 
+table > tbody > tr > td { vertical-align: top; }
+
 div.supertable-wrapper > h3 { font-style: normal;
                               font-size: 1.7rem;
                               width: 100%; }
 
 div.supertable-wrapper > p { font-style: normal;
-                             width: 100%;
                              margin-top: 0.5rem;
                              font-size: 1rem; }
 
@@ -110,7 +110,7 @@ table.supertable > tbody > tr > td:nth-child(1) { padding-left: 1.5em;
                                                   padding-right: 1.5em; }
 
 table.supertable > tbody > tr > td.pseudoparagraph-heading { padding-left: 0em; }
-table.supertable > tbody > tr > td.pseudoparagraph-footer { padding-left: 0em;
+table.supertable > tbody > tr > td.footer { padding-left: 0em;
                                                             padding-top: 1em;
                                                             text-indent: 0em;
                                                             font-style: italic; }
@@ -126,11 +126,11 @@ thead th { text-align: left;
 
 .number { text-align: right; }
 td > div.number { display: inline-block; }
-
 td > div.number2 { width: 1rem; }
 td > div.number7 { width: 3.3rem; }
 
-span.table-label { padding-top: 8px; } /* to maintain height relative to table header row */
+span.table-label { margin-top: 1.4rem;
+                   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; } /* this must match table top margin, to maintain height relative to table header row */
 
 /* Table option: Booktabs, Tufte style */
 table.booktabs { width: auto;
@@ -290,9 +290,9 @@ img { max-width: 100%; }
 .sidenote:before { content: counter(sidenote-counter) " ";
                    top: -0.5rem; }
 
-p, footer, div.table-wrapper { width: 55%; }
+p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
 
-div.fullwidth { width: 100%; }
+div.fullwidth, table.fullwidth { width: 100%; }
 
 div.table-wrapper { overflow-x: scroll;
                     font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
