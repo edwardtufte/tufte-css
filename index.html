@@ -97,9 +97,8 @@
     <section>
       <h2>Figures</h2>
       <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
-      <p>Figures should try to use the <span class="code">figure</span> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:</p>
+      <p>Figures should try to use the <span class="code">figure</span> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:</p>
       <figure>
-        <!-- <figcaption>From Edward Tufte, <em>Visual Display of Quantitative Information</em>, page 92.</figcaption> -->
         <label for="mn-exports-imports" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-exports-imports" class="margin-toggle"/><span class="marginnote">From Edward Tufte, <em>Visual Display of Quantitative Information</em>, page 92.</span>
         <img src="img/exports-imports.png"/>
       </figure>
@@ -138,11 +137,11 @@
 
     <section>
       <h2>ImageQuilts</h2>
-      <p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href="http://imagequilts.com/">ImageQuilts</a>. Some have ragged edges, others straight. Include these images just as you would any other <span class="code">figure</span>.</p>
-      <p>This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:</p>
-      <figure class="fullwidth"><img src="img/imagequilt - 750-Chinese Calligraphy.png"/></figure>
-      <p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.</p>
-      <figure><img src="img/imagequilt - 230-47 animal sounds over and over.png"/></figure>
+      <p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href="http://imagequilts.com/">ImageQuilts</a>, as described by Tufte <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk">on his website</a>. Some have ragged edges, others straight. Include these images just as you would any other <span class="code">figure</span>.</p>
+        <p>This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:</p>
+        <figure class="fullwidth"><img src="img/imagequilt - 750-Chinese Calligraphy.png"/></figure>
+        <p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.</p>
+        <figure><img src="img/imagequilt - 230-47 animal sounds over and over.png"/></figure>
     </section>
   </article>
 </body>
