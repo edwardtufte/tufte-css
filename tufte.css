@@ -203,8 +203,6 @@ blockquote footer { width: 50%;
 ol, ul { width: 45%;
          -webkit-padding-start: 5%;
          -webkit-padding-end: 5%; }
-         
-ul { list-style-type: none; }
 
 li { padding: 0.5rem 0; }
 
