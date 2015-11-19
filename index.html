@@ -65,6 +65,14 @@
    table#pravda > tbody > tr > td { vertical-align: bottom; }
       
   </style>
+
+  <style type="text/css">
+    /* Overrides for Google-code-prettify */
+    pre.prettyprint { padding-left: 2.5% !important;
+                   border: 0px !important; }
+  </style>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" async></script>
 </head>
 
 <body>
@@ -86,7 +94,7 @@
       <h2>Getting Started</h2>
       <p>To use Tufte CSS, copy <span class="code">tufte.css</span> and the <span class="code">et-book</span> directory of font files to your project directory, then add the following to your HTML document’s <span class="code">head</span> block:</p>
 
-      <pre class="code">&lt;link rel="stylesheet"
+      <pre class="code prettyprint lang-html">&lt;link rel="stylesheet"
       href="tufte.css"/&gt;</pre>
 
       <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
@@ -145,7 +153,7 @@
       <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations <em>as close as possible</em> to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.</p>
       <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
       <p>
-        <pre class="code">
+        <pre class="code prettyprint lang-html">
 &lt;label for="sn-demo" class="margin-toggle sidenote-number"&gt;&lt;/label&gt;
 &lt;input type="checkbox" id="sn-demo" class="margin-toggle"/&gt;</pre>
       </p>
@@ -159,7 +167,7 @@
         </span> On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol &#8853; (<span class="code">&amp;#8853;</span>), but it’s up to you.</p>
       <p>Margin notes are created just like sidenotes, but with the <span class="code">marginnote</span> class for the content and the <span class="code">margin-toggle</span> class for the label and dummy checkbox. For instance, here is the code for the margin note used in the previous paragraph:</p>
       <p>
-        <pre class="code">
+        <pre class="code prettyprint lang-html">
 &lt;label for="mn-demo" class="margin-toggle"&gt;&amp;#8853;&lt;/label&gt;
 &lt;input type="checkbox" id="mn-demo" class="margin-toggle"/&gt;
 &lt;span class="marginnote"&gt;
@@ -941,7 +949,7 @@
       <h2>Code</h2>
       <p>Technical jargon, programming language terms, and code samples are denoted with the <span class="code">code</span> class, as I’ve been using in this document to denote HTML. Code needs to be monospace for formatting purposes and to aid in code analysis, but it must maintain its readability. To those ends, Tufte CSS apes GitHub’s font selection, which degrades gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.</p>
       <p>Extended code examples should use a <span class="code">pre</span> tag with class <span class="code">code</span>. This adds control over indentation and overflow as well:</p>
-      <pre class="code">
+      <pre class="code prettyprint lang-clj">
 ;; Some code examples in Clojure. This is a comment.
 
 ;; applying a function to every item in the collection
@@ -960,6 +968,14 @@
 ;; If this proselytizing has worked, check out:
 ;; http://howistart.org/posts/clojure/1
       </pre>
+      <p>
+      <label for="mn-syntax" class="margin-toggle">&#8853;</label>
+      <input type="checkbox" id="mn-syntax" class="margin-toggle"/>
+      <span class="marginnote">Choose one of <em>lang-apollo, lang-basic, lang-clj, lang-css, lang-dart, lang-erlang, lang-go, lang-hs, lang-lisp, lang-llvm, lang-lua, lang-matlab, lang-ml, lang-mumps, lang-n, lang-pascal, lang-proto, lang-r, lang-rd, lang-scala, lang-sql, lang-tcl, lang-tex, lang-vb, lang-vhdl, lang-wiki, lang-xq, lang-yaml</em><br>More information at the <a href="https://github.com/google/code-prettify">Github project</a>.
+      </span>
+      Further extending is possible by adding language syntax highlighting. 
+      You should use a <span class="code">pre</span> tag with classes <span class="code">code prettyprint lang-*</span>.
+      The optional class <span class="code">lang-*</span> is the name of the intendend language renderer.</p>
     </section>
 
     <section>
