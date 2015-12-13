@@ -134,7 +134,7 @@
           <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
           <footer>Richard P. Feynman, <cite>“What Do You Care What Other People Think?”</cite></footer>
         </blockquote>
-        <blockquote>I do not paint things, I paint only the differences between things.<footer>Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite> (Paris, 1943), 37.</blockquote>
+        <blockquote>I do not paint things, I paint only the differences between things.<footer>Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite> (Paris, 1943), 37</footer></blockquote>
       </div>
       <p>If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly <em>Beautiful Evidence</em>), these are <span class="code">blockquote</span> elements with a bit of specialized styling. Quoted text is italicized. The source goes in a <span class="code">footer</span> element inside the <span class="code">blockquote</span>. We have provided three examples in the epigraph of this section, demonstrating shorter and longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.</p>
     </section>
@@ -144,11 +144,9 @@
       <p>One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.</p>
       <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations <em>as close as possible</em> to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.</p>
       <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
-      <p>
-        <pre class="code">
+      <pre class="code">
 &lt;label for="sn-demo" class="margin-toggle sidenote-number"&gt;&lt;/label&gt;
 &lt;input type="checkbox" id="sn-demo" class="margin-toggle"/&gt;</pre>
-      </p>
       <p>You must manually assign a reference <span class="code">id</span> to each side or margin note, replacing “sn-demo” in the <span class="code">for</span> and the <span class="code">id</span> attribute values with an appropriate descriptor. It is useful to use prefixes like <span class="code">sn-</span> for sidenotes and <span class="code">mn-</span> for margin notes.</p>
       <p>Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a <span class="code">span</span> with class <span class="code">sidenote</span>. This tag is also inserted directly in the middle of the body text, but is either pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.</p>
       <p>If you want a sidenote without footnote-style numberings, then you want a margin note.
@@ -158,14 +156,12 @@
           This is a margin note. Notice there isn’t a number preceding the note.
         </span> On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol &#8853; (<span class="code">&amp;#8853;</span>), but it’s up to you.</p>
       <p>Margin notes are created just like sidenotes, but with the <span class="code">marginnote</span> class for the content and the <span class="code">margin-toggle</span> class for the label and dummy checkbox. For instance, here is the code for the margin note used in the previous paragraph:</p>
-      <p>
-        <pre class="code">
+      <pre class="code">
 &lt;label for="mn-demo" class="margin-toggle"&gt;&amp;#8853;&lt;/label&gt;
 &lt;input type="checkbox" id="mn-demo" class="margin-toggle"/&gt;
 &lt;span class="marginnote"&gt;
   This is a margin note. Notice there isn’t a number preceding the note.
 &lt;/span&gt;</pre>
-      </p>
       <p>Figures in the margin are created as margin notes, as demonstrated in the next section.</p>
     </section>
 
@@ -178,7 +174,7 @@
         <img src="img/exports-imports.png"/>
       </figure>
 
-      <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="img/rhino.png"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen to the right of this paragraph.</p>
+      <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen to the right of this paragraph.</p>
       <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that’s inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated below using Edward Tufte’s English translation of the iconic Napoleon’s March data visualization.</p>
       <figure class="fullwidth">
         <img src="img/napoleons-march.png"/>
@@ -188,7 +184,7 @@
 
     <section>
       <h2>Tables</h2>
-      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. The default font is Trebuchet<label for="sn-trebuchet" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="sn-trebuchet" class="margin-toggle"/><span class="sidenote">Trebuchet has <a href="http://www.cssfontstack.com/Trebuchet-MS">~97% penetration</a>.</span>, though a given table might require a different choice. This turns out to be a major principle of tables in Tufte CSS: while there are some defaults, each table requires substantial individual care. Here, more than anywhere else in Tufte CSS, one must customize the styling in order to present one’s data optimally.</p>
+      <p>Tabular data are presented by default with right-aligned numbers, left-aligned text, and minimal grid lines. The default font is Trebuchet<label for="sn-trebuchet" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-trebuchet" class="margin-toggle"/><span class="sidenote">Trebuchet has <a href="http://www.cssfontstack.com/Trebuchet-MS">~97% penetration</a>.</span>, though a given table might require a different choice. This turns out to be a major principle of tables in Tufte CSS: while there are some defaults, each table requires substantial individual care. Here, more than anywhere else in Tufte CSS, one must customize the styling in order to present one’s data optimally.</p>
 
       <p>Let’s look at some examples. Here’s one, from page 121 of Tufte’s <em>Visual Display of Quantitative Information</em>:</p>
 
@@ -882,8 +878,8 @@
             <tr><td class="number">1</td><td>04.12.81</td><td>66&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text">Coolest (66&deg;) launch without O-ring problems.</td></tr>
             
             <tr><td class="number">6</td><td>04.04.83</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td></td></tr>
-            <tr><td class="number">51-A</td><td ">11.08.84</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
-            <tr><td class="number">51-D</td><td ">04.12.85</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">51-A</td><td>11.08.84</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
+            <tr><td class="number">51-D</td><td>04.12.85</td><td>67&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
             <tr><td class="number">5</td><td>11.11.82</td><td>68&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
             <tr><td class="number">3</td><td>03.22.82</td><td>69&deg;</td><td></td><td></td><td><div class="number number2">0</div></td><td class="text"></td></tr>
             <tr><td class="number">2</td><td>11.12.81</td><td>70&deg;</td><td class="danger">1</td><td></td><td><div class="number number2">4</div></td><td class="text">Extent of erosion not fully known.</td></tr>
@@ -966,9 +962,9 @@
       <h2>ImageQuilts</h2>
       <p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href="http://imagequilts.com/">ImageQuilts</a>. Some have ragged edges, others straight. Include these images just as you would any other <span class="code">figure</span>.</p>
       <p>This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:</p>
-      <figure class="fullwidth"><img src="img/imagequilt - 750-Chinese Calligraphy.png"/></figure>
+      <figure class="fullwidth"><img src="img/imagequilt-chinese-calligraphy.png" alt="Image of Chinese Calligraphy"/></figure>
       <p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.</p>
-      <figure><img src="img/imagequilt - 230-47 animal sounds over and over.png"/></figure>
+      <figure><img src="img/imagequilt-animal-sounds.png" alt="Image of animal sounds"/></figure>
     </section>
     
     <section>
