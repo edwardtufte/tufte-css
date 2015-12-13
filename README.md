@@ -73,17 +73,18 @@ rules change slightly for media queries.
 
 Contributors
 -
- - Dave Liepmann (creator, project maintainer)
+ - Dave Liepmann (creator, project maintainer, design)
+ - Edward Tufte (editing, direction, design)
  - [Clay Harmon](https://github.com/edwardtufte/tufte-css/commits/master?author=clayh53) (media queries, rem units)
  - [Linjie Ding](https://github.com/edwardtufte/tufte-css/commits/master?author=pyrocat101) (italic typeface)
  - [Stephen A Thomas](https://github.com/edwardtufte/tufte-css/commits/master?author=sathomas) (automagically numbered sidenotes)
  - [Ben Newman](https://github.com/edwardtufte/tufte-css/pull/9) (sidenote numbering style)
  - [Kevin Godby](https://github.com/edwardtufte/tufte-css/commits/master?author=godbyk) (booktabs tables)
  - [James Kolce](https://github.com/edwardtufte/tufte-css/commits/master?author=jameskolce) (sidenote fixes)
- - [Chris MacKay](https://github.com/crmackay) (sidenote toggling on
-   small screens)
+ - [Chris MacKay](https://github.com/crmackay) (sidenote toggling on small screens)
  - [Paul Rodriguez](https://github.com/edwardtufte/tufte-css/commits/master?author=ruricolist)
    (sidenote style tweaks)
+ - [Claudiu-Vlad Ursache](https://github.com/edwardtufte/tufte-css/commits/master?author=ursachec) (HTML5 conformity)
 
 License
 -
