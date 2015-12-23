@@ -15,7 +15,7 @@ Getting Started
 -
 The file *index.html* is a self-describing demonstration document that walks through
 the features of Tufte CSS. The live version at
-[http://www.daveliepmann.com/tufte-css/](http://www.daveliepmann.com/tufte-css/)
+[https://edwardtufte.github.io/tufte-css/](https://edwardtufte.github.io/tufte-css/)
 is the best overview of the project.
 
 To use Tufte CSS on your own HTML page, just copy `tufte.css`,
