@@ -207,7 +207,7 @@ p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.bookt
 
 div.fullwidth, table.fullwidth { width: 100%; }
 
-div.table-wrapper { overflow-x: scroll;
+div.table-wrapper { overflow-x: auto;
                     font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 @media screen and (max-width: 760px) { p, footer { width: 90%; }
@@ -231,7 +231,7 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 pre.code { width: 52.5%;
            padding-left: 2.5%;
-           overflow-x: scroll; }
+           overflow-x: auto; }
 
 .fullwidth { max-width: 90%;
              clear:both; }
