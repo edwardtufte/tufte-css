@@ -68,7 +68,8 @@ h3 { font-style: italic;
      margin-bottom: 0;
      line-height: 1; }
      
-h1:target, h2:target, h3:target { box-shadow: 0 1rem #eeeeec; }
+h1:target, h2:target, h3:target { box-shadow: 0 1rem #eeeeec;
+                                  display: inline-block; }
 
 p.subtitle { font-style: italic;
              margin-top: 1rem;
