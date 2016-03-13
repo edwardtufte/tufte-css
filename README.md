@@ -88,4 +88,4 @@ Contributors
 
 License
 -
-Released under the MIT license. See [LICENSE](https://github.com/edwardtufte/tufte-css/blob/master/LICENSE).
+Released under the MIT license. See [LICENSE](https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE).
