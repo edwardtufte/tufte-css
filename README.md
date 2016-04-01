@@ -18,9 +18,9 @@ the features of Tufte CSS. The live version at
 [https://edwardtufte.github.io/tufte-css/](https://edwardtufte.github.io/tufte-css/)
 is the best overview of the project.
 
-To use Tufte CSS on your own HTML page, just copy `tufte.css`,
-`ETBembo-RomanLF.ttf`, and `ETBembo-DisplayItalic.ttf` to your project
-directory and add the following to your HTML doc's head block:
+To use Tufte CSS on your own HTML page, just copy `tufte.css` and the `et-book`
+font directory to your project and add the following to your HTML doc's head
+block:
 
 ```html
 <link rel="stylesheet" href="tufte.css"/>
