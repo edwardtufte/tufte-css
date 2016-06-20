@@ -231,7 +231,15 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 pre.code { width: 52.5%;
            padding-left: 2.5%;
-           overflow-x: auto; }
+           white-space: pre-wrap;
+           word-wrap: normal;
+           /*overflow-x: auto; */}
+
+pre.code line { background: transparent url(img/wrapped.gif) no-repeat 0 1.42em ; 
+               display: inline-block;
+               text-indent: -7em;
+               margin-left: 7em;
+               padding-left: 1.3em; }
 
 pre.code.fullwidth { width: 90%; }
 
