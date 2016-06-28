@@ -129,7 +129,63 @@
 ;; If this proselytizing has worked, check out:
 ;; http://howistart.org/posts/clojure/1
       </pre>
+
+    <p>If you prefer to wrap long lines, surround each line of code in a <span class="code">&lt;line>&lt;/line></span> pair.  If you narrow your browser window enough, you can see this effect on the code below.
+
+    <pre class="code wrapped">
+<line>/*</line>
+<line> * One file structure is allocated</line>
+<line> * for each open/creat/pipe call.</line>
+<line> * Main use is to hold the read/write</line>
+<line> * pointer associated with each open </line>
+<line> * file.</line>
+<line> */</line>
+<line>struct     file</line>
+<line>{</line>
+<line>   char    f_flag;</line>
+<line>   char    f_count;              /* reference count */</line>
+<line>   int     f_inode;              /* pointer to inode structure */</line>
+<line>   char    *f_offset[2]          /* read/write character pointer */</line>
+<line>} file [NFILE];</line>
+<line>/* -------------------------------       */</line>
+<line></line>
+    </pre>
+
+    <p>Finally, like images, code blocks also support a fullwidth class; an example of fullwidth wrapped code is below.
+    <pre class="code wrapped fullwidth">
+<line>/*</line>
+<line> * Definition of the unix super block.</line>
+<line> * The root super block is allocated and</line>
+<line> * read in iinit/alloc.c.  Subsequently</line>
+<line> * a super block is allocated and read</line>
+<line> * with each mount (smount/sys3.c) and</line>
+<line> * released with unmount (sumount/sys3.c).</line>
+<line> * A disk block is ripped off for storage.</line>
+<line> * See alloc.c for general alloc/free</line>
+<line> * routines for free list and I list.</line>
+<line> */</line>
+<line>struct  filesys</line>
+<line>{</line>
+<line> int   s_isize;                 /* size in blocks of I list */</line>
+<line> int   s_fsize;                 /* size in blocks of entire volume */</line>
+<line> int   s_nfree;                 /* number of in core free blocks</line>
+<line>                                (between 0 and 100) * /</line>
+<line> int   s_free[100];             /* in core free blocks */</line>
+<line> int   s_ninode;                /* number of in core I nodes (0-100) */</line>
+<line> int   s_inode[100];            /* in core free I nodes */</line>
+<line> char  s_flock;                 /* lock during free list manipulation */</line>
+<line> char  s_ilock;                 /* lock during I list manipulation */</line>
+<line> char  s_fmod;                  /* super block modified flag */</line>
+<line> char  s_ronly;                 /* mounted read-only flag */</line>
+<line> int   s_time[2]                /* current date of last update */</line>
+<line> int   pad[50];</line>
+<line>};</line>
+<line>/* -------------------------------       */</line>
+    </pre>
+
+
     </section>
+
 
     <section>
       <h2 id="imagequilts">ImageQuilts</h2>
@@ -144,7 +200,7 @@
       <h2 id="epilogue">Epilogue</h2>
       <p>Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.</p>
     </section>
-    
+
   </article>
 </body>
 </html>

@@ -222,8 +222,8 @@ div.table-wrapper { overflow-x: auto;
         letter-spacing: .03em; }
 
 .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        font-size: 1.125rem;
-        line-height: 1.6; }
+        font-size: 1.0rem;
+        line-height: 1.42; }
 
 h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
@@ -232,6 +232,18 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 pre.code { width: 52.5%;
            padding-left: 2.5%;
            overflow-x: auto; }
+
+pre.code.wrapped {
+           white-space: pre-wrap;
+           word-wrap: normal; }
+
+pre.code.wrapped line { background: transparent url(img/wrapped.gif) no-repeat 0 1.42em ;
+               display: inline-block;
+               text-indent: -7em;
+               margin-left: 7em;
+               padding-left: 1.6em; }
+
+pre.code.fullwidth { width: 90%; }
 
 .fullwidth { max-width: 90%;
              clear:both; }
