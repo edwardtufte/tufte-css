@@ -231,11 +231,13 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 pre.code { width: 52.5%;
            padding-left: 2.5%;
-           white-space: pre-wrap;
-           word-wrap: normal;
-           /*overflow-x: auto; */}
+           overflow-x: auto; }
 
-pre.code line { background: transparent url(img/wrapped.gif) no-repeat 0 1.42em ; 
+pre.code.wrapped {
+           white-space: pre-wrap;
+           word-wrap: normal; }
+
+pre.code.wrapped line { background: transparent url(img/wrapped.gif) no-repeat 0 1.42em ;
                display: inline-block;
                text-indent: -7em;
                margin-left: 7em;
