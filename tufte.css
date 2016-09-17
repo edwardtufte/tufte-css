@@ -233,6 +233,25 @@ pre.code { width: 52.5%;
            padding-left: 2.5%;
            overflow-x: auto; }
 
+pre.code.with-wrapping { white-space: pre-wrap;
+                         word-wrap: normal; }
+
+pre.code.with-wrapping line { position: relative;
+                              display: inline-block;
+                              text-indent: -8.4em;
+                              margin-left: 6.6em;
+                              padding-left: 1.8em; }
+
+pre.code.with-wrapping line::before { content: "";
+                                      position: absolute;
+                                      display: block;
+                                      top: 1.6em;
+                                      bottom: 0;
+                                      left: 0;
+                                      width: 1.6em;
+                                      background: transparent url(img/line-wrap-arrow.svg) repeat-y 0 1.6em;
+                                      background-size: 1.6em 1.6em; }
+
 .fullwidth { max-width: 90%;
              clear:both; }
 
