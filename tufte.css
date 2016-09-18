@@ -195,6 +195,10 @@ img { max-width: 100%; }
 .sidenote:before { content: counter(sidenote-counter) " ";
                    top: -0.5rem; }
 
+blockquote .sidenote, blockquote .marginnote { margin-right: -82%;
+                                               min-width: 59%;
+                                               text-align: left; }    
+
 p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { width: 55%; }
 
 div.fullwidth, table.fullwidth { width: 100%; }
