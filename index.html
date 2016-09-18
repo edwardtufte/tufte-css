@@ -70,8 +70,12 @@
       <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations <em>as close as possible</em> to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.</p>
       <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
       <pre class="code">
-&lt;label for="sn-demo" class="margin-toggle sidenote-number"&gt;&lt;/label&gt;
-&lt;input type="checkbox" id="sn-demo" class="margin-toggle"/&gt;</pre>
+&lt;label for="sn-demo"
+       class="margin-toggle sidenote-number"&gt;
+&lt;/label&gt;
+&lt;input type="checkbox"
+       id="sn-demo"
+       class="margin-toggle"/&gt;</pre>
       <p>You must manually assign a reference <span class="code">id</span> to each side or margin note, replacing “sn-demo” in the <span class="code">for</span> and the <span class="code">id</span> attribute values with an appropriate descriptor. It is useful to use prefixes like <span class="code">sn-</span> for sidenotes and <span class="code">mn-</span> for margin notes.</p>
       <p>Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a <span class="code">span</span> with class <span class="code">sidenote</span>. This tag is also inserted directly in the middle of the body text, but is either pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.</p>
       <p>If you want a sidenote without footnote-style numberings, then you want a margin note.
