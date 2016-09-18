@@ -1,8 +1,5 @@
 Tufte CSS
 =========
->Simplicity, to me, has always been the essence of good taste. <br/>
-> -- [Cary Grant](http://www.gq.com/story/cary-grant-on-style?printable=true)
-
 Edward Tufte uses a distinctive style in his handouts: simple, with well-set
 typography, extensive sidenotes, and tight integration of graphics and
 charts. `tufte-css` brings that style to HTML documents.
@@ -18,16 +15,16 @@ the features of Tufte CSS. The live version at
 [https://edwardtufte.github.io/tufte-css/](https://edwardtufte.github.io/tufte-css/)
 is the best overview of the project.
 
-To use Tufte CSS on your own HTML page, just copy `tufte.css` and the `et-book`
-font directory to your project and add the following to your HTML doc's head
-block:
+To use Tufte CSS, just copy `tufte.css` and the `et-book` font
+directory to your project and add the following to your HTML doc's
+head block:
 
 ```html
 <link rel="stylesheet" href="tufte.css"/>
 ```
 
-All the other files can be ignored, as they are merely used by the
-demonstration document.
+All other files in the repository can be ignored, as they are merely
+used by the demonstration document.
 
 Contributing
 -
@@ -75,6 +72,7 @@ Contributors
 -
  - Dave Liepmann (creator, project maintainer, design)
  - Edward Tufte (editing, direction, design)
+ - [Adam Schwartz](https://github.com/adamschwartz) (ET Book font, descender-clearing link underlines)
  - [Clay Harmon](https://github.com/edwardtufte/tufte-css/commits/master?author=clayh53) (media queries, rem units)
  - [Linjie Ding](https://github.com/edwardtufte/tufte-css/commits/master?author=pyrocat101) (italic typeface)
  - [Stephen A Thomas](https://github.com/edwardtufte/tufte-css/commits/master?author=sathomas) (automagically numbered sidenotes)
