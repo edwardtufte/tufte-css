@@ -107,9 +107,9 @@ blockquote footer { width: 50%;
                     font-size: 1.1rem;
                     text-align: right; }
 
-ol, ul { width: 45%;
-         -webkit-padding-start: 5%;
-         -webkit-padding-end: 5%; }
+section>ol, section>ul { width: 45%;
+                         -webkit-padding-start: 5%;
+                         -webkit-padding-end: 5%; }
 
 li { padding: 0.5rem 0; }
 
