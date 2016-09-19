@@ -96,14 +96,14 @@ div.epigraph > blockquote, div.epigraph > blockquote > p { font-style: italic; }
 div.epigraph > blockquote > footer { font-style: normal; }
 
 div.epigraph > blockquote > footer > cite { font-style: italic; }
-
 /* end chapter epigraphs styles */
 
 blockquote { font-size: 1.4rem; }
 
-blockquote p { width: 50%; }
+blockquote p { width: 55%;
+               margin-right: 40px; }
 
-blockquote footer { width: 50%;
+blockquote footer { width: 55%;
                     font-size: 1.1rem;
                     text-align: right; }
 
@@ -206,14 +206,6 @@ div.fullwidth, table.fullwidth { width: 100%; }
 div.table-wrapper { overflow-x: auto;
                     font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
 
-@media screen and (max-width: 760px) { p, footer { width: 90%; }
-                                       pre.code { width: 87.5%; }
-                                       ul { width: 85%; }
-                                       figure { max-width: 90%; }
-                                       figcaption, figure.fullwidth figcaption { margin-right: 0%;
-                                                                                 max-width: none; }
-                                       blockquote p, blockquote footer { width: 90%; }}
-
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         letter-spacing: .03em; }
 
@@ -227,7 +219,7 @@ h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 pre.code { font-size: 0.9rem;
            width: 52.5%;
-           padding-left: 2.5%;
+           margin-left: 2.5%;
            overflow-x: auto; }
 
 pre.code.fullwidth { width: 90%; }
@@ -244,7 +236,19 @@ label.sidenote-number { display: inline; }
 
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
-@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; }
+@media (max-width: 760px) { body { width: 84%;
+                                   padding-left: 8%;
+                                   padding-right: 8%; }
+                            p, footer { width: 100%; }
+                            pre.code { width: 97%; }
+                            ul { width: 85%; }
+                            figure { max-width: 90%; }
+                            figcaption, figure.fullwidth figcaption { margin-right: 0%;
+                                                                      max-width: none; }
+                            blockquote { margin-left: 1.5em;
+                                         margin-right: 0em; }
+                            blockquote p, blockquote footer { width: 100%; }
+                            label.margin-toggle:not(.sidenote-number) { display: inline; }
                             .sidenote, .marginnote { display: none; }
                             .margin-toggle:checked + .sidenote,
                             .margin-toggle:checked + .marginnote { display: block;
@@ -256,8 +260,6 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                                                    vertical-align: baseline;
                                                                    position: relative; }
                             label { cursor: pointer; }
-                            pre.code { width: 90%;
-                                       padding: 0; }
                             .table-caption { display: block;
                                              float: right;
                                              clear: both;
