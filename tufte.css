@@ -213,6 +213,8 @@ div.table-wrapper { overflow-x: auto;
         font-size: 1.0rem;
         line-height: 1.42; }
 
+.sans.code { font-size: 1.2rem; }
+
 h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
 
 .marginnote .code, .sidenote .code { font-size: 1rem; }
