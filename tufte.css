@@ -1,7 +1,7 @@
+@charset "UTF-8";
+
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
-
-@charset "UTF-8";
 
 @font-face { font-family: "et-book";
              src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
