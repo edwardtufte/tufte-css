@@ -60,6 +60,14 @@ h3 { font-style: italic;
      margin-bottom: 0;
      line-height: 1; }
 
+hr { display: block;
+     height: 1px;
+     width: 55%;
+     border: 0;
+     border-top: 1px solid #ccc;
+     margin: 1em 0;
+     padding: 0; }
+
 p.subtitle { font-style: italic;
              margin-top: 1rem;
              margin-bottom: 1rem;
