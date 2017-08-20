@@ -241,7 +241,8 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                    padding-right: 8%; }
                             p, footer { width: 100%; }
                             pre.code { width: 97%; }
-                            ul { width: 85%; }
+                            section > ol { width: 90%; }
+                            section > ul { width: 90%; }
                             figure { max-width: 90%; }
                             figcaption, figure.fullwidth figcaption { margin-right: 0%;
                                                                       max-width: none; }
