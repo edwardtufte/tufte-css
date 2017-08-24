@@ -109,6 +109,16 @@
         <figure class="fullwidth">
           <img src="img/napoleons-march.png" alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813" />
         </figure>
+        <p>One obstacle to creating elegant figures on the web is the difficulty of handling different screen sizes, especially on the fly. Embedded <code>iframe</code> elements are particularly troublesome. For these instances we provide a helper class, <code>iframe-wrapper</code>, the most common use for which is probably YouTube videos, e.g.</p>
+        <pre class="code">
+&lt;figure class="iframe-wrapper"&gt;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/uBYPqb83C7k" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/figure&gt;
+        </pre>
+        <figure class="iframe-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uBYPqb83C7k" frameborder="0" allowfullscreen></iframe>
+        </figure>
+        <p>You can use this class on a <code>div</code> instead of a <code>figure</code>, with slightly different results but the same general effect. Choose depending on your application.</p>
       </section>
 
       <section>
@@ -141,23 +151,6 @@
         <figure class="fullwidth"><img src="img/imagequilt-chinese-calligraphy.png" alt="Image of Chinese Calligraphy"/></figure>
         <p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.</p>
         <figure><img src="img/imagequilt-animal-sounds.png" alt="Image of animal sounds"/></figure>
-      </section>
-
-      <section>
-        <h2 id="embeds">Embeds</h2>
-        <p>
-          Responsive iframes are horrible. Use them boldly by placing them within the <code>iframe-wrapper</code> class. The most common use for this is probably youtube videos, e.g.
-        </p>
-        <pre class="code">
-&lt;div class="iframe-wrapper"&gt;
-  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/uBYPqb83C7k" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-        </pre>
-        <figure>
-          <div class="iframe-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uBYPqb83C7k" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </figure>
       </section>
 
       <section>
