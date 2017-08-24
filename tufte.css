@@ -195,7 +195,7 @@ img { max-width: 100%; }
 
 blockquote .sidenote, blockquote .marginnote { margin-right: -82%;
                                                min-width: 59%;
-                                               text-align: left; }    
+                                               text-align: left; }
 
 p, footer, table { width: 55%; }
 
@@ -237,15 +237,15 @@ label.sidenote-number { display: inline; }
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
 .iframe-wrapper { position: relative;
-	          padding-bottom: 56.25%; /* 16:9 */
-	          padding-top: 25px;
-	          height: 0; }
+	              padding-bottom: 56.25%; /* 16:9 */
+	              padding-top: 25px;
+	              height: 0; }
 
 .iframe-wrapper iframe { position: absolute;
-	                 top: 0;
-	                 left: 0;
-	                 width: 100%;
-	                 height: 100%; }
+	                     top: 0;
+	                     left: 0;
+	                     width: 100%;
+	                     height: 100%; }
 
 @media (max-width: 760px) { body { width: 84%;
                                    padding-left: 8%;
