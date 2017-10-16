@@ -85,10 +85,10 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
-p, ol, ul { font-size: 1.4rem; }
+p, ol, ul { font-size: 1.4rem;
+            line-height: 2rem; }
 
-p { line-height: 2rem;
-    margin-top: 1.4rem;
+p { margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     padding-right: 0;
     vertical-align: baseline; }
