@@ -120,7 +120,8 @@ section > p, section > footer, section > table { width: 55%; }
 /* 50 + 5 == 55, to be the same width as paragraph */
 section > ol, section > ul { width: 50%;
                              -webkit-padding-start: 5%; }
-li { padding: 0.5rem 0; }
+
+li:not(:first-child) { margin-top: 0.25rem; }
 
 figure { padding: 0;
          border: 0;
