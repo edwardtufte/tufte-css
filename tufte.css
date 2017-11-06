@@ -207,7 +207,7 @@ div.table-wrapper { overflow-x: auto;
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         letter-spacing: .03em; }
 
-code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+code { font-family: Consolas, "DejaVu Sans Mono", Menlo, monospace;
        font-size: 1.0rem;
        line-height: 1.42; }
 
