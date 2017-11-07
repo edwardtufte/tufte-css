@@ -85,7 +85,7 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
-p, ol, ul { font-size: 1.4rem; }
+p, ol, ul, table { font-size: 1.4rem; }
 
 p { line-height: 2rem;
     margin-top: 1.4rem;
@@ -203,6 +203,25 @@ div.fullwidth, table.fullwidth { width: 100%; }
 
 div.table-wrapper { overflow-x: auto;
                     font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
+
+table { border-collapse: collapse;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        border-top: 1px solid #333;
+        margin: 2rem 0; }
+
+table thead { background: rgba(0,0,0,0.08);
+              font-size: 1rem;
+              font-weight: 600;
+              text-transform: uppercase; }
+
+table tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+
+table td { border-bottom: 1px solid #333;
+           border-left: 1px solid #333;
+           padding: 1rem; }
+
+table td:nth-child(1) { border-left: 0; }
 
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         letter-spacing: .03em; }
