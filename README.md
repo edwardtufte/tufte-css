@@ -26,6 +26,14 @@ head block:
 All other files in the repository can be ignored, as they are merely
 used by the demonstration document.
 
+Project Scope and Status
+-
+Tufte CSS is specifically a CSS-only solution for styling HTML for the web.
+
+That means that JavaScript solutions, although often superior to pure CSS, are out of scope for this project and will not be used. Also out of scope are handling printed versions of web pages and integration with static site generators or other formats. Thankfully, all these useful applications can be well served by separate work that builds on top of Tufte CSS.
+
+This project is maintained but not under active development. It is considered essentially feature-complete. Refactoring and new functionality are a very low priority. However, contributions are still welcome to fix bugs or add functionality.
+
 Contributing
 -
 If you notice something wrong or broken, let us know by opening an
