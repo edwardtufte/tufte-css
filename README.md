@@ -37,14 +37,21 @@ This project is maintained but not under active development. It is considered es
 Contributing
 -
 If you notice something wrong or broken, let us know by opening an
-issue. **Pull requests are very welcome**.
+issue, or better yet, a pull request with how you think it should be
+fixed.
 
-For best results, keep pull requests to one change at a time, and
-test your fix or new functionality against `index.html` on screens as
-small as an iPhone 4 and as big as, well, as big as you use
+Please document your issues and fixes thoroughly. This means a clear
+description of the concern, steps on how to reproduce it, and (if
+possible) before and after screenshots and links to prior discussions
+or commits. Please keep pull requests to one change at a time.
+
+Fixes and new functionality should be tested against `index.html` on
+screens as small as an iPhone 4 and as big as, well, as big as you use
 normally. (If you don't have a mobile device handy, fake different
-devices with your browser's developer tools.)  See the Issues page, especially
-[Help Wanted](https://github.com/edwardtufte/tufte-css/labels/help%20wanted),
+devices with your browser's developer tools.)
+
+See the Issues page, especially [Help
+Wanted](https://github.com/edwardtufte/tufte-css/labels/help%20wanted),
 for opportunities to contribute. Keep our style guide in mind:
 
 CSS Style Guide
