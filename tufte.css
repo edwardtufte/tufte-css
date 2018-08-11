@@ -192,6 +192,7 @@ img { max-width: 100%; }
                          left: 0.1rem; }
 
 .sidenote:before { content: counter(sidenote-counter) " ";
+                   font-size: 1rem;
                    top: -0.5rem; }
 
 blockquote .sidenote, blockquote .marginnote { margin-right: -82%;
