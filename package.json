@@ -1,0 +1,25 @@
+{
+  "name": "tufte-css",
+  "version": "1.3.0",
+  "description": "Edward Tufte uses a distinctive style in his handouts: simple, with well-set typography, extensive sidenotes, and tight integration of graphics and charts.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardtufte/tufte-css.git"
+  },
+  "keywords": [
+    "tufte",
+    "css",
+    "HTML",
+    "typography",
+    "sidenotes"
+  ],
+  "author": "Dave Liepmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edwardtufte/tufte-css/issues"
+  },
+  "homepage": "https://github.com/edwardtufte/tufte-css#readme",
+  "devDependencies": {
+    "csso": "^3.5.1",
+  }
+}
