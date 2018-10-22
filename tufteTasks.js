@@ -39,15 +39,15 @@ const deletableTufteEntries = [
 ];
 
 exports.tuftePrune = function() {
-  let paths = deletableTufteEntries.Map(entry => join(__dirname, entry));
-  return Promise.all(paths.Map(path => 
+  let paths = deletableTufteEntries.map(entry => join(__dirname, entry));
+  return Promise.all(paths.map(path => 
     fs.promises.stat(path).then(
       (status) => {
         if (status.isDirectory()) //It's tufte-css/img, which containssome images
         {
           return fs.promises.readdir(path).then(
             (items) => {
-              Promise.all(items.Map(item => {
+              Promise.all(items.map(item => {
                 return fs.promises.unlink(path+'/'+item);
               })).then(() =>
                 {
@@ -61,16 +61,15 @@ exports.tuftePrune = function() {
         {
           return fs.promises.unlink(path);
         }
-      })
+      }).catch( // If stat errors, the file is missing and we continue
+        () => {}
+      )
   ));
 }
 
 exports.tuftePruneSync = function() {
   deletableTufteEntries.forEach(function(entry)
   {
-    console.log(typeof(__dirname));
-    console.log(typeof(entry))
-    console.log(entry)
     var path = join(__dirname, entry);
     try
     {
@@ -102,12 +101,12 @@ cssFiles = [
 
 exports.tufteMinify = function()
 {
-  return Promise.all(cssFiles.Map(
+  return Promise.all(cssFiles.map(
     (cssFile) => 
       fs.promises.readFile(cssFile).then(
         (stream) => {
           var outFile = cssFile.replace('.css', '.min.css');
-          return fs.promises.writeFile(outFile, csso.minify(stream));
+          return fs.promises.writeFile(outFile, csso.minify(stream).css);
         })
     ));
 }
