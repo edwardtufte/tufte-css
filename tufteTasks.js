@@ -101,7 +101,8 @@ cssFiles = [
 
 exports.tufteMinify = function()
 {
-  return Promise.all(cssFiles.map(
+  let paths = cssFiles.map(file=> join(__dirname,file));
+  return Promise.all(paths.map(
     (cssFile) => 
       fs.promises.readFile(cssFile).then(
         (stream) => {
@@ -114,8 +115,9 @@ exports.tufteMinify = function()
 exports.tufteMinifySync = function()
 {
   cssFiles.forEach(function(file, index, array){
-    var stream = fs.readFileSync(file);
-    var outFile = file.replace('.css','.min.css')
+    var path = join(__dirname, file);
+    var stream = fs.readFileSync(path);
+    var outFile = path.replace('.css','.min.css')
     fs.writeFileSync(outFile, csso.minify(stream).css);
   });
 }
