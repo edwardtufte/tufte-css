@@ -106,10 +106,15 @@ div.epigraph > blockquote > footer { font-style: normal; }
 div.epigraph > blockquote > footer > cite { font-style: italic; }
 /* end chapter epigraphs styles */
 
-blockquote { font-size: 1.4rem; }
+blockquote { font-size: 1.4rem;
+             margin-left: 5%;
+             margin-right: 5%; }
 
-blockquote p { width: 55%;
+blockquote p { width: 55.555%;
                margin-right: 40px; }
+
+blockquote > ul, blockquote > ol { width: 50.555%;
+                                   -webkit-padding-start: 5%; }
 
 blockquote footer { width: 55%;
                     font-size: 1.1rem;
@@ -260,6 +265,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                             blockquote { margin-left: 1.5em;
                                          margin-right: 0em; }
                             blockquote p, blockquote footer { width: 100%; }
+                            blockquote ol, blockquote ul { width: auto; }
                             label.margin-toggle:not(.sidenote-number) { display: inline; }
                             .sidenote, .marginnote { display: none; }
                             .margin-toggle:checked + .sidenote,
