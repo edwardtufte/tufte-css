@@ -79,8 +79,7 @@ p.subtitle { font-style: italic;
 
 .danger { color: red; }
 
-article { position: relative;
-          padding: 5rem 0rem; }
+article { padding: 5rem 0rem; }
 
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
