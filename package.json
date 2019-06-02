@@ -1,6 +1,6 @@
 {
   "name": "tufte-css",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Edward Tufte uses a distinctive style in his handouts: simple, with well-set typography, extensive sidenotes, and tight integration of graphics and charts.",
   "repository": {
     "type": "git",
