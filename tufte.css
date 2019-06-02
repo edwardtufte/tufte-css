@@ -241,15 +241,10 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
     }
 }
 
-a:link::selection, 
+a:link::selection,
 a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
-}
-
-a.no-tufte-underline:link::selection, a.no-tufte-underline:link::-moz-selection {
-    text-shadow: unset;
-    background: unset;
 }
 
 /* Sidenotes, margin notes, figures, captions */
