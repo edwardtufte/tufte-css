@@ -218,7 +218,12 @@ a:visited {
     color: inherit; 
 }
 
-a:link {
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+a:link, .tufte-underline, .hover-tufte-underline:hover {
     text-decoration: none;
     background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
     background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
@@ -231,15 +236,20 @@ a:link {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    a:link {
+    a:link, .tufte-underline, .hover-tufte-underline:hover {
         background-position-y: 87%, 87%, 87%;
     }
 }
 
-a:link::selection,
+a:link::selection, 
 a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
+}
+
+a.no-tufte-underline:link::selection, a.no-tufte-underline:link::-moz-selection {
+    text-shadow: unset;
+    background: unset;
 }
 
 /* Sidenotes, margin notes, figures, captions */
