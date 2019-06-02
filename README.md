@@ -54,35 +54,6 @@ See the Issues page, especially [Help
 Wanted](https://github.com/edwardtufte/tufte-css/labels/help%20wanted),
 for opportunities to contribute. Keep our style guide in mind:
 
-CSS Style Guide
--
->Every major open-source project has its own style guide: a set of
->conventions (sometimes arbitrary) about how to write code for that
->project. It is much easier to understand a large codebase when all the
->code in it is in a consistent style. <br/>
-> -- [Google Style Guide](https://github.com/google/styleguide)
-
-Tufte CSS aims for clarity, concision, and uniformity. Here's a basic
-example of our CSS conventions:
-
-```css
-p { font-size: 1.4rem;
-    line-height: 2rem;
-    margin-top: 1.4rem;
-    margin-bottom: 1.4rem;
-    width: 55%;
-    padding-right: 0;
-    vertical-align: baseline; }
-    
-@media screen and (max-width: 600px) { p { width: 70%; }}
-@media screen and (max-width: 400px) { p { width: 90%; }}
-```
-
-Notice the single spacing between most syntactic markers, the single
-blank lines between unrelated blocks, and the absence of line breaks
-after an open-paren and before end-parens. Notice also that these
-rules change slightly for media queries.
-
 Contributors
 -
  - Dave Liepmann (creator, project maintainer, design)
