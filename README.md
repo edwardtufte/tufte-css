@@ -52,7 +52,7 @@ devices with your browser's developer tools.)
 
 See the Issues page, especially [Help
 Wanted](https://github.com/edwardtufte/tufte-css/labels/help%20wanted),
-for opportunities to contribute. Keep our style guide in mind:
+for opportunities to contribute.
 
 Contributors
 -
