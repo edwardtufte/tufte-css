@@ -19,4 +19,9 @@
     "url": "https://github.com/edwardtufte/tufte-css/issues"
   },
   "homepage": "https://edwardtufte.github.io/tufte-css/",
+  "files": [
+      "tufte.css",
+      "tufte.min.css",
+      "et-book/"
+  ]
 }
