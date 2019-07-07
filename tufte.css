@@ -312,7 +312,7 @@ div.table-wrapper {
     letter-spacing: .03em; 
 }
 
-code {
+code, pre.code {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.0rem;
     line-height: 1.42;
