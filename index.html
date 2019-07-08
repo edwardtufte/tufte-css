@@ -23,7 +23,7 @@
         <h2 id="getting-started">Getting Started</h2>
         <p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to your project directory, then add the following to your HTML document’s <code>head</code> block:</p>
 
-        <pre class="code">&lt;link rel="stylesheet" href="tufte.css"/&gt;</pre>
+        <pre><code>&lt;link rel="stylesheet" href="tufte.css"/&gt;</code></pre>
 
         <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
       </section>
@@ -70,13 +70,12 @@
         <p>One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed their use in this document already. You are very astute.</p>
         <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations <em>as close as possible</em> to the text that references them. At the same time, this secondary information should stay out of the way of the eye, not interfering with the progression of ideas in the main text.</p>
         <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like so:</p>
-        <pre class="code">
-&lt;label for="sn-demo"
+        <pre><code>&lt;label for="sn-demo"
        class="margin-toggle sidenote-number"&gt;
 &lt;/label&gt;
 &lt;input type="checkbox"
        id="sn-demo"
-       class="margin-toggle"/&gt;</pre>
+       class="margin-toggle"/&gt;</code></pre>
         <p>You must manually assign a reference <code>id</code> to each side or margin note, replacing “sn-demo” in the <code>for</code> and the <code>id</code> attribute values with an appropriate descriptor. It is useful to use prefixes like <code>sn-</code> for sidenotes and <code>mn-</code> for margin notes.</p>
         <p>Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a <code>span</code> with class <code>sidenote</code>. This tag is also inserted directly in the middle of the body text, but is either pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.</p>
         <p>If you want a sidenote without footnote-style numberings, then you want a margin note.
@@ -86,12 +85,11 @@
             This is a margin note. Notice there isn’t a number preceding the note.
           </span> On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol &#8853; (<code>&amp;#8853;</code>), but it’s up to you.</p>
         <p>Margin notes are created just like sidenotes, but with the <code>marginnote</code> class for the content and the <code>margin-toggle</code> class for the label and dummy checkbox. For instance, here is the code for the margin note used in the previous paragraph:</p>
-        <pre class="code">
-&lt;label for="mn-demo" class="margin-toggle"&gt;&amp;#8853;&lt;/label&gt;
+        <pre><code>&lt;label for="mn-demo" class="margin-toggle"&gt;&amp;#8853;&lt;/label&gt;
 &lt;input type="checkbox" id="mn-demo" class="margin-toggle"/&gt;
 &lt;span class="marginnote"&gt;
   This is a margin note. Notice there isn’t a number preceding the note.
-&lt;/span&gt;</pre>
+&lt;/span&gt;</code></pre>
         <p>Figures in the margin are created as margin notes, as demonstrated in the next section.</p>
       </section>
 
@@ -110,11 +108,9 @@
           <img src="img/napoleons-march.png" alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813" />
         </figure>
         <p>One obstacle to creating elegant figures on the web is the difficulty of handling different screen sizes, especially on the fly. Embedded <code>iframe</code> elements are particularly troublesome. For these instances we provide a helper class, <code>iframe-wrapper</code>, the most common use for which is probably YouTube videos, e.g.</p>
-        <pre class="code">
-&lt;figure class="iframe-wrapper"&gt;
+        <pre><code>&lt;figure class="iframe-wrapper"&gt;
   &lt;iframe width="853" height="480" src="https://www.youtube.com/embed/YslQ2625TR4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/figure&gt;
-        </pre>
+&lt;/figure&gt;</code></pre>
         <figure class="iframe-wrapper">
           <iframe width="853" height="480" src="https://www.youtube.com/embed/YslQ2625TR4" frameborder="0" allowfullscreen></iframe>
         </figure>
@@ -124,8 +120,8 @@
       <section>
         <h2 id="code">Code</h2>
         <p>Technical jargon, programming language terms, and code samples are denoted with the <code>code</code> class, as I’ve been using in this document to denote HTML. Code needs to be monospace for formatting purposes and to aid in code analysis, but it must maintain its readability. To those ends, Tufte CSS follows GitHub’s font selection, which shifts gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.</p>
-        <p>Extended code examples should use a <code>pre</code> tag with class <code>code</code>. This adds control over indentation and overflow as well:</p>
-        <pre class="code">;; Some code examples in Clojure. This is a comment.
+        <p>Extended code examples should live in a <code>code</code> element within a <code>pre</code> element. This adds control over indentation and overflow as well:</p>
+        <pre><code>;; Some code examples in Clojure. This is a comment.
 
 ;; applying a function to every item in the collection
 (map tufte-css blog-posts)
@@ -141,7 +137,7 @@
   (prn (* b d)))
 
 ;; If this proselytizing has worked, check out:
-;; http://howistart.org/posts/clojure/1</pre>
+;; http://howistart.org/posts/clojure/1</code></pre>
       </section>
 
       <section>

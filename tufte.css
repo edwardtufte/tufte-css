@@ -312,7 +312,7 @@ div.table-wrapper {
     letter-spacing: .03em; 
 }
 
-code {
+code, pre > code {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.0rem;
     line-height: 1.42;
@@ -334,14 +334,15 @@ h3 > code {
     font-size: 1rem; 
 }
 
-pre.code {
+pre > code {
     font-size: 0.9rem;
     width: 52.5%;
     margin-left: 2.5%;
-    overflow-x: auto; 
+    overflow-x: auto;
+    display: block;
 }
 
-pre.code.fullwidth {
+pre.fullwidth > code {
     width: 90%; 
 }
 
@@ -396,7 +397,7 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%; 
     }
     
-    pre.code {
+    pre > code {
         width: 97%; 
     }
 
