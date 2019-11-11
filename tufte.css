@@ -119,6 +119,7 @@ section {
 }
 
 p,
+dl,
 ol,
 ul {
     font-size: 1.4rem;
@@ -178,12 +179,14 @@ section > table {
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
+section > dl,
 section > ol,
 section > ul {
     width: 50%;
     -webkit-padding-start: 5%;
 }
 
+dt:not(:first-child),
 li:not(:first-child) {
     margin-top: 0.25rem;
 }
@@ -405,10 +408,8 @@ label.margin-toggle:not(.sidenote-number) {
         width: 97%;
     }
 
-    section > ol {
-        width: 90%;
-    }
-
+    section > dl,
+    section > ol,
     section > ul {
         width: 90%;
     }
