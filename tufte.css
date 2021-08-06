@@ -383,7 +383,8 @@ input.margin-toggle {
 }
 
 label.sidenote-number {
-    display: inline;
+    display: inline-block;
+    margin-bottom: -5%;
 }
 
 label.margin-toggle:not(.sidenote-number) {
