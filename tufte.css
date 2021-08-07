@@ -384,7 +384,7 @@ input.margin-toggle {
 
 label.sidenote-number {
     display: inline-block;
-    margin-bottom: -5%;
+    max-height: 2rem;
 }
 
 label.margin-toggle:not(.sidenote-number) {
