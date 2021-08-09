@@ -11,8 +11,6 @@
              margin-right: -0.15rem;
              text-shadow: none; }
 
-.latex::selection, .latex span:not(.latex-sup)::selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-                    background: #b4d5fe; }
-
-.latex::-moz-selection, .latex span:not(.latex-sup)::-moz-selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-                         background: #b4d5fe; }
+.latex::selection, .latex span:not(.latex-sup)::selection { text-shadow: 0.03em 0 highlight, -0.03em 0 highlight, 0 0.03em highlight, 0 -0.03em highlight, 0.06em 0 highlight, -0.06em 0 highlight, 0.09em 0 highlight, -0.09em 0 highlight, 0.12em 0 highlight, -0.12em 0 highlight, 0.15em 0 highlight, -0.15em 0 highlight;
+                    background: highlight;
+                    color: highlighttext; }
