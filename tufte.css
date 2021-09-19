@@ -288,6 +288,11 @@ img {
     position: relative;
 }
 
+li .sidenote,
+li .marginnote {
+    margin-right: -65%;
+}
+
 .sidenote-number {
     counter-increment: sidenote-counter;
 }
