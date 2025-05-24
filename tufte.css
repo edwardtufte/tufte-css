@@ -56,13 +56,7 @@ body {
     counter-reset: sidenote-counter;
 }
 
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #151515;
-        color: #ddd;
-    }
-}
+
 
 h1 {
     font-weight: 400;
