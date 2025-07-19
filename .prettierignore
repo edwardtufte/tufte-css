@@ -1,0 +1,5 @@
+# Ignore all files - disable Prettier completely
+# In order to keep code similar to upstream format
+
+*
+**/*
