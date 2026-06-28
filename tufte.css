@@ -359,6 +359,10 @@ input.margin-toggle {
     width: 0;
 }
 
+label.margin-toggle:has(+ input:focus-visible) {
+    outline: auto;
+}
+
 label.sidenote-number {
     display: inline-block;
     max-height: 2rem; /* should be less than or equal to paragraph line-height */
