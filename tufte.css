@@ -424,6 +424,18 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 
+    input.margin-toggle {
+        display: inline-block;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    label.margin-toggle:has(+ input:focus-visible) {
+        outline: auto;
+    }
+
     label.margin-toggle:not(.sidenote-number) {
         display: inline;
     }
