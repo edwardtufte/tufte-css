@@ -145,6 +145,12 @@ sup {
     line-height: 0;
 }
 
+.smallcaps {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: 0.03em;
+}
+
 /* Chapter Epigraphs */
 div.epigraph {
     margin: 5em 0;
